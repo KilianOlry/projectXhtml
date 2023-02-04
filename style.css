@@ -1,0 +1,77 @@
+:root {
+    /* color */
+
+    --color-blue: #0E4E91;
+    --color-yellow: #F39200;
+    --color-orange: #E8501F;
+    --color-card: #FDFDFD;
+    --color-icon: #505050;
+    --color-forms: #D2D2D2;
+
+    /* Font */
+
+    --font-family: 'Open Sans', sans-serif;
+
+    /* Font Size */
+    --Hight-size: 3.2rem;
+    --biggest-size: 2.6rem;
+    --big-size: 2.4rem;
+    --medium-size: 2rem;
+    --normal-size: 1.8rem;
+    --small-size: 1.6rem;
+    --smaller-size: 1.4rem;
+    --smalling-size: 1.1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav_menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: #E8501F;
+}
+
+.nav_menu .bar {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blue);
+    position: absolute;
+}
+
+.nav_menu .burger_top {
+    top: 0;
+    left: 0;
+    background: #F39200;
+}
+
+.burger_mid {
+    display: flex;
+}
+
+.nav_menu .burger_bot {
+    bottom: 0;
+    right: 0;
+}
