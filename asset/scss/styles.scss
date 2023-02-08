@@ -21,11 +21,21 @@
 
 .container_cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 5rem 0;
-    gap: 8rem;
-
+    .card{
+        height: 300px;
+    }
+    .contain{
+        width: 100%;
+        height: 50%;
+        
+    }
+    .img-left{
+        background-image: url(../images/policeman1.png);
+        background-size: cover;
+    }
 }
 
 @media (width <480px) {

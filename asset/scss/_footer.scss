@@ -13,8 +13,6 @@ footer {
         align-items: flex-start;
         flex-wrap: wrap;
         h4 {
-            text-transform: uppercase;
-            font-size: var(--normal-size);
             color: white;
             text-decoration: underline;
         }
@@ -22,10 +20,11 @@ footer {
     ul li {
         margin: 1.2rem 0;
         font-size: var(--small-size);
+        a {
+            color: white;
+        }
     }
-    ul li a {
-        color: white;
-    }
+
     .legale,
 .legale a {
     text-align: center;

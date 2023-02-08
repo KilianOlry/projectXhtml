@@ -37,6 +37,15 @@ h2 {
 h3 {
     font-size: var(--medium-size);
 }
+h4{
+    font-size: var(--normal-size);
+    text-transform: uppercase;
+}
+
+h5{
+    font-size: var(--normal-size);
+    text-transform: uppercase;
+}
 
 p {
     font-size: var(--smaller-size);

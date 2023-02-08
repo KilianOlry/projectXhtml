@@ -38,6 +38,16 @@ h3 {
   font-size: var(--medium-size);
 }
 
+h4 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+}
+
 p {
   font-size: var(--smaller-size);
 }
@@ -103,7 +113,7 @@ header .nav_menu .bar {
   height: 200px;
   overflow: hidden;
   position: relative;
-  background-color: var(--color-blue);
+  background-color: var(--color-forms);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -113,6 +123,19 @@ header .nav_menu .bar {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.container_picture #carousel .slide h5 {
+  color: white;
+}
+.container_picture #carousel .slide .btn {
+  padding: 1rem 1.3rem;
+  background-color: var(--color-orange);
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  box-shadow: var(--box-shadow);
 }
 .container_picture #carousel .previous,
 .container_picture #carousel .next {
@@ -121,7 +144,7 @@ header .nav_menu .bar {
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
+  padding: 10px;
   color: white;
   font-size: var(--biggest-size);
   transition: 0.6s ease;
@@ -153,8 +176,6 @@ footer .container {
   flex-wrap: wrap;
 }
 footer .container h4 {
-  text-transform: uppercase;
-  font-size: var(--normal-size);
   color: white;
   text-decoration: underline;
 }
@@ -191,10 +212,20 @@ footer .legale a {
 
 .container_cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 5rem 0;
-  gap: 8rem;
+}
+.container_cards .card {
+  height: 300px;
+}
+.container_cards .contain {
+  width: 100%;
+  height: 50%;
+}
+.container_cards .img-left {
+  background-image: url(../images/policeman1.png);
+  background-size: cover;
 }
 
 @media (width < 480px) {

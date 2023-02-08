@@ -38,6 +38,16 @@ h3 {
   font-size: var(--medium-size);
 }
 
+h4 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+}
+
 p {
   font-size: var(--smaller-size);
 }
@@ -104,8 +114,6 @@ footer .container {
   flex-wrap: wrap;
 }
 footer .container h4 {
-  text-transform: uppercase;
-  font-size: var(--normal-size);
   color: white;
   text-decoration: underline;
 }
