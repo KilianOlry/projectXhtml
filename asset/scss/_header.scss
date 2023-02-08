@@ -1,0 +1,44 @@
+/* HEADER */
+.bandeau {
+    background: var(--color-blue);
+    height: 3.5rem;
+    width: auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    .container_logo {
+        display: flex;
+        align-items: center;
+    }
+    .nav_menu {
+        margin-right: 5rem;
+        cursor: pointer;
+        .bar {
+            display: block;
+            width: 3.5rem;
+            border-radius: 0.5rem;
+            height: 4px;
+            margin: 7px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background: var(--color-blue);
+        }
+    }
+
+}
+
+/* Classe pour le svg */
+.st0 {
+    fill: var(--color-blue);
+}
+
+.st1 {
+    fill: var(--color-orange);
+}
+
+.st2 {
+    fill: var(--color-yellow);
+}

@@ -1,181 +1,128 @@
-:root {
-    /* color */
-
-    --color-blue: #0E4E91;
-    --color-yellow: #F39200;
-    --color-orange: #E8501F;
-    --color-card: #FDFDFD;
-    --color-icon: #505050;
-    --color-forms: #D2D2D2;
-    --color-red: #D71818;
-
-    /* Font */
-
-    --font-family: 'Open Sans', sans-serif;
-
-    /* Font Size */
-    --hight-size: 3rem;
-    --biggest-size: 2.6rem;
-    --big-size: 2.4rem;
-    --medium-size: 2rem;
-    --normal-size: 1.8rem;
-    --small-size: 1.6rem;
-    --smaller-size: 1.4rem;
-    --smalling-size: 1.1rem;
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    font-family: var(--font-family);
+  font-size: 62.5%;
+  font-family: var(--font-family);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 h1 {
-    color: var(--color-blue);
-    font-size: var(--small-size);
-    margin-left: 3rem;
-    text-align: center;
+  color: var(--color-blue);
+  font-size: var(--small-size);
+  margin-left: 3rem;
+  text-align: center;
 }
 
 h2 {
-    font-size: var(--hight-size);
-    color: var(--color-blue);
-    font-weight: 600;
-    margin: 6rem 0;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: var(--hight-size);
+  color: var(--color-blue);
+  font-weight: 600;
+  margin: 6rem 0;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h3 {
-    font-size: var(--medium-size);
+  font-size: var(--medium-size);
 }
 
 p {
-    font-size: var(--smaller-size);
+  font-size: var(--smaller-size);
+}
+
+/* HEADER */
+.bandeau {
+  background: var(--color-blue);
+  height: 3.5rem;
+  width: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .container_logo {
+  display: flex;
+  align-items: center;
+}
+header .nav_menu {
+  margin-right: 5rem;
+  cursor: pointer;
+}
+header .nav_menu .bar {
+  display: block;
+  width: 3.5rem;
+  border-radius: 0.5rem;
+  height: 4px;
+  margin: 7px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: var(--color-blue);
 }
 
 /* Classe pour le svg */
 .st0 {
-    fill: var(--color-blue);
+  fill: var(--color-blue);
 }
 
 .st1 {
-    fill: var(--color-orange);
+  fill: var(--color-orange);
 }
 
 .st2 {
-    fill: var(--color-yellow);
+  fill: var(--color-yellow);
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-.bandeau {
-    background: var(--color-blue);
-    height: 3.5rem;
-    width: auto;
-}
-
-.container_logo {
-    display: flex;
-    align-items: center;
-}
-
-.nav_menu {
-    margin-right: 5rem;
-    cursor: pointer;
-}
-
-.nav_menu .bar {
-    display: block;
-    width: 3.5rem;
-    border-radius: 0.5rem;
-    height: 4px;
-    margin: 7px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background: var(--color-blue);
-}
-
-.container_picture {
-    background-image: url(../images/gendarmerie-g66bd3bd03_1920.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 400px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
-    background: var(--color-yellow);
+  background: var(--color-yellow);
 }
-
-.social {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+footer .social {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-
-.container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
+footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-
-h4 {
-    text-transform: uppercase;
-    font-size: var(--normal-size);
-    color: white;
-    text-decoration: underline;
+footer .container h4 {
+  text-transform: uppercase;
+  font-size: var(--normal-size);
+  color: white;
+  text-decoration: underline;
 }
-
-ul li {
-    margin: 1.2rem 0;
-    font-size: var(--small-size);
+footer ul li {
+  margin: 1.2rem 0;
+  font-size: var(--small-size);
 }
-
 footer ul li a {
-    color: white;
+  color: white;
+}
+footer .legale,
+footer .legale a {
+  text-align: center;
+  background: white;
+  color: var(--color-blue);
+  font-size: var(--small-size);
+  padding: 1rem;
 }
 
-.legale,
-.legale a {
-    text-align: center;
-    background: white;
-    color: var(--color-blue);
-    font-size: var(--small-size);
-    padding: 1rem;
-}
+/*# sourceMappingURL=mention_legales.css.map */
