@@ -1,0 +1,131 @@
+
+/* Navbar*/
+.navbar {  
+  display:flex;
+  align-items:center; 
+  justify-content:space-between;   
+  padding:10px;
+  font-size:var(--smalling-size);
+  background: var(--color-card);
+}
+ 
+/*Nav bar menu burger */
+  .navbar__links { 
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px);  
+    position:absolute;
+    top:35px;
+    right:0;     
+    background:var(--color-blue);  
+    transform:translateX(110%);
+    transition:all .2s ease-in-out;
+  }
+  .show-nav .navbar__links { 
+    width:30vw;    
+    transform: translateX(0);
+  } 
+  .navbar__link {    
+    transform: translateX(101%);
+    transition: all .3s ease-in-out;
+  }
+  
+  .show-nav .navbar__link  {        
+    transform: translateX(0);    
+  }   
+  .navbar__link > a {
+    display:flex;
+    justify-content:center;
+    padding:var(--hight-size);
+    font-size:var(--small-size);
+    color:var(--color-card);
+    transition: all .1s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left:var(--medium-size);
+    letter-spacing:5px;
+  }
+  
+  /* Menu Burger */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;    
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background:var(--color-blue); 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0;  
+    background:var(--color-blue);
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px);
+
+ 
+  }
+  .bar::after {
+    transform:translateY(12px);
+
+
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+    background:var(--color-card);
+
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+    background:var(--color-card);
+  }
+  
+  /* Animations text nav burger */
+  .show-nav .first {      
+    transition: all 0.2s ease-out;
+  } 
+  .show-nav .second {      
+    transition: all 0.3s ease-out;
+  } 
+  .show-nav .third {      
+    transition: all 0.4s ease-out;
+  } 
+  .show-nav .four {      
+    transition: all 0.5s ease-out;
+  } 
+  .show-nav .fifth {      
+    transition: all 0.6s ease-out;
+  }
+
+  /*Mobile */
+
+  @media screen and (max-width:767.98px){
+
+    .show-nav .navbar__links{
+      width: 65vw;
+
+    }
+  }
+
+
