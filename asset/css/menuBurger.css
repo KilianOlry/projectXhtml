@@ -5,14 +5,7 @@
 margin-right:56%;
 text-align:center;
 }
-.navbar {  
-  display:flex;
-  align-items:center; 
-  justify-content:space-between;   
-  padding:10px;
-  font-size:var(--smalling-size);
-  background: var(--color-card);
-}
+
  
 /*Nav bar menu burger */
   .navbar__links { 
@@ -20,35 +13,38 @@ text-align:center;
     display:flex;
     flex-direction:column;
     width:0;
-    height:calc(100vh - 65px);  
+    height:100vh;
     position:absolute;
-    top:35px;
+    top:0;
     right:0;     
     background:var(--color-blue);  
     transform:translateX(110%);
     transition:all .2s ease-in-out;
- 
+   
   }
   .show-nav .navbar__links { 
-    width:30vw;    
+    width:40vw;    
+    height:100vh;
     transform: translateX(0);
+    position:fixed;
+    z-index:1;
   } 
   .navbar__link {    
     transform: translateX(101%);
     transition: all .3s ease-in-out;
-
     
   }
   
   .show-nav .navbar__link  {        
     transform: translateX(0);  
+   
  
   }   
   .navbar__link > a {
     display:flex;
     justify-content:center;
-    padding:2rem;
-    margin:5.5rem;
+    padding:3rem;
+    margin:6.5rem;
     font-size:var(--small-size);
     color:var(--color-card);
     transition: all .1s ease-in-out;
@@ -82,6 +78,7 @@ text-align:center;
     border-radius:3px;
     background:var(--color-blue); 
     transition: all .5s ease-in-out; 
+    position:fixed;
 
     
   }
@@ -95,6 +92,7 @@ text-align:center;
     border-radius:3px;    
     transition: all .5s ease-in-out;
    
+   
   }
   .bar::before {
     transform:translateY(-12px);
@@ -103,22 +101,25 @@ text-align:center;
   }
   .bar::after {
     transform:translateY(12px);
+ 
 
 
   }
   .show-nav .bar {
     width:0;
     background:transparent;
+    z-index:1;
   }
   .show-nav .bar::before {
     transform:rotate(45deg);
     background:var(--color-card);
-
+ 
   }
   .show-nav .bar::after {
     transform:rotate(-45deg);
     background:var(--color-card);
-
+    
+    
   }
   
   /* Animations text nav burger */
@@ -138,10 +139,15 @@ text-align:center;
     transition: all 0.6s ease-out;
   }
 
-
   /*Mobile */
 
   @media screen and (max-width:767.98px){
+
+
+    .navbar__link > a {
+     margin:6.9rem;
+    }
+
 
     .show-nav .navbar__links{
       width: 100vw;

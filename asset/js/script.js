@@ -25,7 +25,7 @@ function showSlides(n) {
 /*Menu Burger */
 
 function toggleMenu () {  
-  const navbar = document.querySelector('.navbar');
+  const navbar = document.querySelector('.header');
   const burger = document.querySelector('.burger');
   
   burger.addEventListener('click', (e) => {    
@@ -33,14 +33,13 @@ function toggleMenu () {
   });   
   
 
-  // bonus
-  const navbarLinks = document.querySelectorAll('.navbar a');
-  navbarLinks.forEach(link => {
+/* bonus */
+  const navbarMenu = document.querySelectorAll('.header a');
+  navbarMenu.forEach(link => {
     link.addEventListener('click', (e) => {    
       navbar.classList.toggle('show-nav');
     }); 
-  })
-   
+  })   
 }
 toggleMenu();
 
