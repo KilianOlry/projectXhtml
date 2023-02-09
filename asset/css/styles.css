@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 62.5%;
   font-family: var(--font-family);
@@ -135,6 +136,7 @@ footer .legale a {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .container_picture #carousel {
   width: 30%;
@@ -143,6 +145,7 @@ footer .legale a {
   position: relative;
   background-color: var(--color-blue);
   border-radius: 7px;
+
 }
 .container_picture #carousel .slide {
   width: 100%;
@@ -150,6 +153,7 @@ footer .legale a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 .container_picture #carousel .previous,
 .container_picture #carousel .next {

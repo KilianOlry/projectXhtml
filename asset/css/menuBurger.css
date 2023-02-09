@@ -1,5 +1,10 @@
 
 /* Navbar*/
+.title {
+
+margin-right:56%;
+text-align:center;
+}
 .navbar {  
   display:flex;
   align-items:center; 
@@ -22,6 +27,7 @@
     background:var(--color-blue);  
     transform:translateX(110%);
     transition:all .2s ease-in-out;
+ 
   }
   .show-nav .navbar__links { 
     width:30vw;    
@@ -30,23 +36,31 @@
   .navbar__link {    
     transform: translateX(101%);
     transition: all .3s ease-in-out;
+
+    
   }
   
   .show-nav .navbar__link  {        
-    transform: translateX(0);    
+    transform: translateX(0);  
+ 
   }   
   .navbar__link > a {
     display:flex;
     justify-content:center;
-    padding:var(--hight-size);
+    padding:2rem;
+    margin:5.5rem;
     font-size:var(--small-size);
     color:var(--color-card);
     transition: all .1s ease-in-out;
+    text-align: center;
+  
   }
   .navbar__link > a:hover {
-    padding-left:var(--medium-size);
-    letter-spacing:5px;
+
+    letter-spacing:1px;
+    color: var( --color-yellow);
   }
+
   
   /* Menu Burger */
   .burger {
@@ -54,10 +68,12 @@
     position:relative;
     padding:0;
     width:45px;
-    height:45px;
+    height:40px;
     border:none;
     background:transparent;
     cursor:pointer;
+  ;
+
   }
   .bar {
     display:block;    
@@ -65,7 +81,9 @@
     height:4px;  
     border-radius:3px;
     background:var(--color-blue); 
-    transition: all .5s ease-in-out;   
+    transition: all .5s ease-in-out; 
+
+    
   }
   .bar::before, .bar::after {
     content:"";
@@ -76,6 +94,7 @@
     background:var(--color-blue);
     border-radius:3px;    
     transition: all .5s ease-in-out;
+   
   }
   .bar::before {
     transform:translateY(-12px);
@@ -99,6 +118,7 @@
   .show-nav .bar::after {
     transform:rotate(-45deg);
     background:var(--color-card);
+
   }
   
   /* Animations text nav burger */
@@ -118,14 +138,25 @@
     transition: all 0.6s ease-out;
   }
 
+
   /*Mobile */
 
   @media screen and (max-width:767.98px){
 
     .show-nav .navbar__links{
-      width: 65vw;
-
+      width: 100vw;
+      z-index:1
+    }
+    .show-nav .four {
+     text-align:center; 
+    }
+    .show-nav .bar::before {
+      z-index:1;
+    }
+    .show-nav .bar::after  {
+     z-index:1;
+    }
+    .title{
+      display:none;
     }
   }
-
-
