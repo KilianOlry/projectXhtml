@@ -90,18 +90,126 @@ header .container_logo {
   align-items: center;
 }
 header .nav_menu {
-  margin-right: 5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-blue);
+  transform: translateX(110%);
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-header .nav_menu .bar {
+
+.navbar__link {
+  transform: translateX(101%);
+  transition: all 0.1s ease-in-out;
+}
+.navbar__link > a {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  margin: 6rem;
+  font-size: var(--small-size);
+  color: var(--color-card);
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+}
+.navbar__link > a:hover {
+  letter-spacing: 1px;
+  color: var(--color-yellow);
+}
+
+/* Menu Burger */
+.burger {
   display: block;
-  width: 3.5rem;
-  border-radius: 0.5rem;
+  position: relative;
+  padding: 0;
+  width: 45px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 45px;
+  border-radius: 3px;
   height: 4px;
-  margin: 7px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: var(--color-blue);
+  position: fixed;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: 45px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  background: var(--color-blue);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.bar::before {
+  transform: translateY(-12px);
+}
+
+.bar::after {
+  transform: translateY(12px);
+}
+
+.show-nav .nav_menu {
+  width: 40vw;
+  height: 100vh;
+  transform: translateX(0);
+  position: fixed;
+  z-index: 1;
+}
+
+.show-nav .navbar__link {
+  transform: translateX(0);
+}
+
+.show-nav .bar {
+  width: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.show-nav .bar::before {
+  transform: rotate(45deg);
+  background: var(--color-card);
+}
+
+.show-nav .bar::after {
+  transform: rotate(-45deg);
+  background: var(--color-card);
+}
+
+/* Animations text nav burger */
+.show-nav .first {
+  transition: all 0.2s ease-out;
+}
+
+.show-nav .second {
+  transition: all 0.3s ease-out;
+}
+
+.show-nav .third {
+  transition: all 0.4s ease-out;
+}
+
+.show-nav .four {
+  transition: all 0.5s ease-out;
 }
 
 /* Classe pour le svg */
@@ -117,6 +225,29 @@ header .nav_menu .bar {
   fill: var(--color-yellow);
 }
 
+/*Mobile burger */
+@media screen and (max-width: 767.98px) {
+  .navbar__link > a {
+    margin: 6.9rem;
+    height: 10vh;
+  }
+  .title h1 {
+    display: none;
+  }
+  .show-nav .nav_menu {
+    width: 65vw;
+    z-index: 1;
+  }
+  .show-nav .four {
+    text-align: center;
+  }
+  .show-nav .bar::before {
+    z-index: 1;
+  }
+  .show-nav .bar::after {
+    z-index: 1;
+  }
+}
 .container_picture {
   background-image: url(../images/banniere.png);
   background-size: cover;
