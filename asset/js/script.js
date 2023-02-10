@@ -1,3 +1,5 @@
+/*Caroussel */
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -19,3 +21,25 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "flex";
 }
+
+/*Menu Burger */
+
+function toggleMenu () {  
+  const navbar = document.querySelector('.header');
+  const burger = document.querySelector('.burger');
+  
+  burger.addEventListener('click', (e) => {    
+    navbar.classList.toggle('show-nav');
+  });   
+  
+
+/* bonus */
+  const navbarMenu = document.querySelectorAll('.header a');
+  navbarMenu.forEach(link => {
+    link.addEventListener('click', (e) => {    
+      navbar.classList.toggle('show-nav');
+    }); 
+  })   
+}
+toggleMenu();
+
