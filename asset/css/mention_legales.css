@@ -22,7 +22,12 @@ h1 {
   color: var(--color-blue);
   font-size: var(--small-size);
   margin-left: 3rem;
-  text-align: center;
+  text-align: start;
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: var(--smaller-size);
+  }
 }
 
 h2 {
@@ -33,13 +38,38 @@ h2 {
   text-transform: uppercase;
   text-align: center;
 }
+@media (max-width: 400px) {
+  h2 {
+    font-size: var(--medium-size);
+  }
+}
 
 h3 {
   font-size: var(--medium-size);
+  text-align: center;
+  color: var(--color-blue);
+}
+
+h4 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
+}
+
+h5 {
+  font-size: var(--normal-size);
+  text-transform: uppercase;
+  color: white;
 }
 
 p {
   font-size: var(--smaller-size);
+}
+@media (max-width: 400px) {
+  p {
+    padding: 0 2rem;
+  }
 }
 
 /* HEADER */
@@ -228,18 +258,16 @@ footer .social {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 2rem 0;
+}
+footer .social .st3 {
+  fill: var(--color-white);
 }
 footer .container {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
   flex-wrap: wrap;
-}
-footer .container h4 {
-  text-transform: uppercase;
-  font-size: var(--normal-size);
-  color: white;
-  text-decoration: underline;
+  margin-top: 5rem;
 }
 footer ul li {
   margin: 1.2rem 0;
@@ -255,6 +283,17 @@ footer .legale a {
   color: var(--color-blue);
   font-size: var(--small-size);
   padding: 1rem;
+}
+
+@media (width < 480px) {
+  .container {
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+  .container div {
+    margin: 2rem 0;
+  }
 }
 
 /*# sourceMappingURL=mention_legales.css.map */

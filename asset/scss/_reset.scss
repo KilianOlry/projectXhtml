@@ -1,3 +1,5 @@
+@import "mixins";
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +24,11 @@ h1 {
     color: var(--color-blue);
     font-size: var(--small-size);
     margin-left: 3rem;
-    text-align: center;
+    text-align: start;
+
+    @include smartphone {
+        font-size: var(--smaller-size);
+    }
 }
 
 h2 {
@@ -32,12 +38,36 @@ h2 {
     margin: 6rem 0;
     text-transform: uppercase;
     text-align: center;
+
+    @include smartphone {
+        font-size: var(--medium-size)
+    }
+
 }
 
 h3 {
     font-size: var(--medium-size);
+    text-align: center;
+    color: var(--color-blue);
+}
+
+h4 {
+    font-size: var(--normal-size);
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+}
+
+h5 {
+    font-size: var(--normal-size);
+    text-transform: uppercase;
+    color: white;
 }
 
 p {
     font-size: var(--smaller-size);
+
+    @include smartphone {
+        padding: 0 2rem;
+    }
 }

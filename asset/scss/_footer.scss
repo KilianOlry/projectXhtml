@@ -1,46 +1,53 @@
 footer {
     background: var(--color-yellow);
+
     .social {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        padding: 2rem 0;
+
+        .st3 {
+            fill: var(--color-white);
+        }
     }
+
     .container {
         display: flex;
         justify-content: space-evenly;
-        align-items: flex-start;
         flex-wrap: wrap;
-        h4 {
-            text-transform: uppercase;
-            font-size: var(--normal-size);
-            color: white;
-            text-decoration: underline;
-        }
+        margin-top: 5rem;
     }
+
     ul li {
         margin: 1.2rem 0;
         font-size: var(--small-size);
+
+        a {
+            color: white;
+        }
     }
-    ul li a {
-        color: white;
-    }
+
     .legale,
-.legale a {
-    text-align: center;
-    background: white;
-    color: var(--color-blue);
-    font-size: var(--small-size);
-    padding: 1rem;
+    .legale a {
+        text-align: center;
+        background: white;
+        color: var(--color-blue);
+        font-size: var(--small-size);
+        padding: 1rem;
+    }
 }
+
+@media (width <480px) {
+    .container {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+
+    .container div {
+        margin: 2rem 0;
+    }
 }
-
-
-
-
-
-
-
-
-
