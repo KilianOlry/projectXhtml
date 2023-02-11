@@ -1,5 +1,36 @@
+//RESPONSIVE
 @mixin smartphone {
     @media (max-width: 400px) {
         @content;
     }
+}
+@mixin small-smartphone {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+@mixin tablette {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+//ALIGNEMENT
+@mixin flex-jccenter-ai-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-jccenter{
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-jcbetween-ai-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-ai-center{
+    display: flex;
+    align-items: center;
 }

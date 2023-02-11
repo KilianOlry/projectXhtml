@@ -1,51 +1,64 @@
 /* HEADER */
-.bandeau {
-  background: var(--color-blue);
-  height: 3.5rem;
-  width: auto;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  .container_logo {
-    display: flex;
-    align-items: center;
-  }
-  .nav_menu {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    width: 0;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
+.nav{
+  position:fixed;
+  width:100%;
+   z-index:1;
+   header {
+    background-color: var(--color-white);
+    .bandeau {
     background: var(--color-blue);
-    transform: translateX(110%);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    height: 3.5rem;
   }
+      .container_header{
+        @include flex-jcbetween-ai-center;
+        padding: 1rem;
+      .container_logo {
+        @include flex-ai-center;
+    }
+    }
+  }
+
+/* logo Classe pour le svg */
+.st0 {
+  fill: var(--color-blue);
 }
+
+.st1 {
+  fill: var(--color-orange);
+}
+
+.st2 {
+  fill: var(--color-yellow);
+}
+    .nav_menu {
+      overflow: hidden;
+      @include flex-jccenter;
+      flex-direction: column;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--color-blue);
+      transform: translateX(110%);
+      transition: all 0.2s ease-in-out;
+      
+    }
+  }
 
 .navbar__link {
   transform: translateX(101%);
   transition: all 0.1s ease-in-out;
 
   > a {
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-    margin: 6rem;
+    @include flex-jccenter;
+    margin: 8rem;
     font-size: var(--small-size);
     color: var(--color-card);
     transition: all 0.1s ease-in-out;
     text-align: center;
-  }
-  > a:hover {
-    letter-spacing: 1px;
-    color: var(--color-yellow);
+    &:hover{
+      color: var(--color-yellow);
+    }
   }
 }
 
@@ -53,25 +66,23 @@ header {
 .burger {
   display: block;
   position: relative;
-  padding: 0;
   width: 45px;
   height: 40px;
   border: none;
   background: transparent;
   cursor: pointer;
+  .bar {
+    display: block;
+    width: 45px;
+    border-radius: 3px;
+    height: 4px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blue);
+    position: fixed;
+  }
 }
 
-.bar {
-  display: block;
-  width: 45px;
-  border-radius: 3px;
-  height: 4px;
-
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background: var(--color-blue);
-  position: fixed;
-}
 .bar::before,
 .bar::after {
   content: "";
@@ -80,7 +91,6 @@ header {
   position: absolute;
   left: 0;
   background: var(--color-blue);
-  border-radius: 3px;
   transition: all 0.3s ease-in-out;
   z-index: 1;
 }
@@ -92,15 +102,14 @@ header {
 }
 
 .show-nav .nav_menu {
-  width: 40vw;
+  width: 25vw;
   height: 100vh;
   transform: translateX(0);
   position: fixed;
   z-index: 1;
-}
-
-.show-nav .navbar__link {
-  transform: translateX(0);
+  .navbar__link {
+    transform: translateX(0);
+  }
 }
 
 .show-nav .bar {
@@ -130,37 +139,16 @@ header {
   transition: all 0.5s ease-out;
 }
 
-/* Classe pour le svg */
-.st0 {
-  fill: var(--color-blue);
-}
-
-.st1 {
-  fill: var(--color-orange);
-}
-
-.st2 {
-  fill: var(--color-yellow);
-}
-
 /*Mobile burger */
 
 @media screen and (max-width: 767.98px) {
   .navbar__link > a {
-    margin: 6.9rem;
-    height: 10vh;
+    margin: 5rem 0;
+    font-size: --smalling-size;
   }
-  /*title */
-  .title h1 {
-    display: none;
-  }
-
   .show-nav .nav_menu {
-    width: 65vw;
+    width: 60vw;
     z-index: 1;
-  }
-  .show-nav .four {
-    text-align: center;
   }
   .show-nav .bar::before {
     z-index: 1;

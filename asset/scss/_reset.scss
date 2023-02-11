@@ -17,32 +17,29 @@ ul {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
+    cursor: pointer;
 }
 
-h1 {
+h2 {
+
     color: var(--color-blue);
     font-size: var(--small-size);
     margin-left: 3rem;
     text-align: start;
-
     @include smartphone {
-        font-size: var(--smaller-size);
+        display: none;
     }
 }
 
-h2 {
+h1 {
+
     font-size: var(--hight-size);
     color: var(--color-blue);
     font-weight: 600;
     margin: 6rem 0;
     text-transform: uppercase;
     text-align: center;
-
-    @include smartphone {
-        font-size: var(--medium-size)
-    }
-
 }
 
 h3 {
@@ -54,19 +51,18 @@ h3 {
 h4 {
     font-size: var(--normal-size);
     text-transform: uppercase;
-    color: white;
+    color: var(--color-white);
     text-decoration: underline;
 }
 
 h5 {
     font-size: var(--normal-size);
     text-transform: uppercase;
-    color: white;
+    color: var(--color-white);
 }
 
 p {
     font-size: var(--smaller-size);
-
     @include smartphone {
         padding: 0 2rem;
     }
