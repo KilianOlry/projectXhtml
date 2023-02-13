@@ -281,4 +281,21 @@ footer .legale a {
   padding: 1rem;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 15rem;
+  max-width: 1200px;
+}
+
+.content {
+  background-color: yellow;
+}
+.content h3 {
+  text-align: center;
+}
+
 /*# sourceMappingURL=mention_legales.css.map */

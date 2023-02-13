@@ -2,4 +2,16 @@
 @import "header";
 @import "footer";
 @import "mixins";
-
+.main {
+  @include flex-jccenter;
+}
+.container {
+  margin-top: 15rem;
+  max-width: 1200px;
+}
+.content {
+  background-color: yellow;
+  h3 {
+    text-align: center;
+  }
+}
