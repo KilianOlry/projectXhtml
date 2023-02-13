@@ -1,62 +1,40 @@
 @import "reset";
 @import "header";
-@import"banniere";
+@import "banniere";
 @import "footer";
 @import "mixins";
 
 .main {
-    @include flex-jccenter-ai-center;
-    flex-wrap: wrap;
-    gap: 6rem;
-    margin: 8rem 0;
-    :hover{
-        transform: scale(1.1);
+  @include flex-jccenter-ai-center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin: 8rem 0;
+  padding: 0 2rem;
+  .card {
+    background-color: var(--color-card);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: 0.5s;
+    width: 300px;
+    &:hover {
+      transform: scale(1.05);
     }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-        .card {
-            height: 300px;
-            width: 300px;
-            background-color: var(--color-card);
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-
-
-            .contain {
-                width: 100%;
-                height: 70%;
-                transition: 1s;
-
-    
-                &.img-left {
-                    background-image: url(../images/gendarmes.png);
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 7px;
-                }
-                &.img-mid {
-                    background-image: url(../images/car.png);
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 7px;
-                }
-                &.img-right {
-                    background-image: url(../images/banniere.png);
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 7px;
-                    }    
-                }
-            }
-        }  
-        .contain_text{
-            @include flex-jccenter-ai-center;
-            a{
-                margin-top: 2rem;
-                color: black;
-                text-transform: uppercase;
-                font-weight: 400;
-                font-size: var(--small-size);
-                text-align: center;
-            }
-        }  
-
+  .contain_text {
+    @include flex-jccenter-ai-center;
+    a {
+      margin-top: 1rem;
+      color: black;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: var(--small-size);
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
