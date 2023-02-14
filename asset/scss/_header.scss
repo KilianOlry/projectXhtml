@@ -1,49 +1,48 @@
 /* HEADER */
-.nav{
-  position:fixed;
-  width:100%;
-   z-index:1;
-   header {
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  header {
     background-color: var(--color-white);
     .bandeau {
-    background: var(--color-blue);
-    height: 3.5rem;
-  }
-      .container_header{
-        @include flex-jcbetween-ai-center;
-        padding: 1rem;
+      background: var(--color-blue);
+      height: 3.5rem;
+    }
+    .container_header {
+      @include flex-jcbetween-ai-center;
+      padding: 1rem;
       .container_logo {
         @include flex-ai-center;
-    }
-    }
-  }
-
-/* logo Classe pour le svg */
-.st0 {
-  fill: var(--color-blue);
-}
-
-.st1 {
-  fill: var(--color-orange);
-}
-
-.st2 {
-  fill: var(--color-yellow);
-}
-    .nav_menu {
-      overflow: hidden;
-      @include flex-jccenter;
-      flex-direction: column;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--color-blue);
-      transform: translateX(110%);
-      transition: all 0.2s ease-in-out;
-      
+      }
     }
   }
+
+  /* logo Classe pour le svg */
+  .st0 {
+    fill: var(--color-blue);
+  }
+
+  .st1 {
+    fill: var(--color-orange);
+  }
+
+  .st2 {
+    fill: var(--color-yellow);
+  }
+  .nav_menu {
+    overflow: hidden;
+    @include flex-jccenter;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-blue);
+    transform: translateX(110%);
+    transition: all 0.2s ease-in-out;
+  }
+}
 
 .navbar__link {
   transform: translateX(101%);
@@ -56,7 +55,7 @@
     color: var(--color-card);
     transition: all 0.1s ease-in-out;
     text-align: center;
-    &:hover{
+    &:hover {
       color: var(--color-yellow);
     }
   }
