@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/KilianOlry/projectXhtml#readme",
   "dependencies": {
-    "sass": "^1.58.0"
+    "sass": "^1.58.1"
   }
 }
