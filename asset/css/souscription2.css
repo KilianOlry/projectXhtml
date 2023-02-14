@@ -281,18 +281,61 @@ footer .legale a {
   padding: 1rem;
 }
 
-/*https://www.ibrahima-ndaw.com/fr/blog/awesome-stepper-form/*/
-main {
+/*https://www.ibrahima-ndaw.com/fr/blog/awesome-stepper-form/ 
+https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
+/*page formulaire */
+.formules {
   height: 100vh;
-  width: 100%;
+  width: 100vmax;
+  flex-direction: column;
+  position: relative;
+}
+
+.condition p {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  position: relative;
-  background: rgba(14, 77, 145, 0.0509803922);
+  font-weight: lighter;
+  font-size: xx-small;
+  margin-top: 2%;
 }
 
+/*Tableau */
+.color_table1 {
+  background-color: var(--color-white);
+}
+
+.color_table2 {
+  background-color: var(--color-forms);
+}
+
+th, td {
+  text-align: center;
+  background: red;
+  border-radius: 5%;
+  padding: 8px;
+}
+
+th {
+  background-color: var(--color-blue);
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  border-radius: 5%;
+  padding: 15px;
+}
+
+/*Card Promo */
+.card_content {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  width: auto;
+  height: 20%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Etapes */
 .stepper {
   margin-top: 150px;
   width: 20rem;
@@ -321,6 +364,7 @@ main {
   border-right: 1px solid #666666;
 }
 
+/*Formulaire */
 .form {
   position: absolute;
   width: 45vw;
@@ -411,7 +455,7 @@ input[type=text] {
   color: #fff;
 }
 
-/*Animation*/
+/*Animation form*/
 @keyframes moveRight {
   0% {
     transform: translateX(-27rem) scale(0.9);
@@ -440,5 +484,16 @@ input[type=text] {
     opacity: 1;
   }
 }
+/*Table responsive */
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+  th, td {
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+}
 
-/*# sourceMappingURL=souscription.css.map */
+/*# sourceMappingURL=souscription2.css.map */

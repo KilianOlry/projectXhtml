@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/asset/css/variables.css">
+    <link rel="stylesheet" href="/asset/css/styles.css">
+    <link rel="stylesheet" href="/asset/css/souscription.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
@@ -16,8 +17,6 @@
 
 <body>
  
-    
-
     <nav class="nav">
     <header class="header">
         <div class="bandeau"></div>
@@ -66,16 +65,73 @@
             </button>
         </div>
     </div>
-
     </header>
 </nav>
-
-
             <div class="slide">
-       
-        </div>
+                
+            
+            </div>
 
-    </section>
+              <main>
+                <div class="stepper">
+                
+                  
+                  <div class="step--1 step-active">formules</div>
+                  <div class="step--2">souscripteur</div>
+                  <div class="step--3">option</div>
+                  <div class="step--4">document à joindre</div>
+                </div>
+              
+                <form class="form form-active">
+               
+                
+                
+    <div class="content_form">
+        
+        <div class="text_form">
+         
+            <p>Je souhaite bénéficier d’une protection minimale et souscrire seulement la garantie de base:</p>
+        </div>
+        <div class="input1">
+                    <input name="formules" value="formule_1" type="radio" /> <label for="formule_1">Formule 1 : Seuil d’intervention  de 10 % </label>
+                </div>
+                <div class="input2">
+                    <input name="formules" value="formule_2" type="radio" /><label for="formule_2">Formule 2 : Seuil d’intervention  de 10 % </label>
+                    </div>
+                   
+                    <button class="form__btn" id="btn-1">suivant</button>
+                </div>
+             
+                </form>
+           
+                
+                <form class="form">
+                  <div class="form--header-container">
+                        <img src="/asset/images/changer-assurance-pret-immobilier_opt 1.png" alt="">
+               
+                  </div>
+              
+           
+                  <button class="form__btn" id="btn-2-prev">Previous</button>
+                  <button class="form__btn" id="btn-2-next">Next</button>
+                </form>
+                <form class="form">
+                  <div class="form--header-container">
+                    <h1 class="form--header-title">
+                      Social account
+                    </h1>
+              
+                    <p class="form--header-text">
+                      Tell us more about your social account.
+                    </p>
+                  </div>
+                  <input type="text" placeholder="Linkedin" />
+                  <input type="text" placeholder="Twitter" />
+                  <input type="text" placeholder="Github" />
+                  <button class="form__btn" id="btn-3">Submit</button>
+                </form>
+                <div class="form--message"></div>
+              </main>
 
 
     <footer>
@@ -156,7 +212,7 @@
 
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/817262485e.js" crossorigin="anonymous"></script>
-    <script src="../js/script.js"></script>
+    <script src="/asset/js/script.js"></script>
 </body>
 
 </html>

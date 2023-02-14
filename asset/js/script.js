@@ -44,6 +44,7 @@ function toggleMenu () {
 toggleMenu();
 
 
+/*Etape souscritpion 
 
 const formBtn1 = document.querySelector("#btn-1")
 const formBtnPrev2 = document.querySelector("#btn-2-prev")
@@ -75,7 +76,9 @@ formBtn3.addEventListener("click", function(e) {
   document.querySelector(`.step--4`).classList.add("step-active")
   formBtn3.parentElement.style.display = "none"
   document.querySelector(".form--message").innerHTML = `
-   <h1 class="form--message-text">Your account is successfully created </h1>
+   <h1 class="form--message-text">Vous avez presque terminé !
+
+   Veuillez vérifier vos mails pour accéder au document PDF pour la signature électronique  </h1>
    `
   e.preventDefault()
 })
@@ -99,3 +102,5 @@ const gotoNextForm = (prev, next, stepPrev, stepNext) => {
     nextForm.classList.remove("form-active-animate")
   }, 1000)
 }
+*/
+

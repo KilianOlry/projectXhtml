@@ -3,19 +3,71 @@
 @import "footer";
 @import "mixins";
 
-/*https://www.ibrahima-ndaw.com/fr/blog/awesome-stepper-form/*/
+/*https://www.ibrahima-ndaw.com/fr/blog/awesome-stepper-form/ 
+https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
+
+/*page formulaire */
 
 
-
-  main {
+  .formules{
     height: 100vh;
-    width: 100%;
-   @include flex-jccenter-ai-center;
+    width: 100vmax;
     flex-direction: column;
     position: relative;
-    background: #0e4d910d;
-   
+  
   }
+
+.condition p {
+    @include flex-jccenter-ai-center;
+    font-weight:lighter;
+    font-size:xx-small;
+    margin-top:2%;
+}
+
+
+/*Tableau */
+
+
+  .color_table1 {
+background-color: var(--color-white);
+  }
+  .color_table2 {
+    background-color: var(--color-forms);
+      }
+    
+  th, td {
+   
+    text-align: center;
+    background: red;
+    border-radius:  5%;
+    padding:8px;
+  
+  }
+
+  th {
+    background-color: var(--color-blue);
+    text-align: center;
+    color:white;
+    font-weight: 600;
+    border-radius:  5%;
+    padding:15px;
+  }
+
+  
+/*Card Promo */
+
+.card_content {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        width:auto;
+        height:20%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+  /*Etapes */
 
   .stepper {
    margin-top:150px;
@@ -43,6 +95,8 @@
   .step--3 {
     border-right: 1px solid #666666;
   }
+
+/*Formulaire */
 
   .form {
     position: absolute;
@@ -80,8 +134,6 @@
 label{
 
 	margin-left: 10px;
-
-
 }
 
 
@@ -142,7 +194,7 @@ label{
  
   }
 
-  /*Animation*/
+  /*Animation form*/
 
   @keyframes moveRight {
   0% {
@@ -174,3 +226,18 @@ label{
     opacity: 1;
   }
 }
+
+/*Table responsive */
+
+@media screen and (max-width: 600px) {
+    table {
+      width: 100%;
+    }
+
+    th, td {
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
+  }
+
