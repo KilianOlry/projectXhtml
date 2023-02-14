@@ -320,6 +320,7 @@ footer .legale a {
 }
 .main ul {
   font-size: var(--smaller-size);
+  padding: 0rem 1rem;
 }
 
 /*# sourceMappingURL=mention_legales.css.map */
