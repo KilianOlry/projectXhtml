@@ -51,6 +51,7 @@ body {
     }
   }
 
+
   label {
     font-size: var(--smaller-size);
   }
@@ -69,12 +70,18 @@ body {
 .login {
   text-align: center;
   margin-top: 1.5rem;
+
+  input[type=submit] {
+    width: auto;
+    @include btn_forms;
+    padding: 1rem 2rem;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+
+  }
 }
 
 button {
-  @include btn_forms;
-  background-color: var(--color-blue);
-
   @include smartphone {
     font-size: var(--smalling-size)
   }

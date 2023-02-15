@@ -299,15 +299,19 @@ body {
   text-align: center;
   margin-top: 1.5rem;
 }
-
-button {
+.login input[type=submit] {
+  width: auto;
   padding: 1rem 0.5rem;
   font-size: var(--smaller-size);
   border: none;
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem 2rem;
   background-color: var(--color-blue);
+  color: var(--color-white);
 }
+
 @media (max-width: 400px) {
   button {
     font-size: var(--smalling-size);
@@ -320,6 +324,7 @@ button {
   border: none;
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
+  cursor: pointer;
   background-color: var(--color-orange);
 }
 @media (max-width: 400px) {
@@ -334,6 +339,7 @@ button {
   border: none;
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
+  cursor: pointer;
   background-color: var(--color-yellow);
 }
 @media (max-width: 400px) {
