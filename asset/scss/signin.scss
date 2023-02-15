@@ -1,0 +1,77 @@
+@import "reset";
+@import "header";
+@import "mixins";
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.main {
+  background: url(/asset/images/banniere.png);
+  background-size: cover;
+  background-position: center;
+  @include flex-jccenter-ai-center;
+  padding-top: 15rem;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 400px;
+  height: 450px;
+  background-color: var(--color-forms);
+  @include flex-ai-center;
+  flex-direction: column;
+  border-radius: var(--border-radius-input);
+  box-shadow: var(--box-shadow);
+  h2 {
+    font-size: var(--normal-size);
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    color: black;
+  }
+}
+.formulaire {
+  @include flex-jccenter;
+  flex-direction: column;
+  width: 400px;
+  height: 450px;
+  gap: 2rem;
+  padding: 0 2rem;
+  input {
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius-input);
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    &::placeholder {
+      padding-left: 1rem;
+    }
+  }
+  label {
+    font-size: var(--smaller-size);
+  }
+}
+.btn_2 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.login {
+  text-align: center;
+  margin-top: 2rem;
+}
+button {
+  @include btn_forms;
+  background-color: var(--color-blue);
+}
+.forget_password {
+  @include btn_forms;
+  background-color: var(--color-orange);
+}
+.signup {
+  @include btn_forms;
+  background-color: var(--color-yellow);
+}
