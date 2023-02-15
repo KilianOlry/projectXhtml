@@ -299,29 +299,27 @@ body {
     width: 100%;
   }
 }
-
-.formulaire {
+.container .formulaire {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
   padding: 0 2rem;
 }
-.formulaire input {
+.container .formulaire input {
   width: 100%;
   border: none;
   border-radius: var(--border-radius-input);
   padding: 1rem 0;
   margin-top: 0.5rem;
 }
-.formulaire input::placeholder {
+.container .formulaire input::placeholder {
   padding-left: 1rem;
 }
-.formulaire label {
+.container .formulaire label {
   font-size: var(--smaller-size);
 }
-
-input[type=submit] {
+.container input[type=submit] {
   margin: 2rem 0;
   width: auto;
   padding: 1rem 0.5rem;
