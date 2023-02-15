@@ -44,8 +44,6 @@ function toggleMenu () {
 toggleMenu();
 
 
-/*Etape souscritpion 
-
 const formBtn1 = document.querySelector("#btn-1")
 const formBtnPrev2 = document.querySelector("#btn-2-prev")
 const formBtnNext2 = document.querySelector("#btn-2-next")
@@ -102,5 +100,5 @@ const gotoNextForm = (prev, next, stepPrev, stepNext) => {
     nextForm.classList.remove("form-active-animate")
   }, 1000)
 }
-*/
+
 

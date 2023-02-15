@@ -285,10 +285,7 @@ footer .legale a {
 https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
 /*page formulaire */
 .formules {
-  height: 100vh;
-  width: 100vmax;
-  flex-direction: column;
-  position: relative;
+  height: 100%;
 }
 
 .condition p {
@@ -297,10 +294,16 @@ https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
   align-items: center;
   font-weight: lighter;
   font-size: xx-small;
-  margin-top: 2%;
+  margin-top: 10px;
 }
 
 /*Tableau */
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .color_table1 {
   background-color: var(--color-white);
 }
@@ -311,9 +314,10 @@ https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
 
 th, td {
   text-align: center;
-  background: red;
-  border-radius: 5%;
-  padding: 8px;
+  padding: 15px;
+  height: 6vh;
+  width: 12vmax;
+  border-radius: 3%;
 }
 
 th {
@@ -321,17 +325,16 @@ th {
   text-align: center;
   color: white;
   font-weight: 600;
-  border-radius: 5%;
-  padding: 15px;
+  padding: 10px;
 }
 
 /*Card Promo */
-.card_content {
+.card_content_promo {
   display: flex;
   flex-direction: column;
   padding: 5%;
-  width: auto;
-  height: 20%;
+  height: 20vh;
+  width: 20vmax;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
