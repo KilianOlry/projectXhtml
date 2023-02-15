@@ -37,11 +37,19 @@ body {
         display: flex;
         justify-content: space-between;
 
+        @include smartphone {
+            flex-direction: column;
+        }
+
         .prenom,
         .nom,
         .tel,
         .date {
             width: 40%;
+
+            @include smartphone {
+                width: 100%;
+            }
         }
     }
 }

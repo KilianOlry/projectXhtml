@@ -271,6 +271,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 400px) {
+  .container .first,
+  .container .second {
+    flex-direction: column;
+  }
+}
 .container .first .prenom,
 .container .first .nom,
 .container .first .tel,
@@ -280,6 +286,18 @@ body {
 .container .second .tel,
 .container .second .date {
   width: 40%;
+}
+@media (max-width: 400px) {
+  .container .first .prenom,
+  .container .first .nom,
+  .container .first .tel,
+  .container .first .date,
+  .container .second .prenom,
+  .container .second .nom,
+  .container .second .tel,
+  .container .second .date {
+    width: 100%;
+  }
 }
 
 .formulaire {
