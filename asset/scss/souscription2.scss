@@ -6,27 +6,106 @@
 /*https://www.ibrahima-ndaw.com/fr/blog/awesome-stepper-form/ 
 https://chat.openai.com/chat/15ce5562-a73c-4980-a34b-ef7cdc776017 */
 
-/*page formulaire */
+/*Barre de progression */
 
-
-.formules {
-height:100%;
-
+.step{
+  width:100%;
+  height:15%;
 }
 
+.container_step {
+  margin: 30vh auto;
+  max-width: 835px;
+  width: 100%;
+
+
+
+  .progress--bar {
+      display: flex;
+      padding: 0;
+
+
+      li {
+          list-style-type: none;
+          position: relative;
+          text-align: center;
+        color:  var(--color-transparent);
+          width: 100%;
+          font-weight:bold;
+     
+         
+          &::before {
+              content: counter(step);
+              counter-increment: step;
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid var(--color-icon);
+              display: block;
+              text-align: center;
+              margin: 0 auto 10px auto;
+              border-radius: 50%;
+              background-color: white;  
+             color:white;
+          }
+
+          &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              background: var(--color-icon);
+              top: 25px;
+              left: -50%;
+              z-index: -1;
+              background: #35446c26;
+           
+          }
+
+          &:first-child::after {
+              content: none;
+          
+          }
+
+          &.active {
+              color: var(--color-orange);
+              &::before {
+                  border-color:  var(--color-orange);
+                  background:  var(--color-orange);
+                  background-image: url(/asset/images/icons8-euro-50.png);
+                
+                
+              }
+
+              + li::after {
+                  background-color:  var(--color-orange);
+                  
+              }
+          }
+      }
+  }
+}
+
+
+/*page formulaire */
+
+.titre {
+  @include flex-jccenter-ai-center;
+
+}
 .condition p {
   @include flex-jccenter-ai-center;
     font-weight:lighter;
-    font-size:xx-small;
-    margin-top: 10px;
-
+    font-size:small;
+    margin-top: 50px;
 }
 
 
-/*Tableau */
 
+/*Tableau */
 table {
-  @include flex-jccenter-ai-center;
+  width:70vmax;
+
 }
   .color_table1 {
 background-color: var(--color-white);
@@ -36,12 +115,10 @@ background-color: var(--color-white);
       }
     
   th, td {
-   
     text-align: center;
-    padding:15px;
-    height:6vh;
-    width: 12vmax;
-    border-radius: 3%;
+    padding:5px;
+    font-size:large;
+    border-radius: 8px;
   }
 
   th {
@@ -49,21 +126,52 @@ background-color: var(--color-white);
     text-align: center;
     color:white;
     font-weight: 600;
-    padding:10px;
-    
+    width: 20%;
   }
 
   
 /*Card Promo */
 
-.card_content_promo {
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
+.card_promo {
+  @include flex-jccenter-ai-center;
+        padding: 10px;
         height:20vh;
-        width:20vmax;
+        background: white;
+        width:70vmax;
+        border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        margin-top: 15%;
 }
+.card_content_promo h4{
+ color: red;
+ font-weight:500;
+ text-decoration: none;
+ font-size:medium;
+ text-align: center;
+}
+
+/*Card Form */
+
+.card_form {
+  @include flex-jccenter-ai-center;
+        padding: 10px;
+        height:20vh;
+        background: white;
+        width:70vmax;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        margin-top: 10%;
+}
+
+.card_text_form {
+  color:var(  --color-blue);
+  font-weight:800;
+}
+
+.card_content_form {
+  margin-bottom: 7%;
+}
+
 
 
 
@@ -96,7 +204,7 @@ background-color: var(--color-white);
     border-right: 1px solid #666666;
   }
 
-/*Formulaire */
+/*Formulaire 
 
   .form {
     position: absolute;
@@ -123,19 +231,26 @@ background-color: var(--color-white);
   align-items: flex-start;
   width:100%;
   height:100%;
-}
+} */
 
 .input1 , .input2 {
 
   padding:20px;
-  margin-right:10px;
-
 }
+
 label{
 
 	margin-left: 10px;
 }
+.input1 span {
+  color:var(--color-blue);
+  font-weight: bold;
+}
 
+.input2 span {
+  color:var(--color-blue);
+  font-weight:bold;
+}
 
 
   input[type="text"] {
@@ -151,18 +266,34 @@ label{
 
 
   .form__btn {
+    float: right;
     background: var(--color-orange);
     color: #fff;
     outline: none;
     border: none;
-    width: 15rem;
-    margin: 2rem auto;
-    border-radius: 0.9rem;
-    text-transform: uppercase;
+    width: 16rem;
+    height: 2.5rem;
+    margin: 6rem auto;
+    border-radius: 2rem;
     font-weight: 700;
     cursor: pointer;
   }
 
+  .form__btn2 {
+    background: var(--color-blue);
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 16rem;
+    height:2.5rem;
+    margin: 6rem auto;
+    border-radius: 2rem;
+    
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+/*
   .form--message-text {
     width: 25rem;
     background: #fff;
@@ -192,10 +323,10 @@ label{
     color: #fff;
   
  
-  }
+  } */
 
   /*Animation form*/
-
+/*
   @keyframes moveRight {
   0% {
     transform: translateX(-27rem) scale(0.9);
@@ -226,18 +357,20 @@ label{
     opacity: 1;
   }
 }
+/*
 
 /*Table responsive */
 
 @media screen and (max-width: 600px) {
     table {
-      width: 100%;
+      width: 100vmax;
+
     }
 
     th, td {
       width: 100%;
       display: block;
       text-align: left;
+      
     }
   }
-
