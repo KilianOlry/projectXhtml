@@ -4,11 +4,13 @@
     @content;
   }
 }
+
 @mixin small-smartphone {
   @media (max-width: 320px) {
     @content;
   }
 }
+
 @mixin tablette {
   @media (max-width: 1024px) {
     @content;
@@ -21,19 +23,23 @@
   justify-content: center;
   align-items: center;
 }
+
 @mixin flex-jccenter {
   display: flex;
   justify-content: center;
 }
+
 @mixin flex-jcbetween-ai-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 @mixin flex-ai-center {
   display: flex;
   align-items: center;
 }
+
 @mixin flex-ai-flex-start-jc-center-direction-column {
   display: flex;
   justify-content: center;
@@ -48,5 +54,4 @@
   border: none;
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
-  cursor: pointer;
 }
