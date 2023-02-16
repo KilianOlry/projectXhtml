@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
@@ -72,28 +72,42 @@
     <section class="main">
 
         <div class="container">
-            <h2>se connecter</h2>
+            <h2>Création de compte</h2>
             <form action="" method="post" class="formulaire">
+                <div class="first">
+                    <div class="prenom">
+                        <label for="ID_prenom">Prénom</label>
+                        <input type="text" id="ID_Prenom" placeholder="Prénom">
+                    </div>
+                    <div class="nom">
+                        <label for="ID_nom">Nom</label>
+                        <input type="text" id="ID_nom" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="tel">
+                        <label for="ID_tel">Téléphone</label>
+                        <input type="tel" id="ID_tel" placeholder="Téléphone">
+                    </div>
+                    <div class="date">
+                        <label for="ID_date">Date de naissance</label>
+                        <input type="date" id="ID_nom">
+                    </div>
+                </div>
                 <div class="mail">
                     <label for="ID_email">Adresse mail</label>
                     <input type="text" id="ID_email" placeholder="Veuillez entrer votre adresse mail">
                 </div>
                 <div class="mdp">
                     <label for="ID_mot-de-passe">Mot de passe</label>
-                    <input type="text" id="ID_mot-de-passe" placeholder="Veuillez entrer votre mot de passe">
+                    <input type="password" id="ID_mot-de-passe" placeholder="Veuillez entrer votre mot de passe">
                 </div>
 
-                <div class="btn login">
-                    <input type="submit" value="se connecter">
-                </div>
 
             </form>
             <div class="btn_2">
-                <div class="btn_1">
-                    <button class="forget_password"><a href="#">mot de passe oublier</a></button>
-                </div>
                 <div class="btn">
-                    <button class="signup"><a href="../pages/signup.html">créer son compte</a></button>
+                    <input type="submit" value="Créer son compte">
                 </div>
             </div>
         </div>
