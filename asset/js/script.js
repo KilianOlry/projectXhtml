@@ -43,3 +43,7 @@ function toggleMenu () {
 }
 toggleMenu();
 
+
+/*Caroussel infoGlobale */
+
+
