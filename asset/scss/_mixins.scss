@@ -16,6 +16,11 @@
     @content;
   }
 }
+@mixin large-tablette {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
 
 //ALIGNEMENT
 @mixin flex-jccenter-ai-center {
@@ -38,6 +43,10 @@
 @mixin flex-ai-center {
   display: flex;
   align-items: center;
+}
+@mixin flex-ai-start {
+  display: flex;
+  align-items: start;
 }
 
 @mixin flex-ai-flex-start-jc-center-direction-column {
