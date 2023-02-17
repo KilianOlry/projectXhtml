@@ -427,12 +427,26 @@ table .color_table {
   /*Etapes */
 }
 .container_card .card_promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: var(--hight-size2);
   text-align: center;
   padding: 20px;
   width: 60vw;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .container_card .card_promo {
+    width: 60vw;
+  }
+}
+@media (max-width: 400px) {
+  .container_card .card_promo {
+    width: 85vw;
+    height: 10vh;
+  }
 }
 .container_card .card_promo h4 {
   color: red;

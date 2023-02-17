@@ -154,13 +154,20 @@ table {
   flex-direction: column;
 
   .card_promo {
+    @include flex-jccenter-ai-center;
     margin-top: var(--hight-size2);
     text-align: center;
     padding: 20px;
     width: 60vw;
     border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
+    @include medium-tablette {
+      width:60vw;
+      }
+      @include smartphone {
+        width: 85vw;
+        height:10vh;
+    }
     h4 {
       color: red;
       text-decoration: none;
