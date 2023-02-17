@@ -44,59 +44,28 @@ function toggleMenu () {
 toggleMenu();
 
 
-const formBtn1 = document.querySelector("#btn-1")
-const formBtnPrev2 = document.querySelector("#btn-2-prev")
-const formBtnNext2 = document.querySelector("#btn-2-next")
-const formBtn3 = document.querySelector("#btn-3")
+/*Card formules */
 
 
-// Button listener of form 1
-formBtn1.addEventListener("click", function(e) {
-  gotoNextForm(formBtn1, formBtnNext2, 1, 2)
-  e.preventDefault()
-})
+const card1 = document.querySelector('.card_1');
+const card2 = document.querySelector('.card_2');
+const text = document.getElementById('formule1');
+const text2 = document.getElementById('formule2');
 
-// Next button listener of form 2
-formBtnNext2.addEventListener("click", function(e) {
-  gotoNextForm(formBtnNext2, formBtn3, 2, 3)
-  e.preventDefault()
-})
+card1.addEventListener('click', function() {
+    card1.style.backgroundColor = 'var(--color-blue-transparent)';
+    text.style.color = 'var(--color-yellow)';
+    card2.style.backgroundColor = "white";
+    text2.style.color = "var(--color-blue)";
+});
 
-// Previous button listener of form 2
-formBtnPrev2.addEventListener("click", function(e) {
-  gotoNextForm(formBtnNext2, formBtn1, 2, 1)
-  e.preventDefault()
-})
+  card2.addEventListener('click', function() {
+    card1.style.backgroundColor = "white";
+    text.style.color = "var(--color-blue)";
+      card2.style.backgroundColor = 'var(--color-blue-transparent)';
+      text2.style.color = 'var(--color-yellow)';
+  });
 
-// Button listener of form 3
-formBtn3.addEventListener("click", function(e) {
-  document.querySelector(`.step--3`).classList.remove("step-active")
-  document.querySelector(`.step--4`).classList.add("step-active")
-  formBtn3.parentElement.style.display = "none"
-  document.querySelector(".form--message").innerHTML = `
-   <h1 class="form--message-text">Vous avez presque terminé !
+  
 
-   Veuillez vérifier vos mails pour accéder au document PDF pour la signature électronique  </h1>
-   `
-  e.preventDefault()
-})
-const gotoNextForm = (prev, next, stepPrev, stepNext) => {
-  // Get form through the button
-  const prevForm = prev.parentElement
-  const nextForm = next.parentElement
-  const nextStep = document.querySelector(`.step--${stepNext}`)
-  const prevStep = document.querySelector(`.step--${stepPrev}`)
-  // Add active/inactive classes to both previous and next form
-  nextForm.classList.add("form-active")
-  nextForm.classList.add("form-active-animate")
-  prevForm.classList.add("form-inactive")
-  // Change the active step element
-  prevStep.classList.remove("step-active")
-  nextStep.classList.add("step-active")
-  // Remove active/inactive classes to both previous an next form
-  setTimeout(() => {
-    prevForm.classList.remove("form-active")
-    prevForm.classList.remove("form-inactive")
-    nextForm.classList.remove("form-active-animate")
-  }, 1000)
-}
+
