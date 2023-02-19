@@ -162,11 +162,11 @@ table {
     border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     @include medium-tablette {
-      width:60vw;
-      }
-      @include smartphone {
-        width: 85vw;
-        height:10vh;
+      width: 60vw;
+    }
+    @include smartphone {
+      width: 85vw;
+      height: 10vh;
     }
     h4 {
       color: red;

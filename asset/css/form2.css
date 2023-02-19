@@ -422,6 +422,7 @@ table td {
   align-items: center;
   width: 100vw;
   flex-direction: column;
+  /*Card Police */
   /* Card formules only mobil */
   /*Card Form */
   /*Etapes */
@@ -451,6 +452,37 @@ table td {
 }
 .container_card .card_promo h4 {
   color: red;
+  text-decoration: none;
+  font-size: var(--light-weight);
+  font-weight: var(--semi-bold);
+}
+.container_card .card_promo_police {
+  margin-top: var(--hight-size2);
+  text-align: center;
+  width: 60vw;
+  height: 25vh;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .container_card .card_promo_police {
+    height: 25vh;
+  }
+}
+@media (max-width: 400px) {
+  .container_card .card_promo_police {
+    width: 85vw;
+    height: 21vh;
+  }
+}
+.container_card .card_promo_police .img_police {
+  max-width: 100%;
+  height: auto;
+}
+.container_card .card_promo_police h4 {
+  padding: 5px;
+  margin-top: 2px;
+  color: black;
   text-decoration: none;
   font-size: var(--light-weight);
   font-weight: var(--semi-bold);

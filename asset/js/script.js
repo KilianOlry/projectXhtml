@@ -44,7 +44,7 @@ function toggleMenu () {
 toggleMenu();
 
 
-/*Card formules */
+/*Card formules et garantie */
 
 
 const card1 = document.querySelector('.card_1');
