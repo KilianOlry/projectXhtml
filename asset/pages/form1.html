@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="/asset/css/variables.css">
     <link rel="stylesheet" href="/asset/css/styles.css">
-    <link rel="stylesheet" href="/asset/css/form2.css">
+    <link rel="stylesheet" href="/asset/css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
@@ -71,107 +71,118 @@
     </nav>
     <div class="slide"> </div>
 
-    <section class="step">
-
-        <div class="container_step">
-            <ul class="progress--bar">
-                <li class="active"><b>Formules</b> </li>
-                <li>Souscripteur</li>
-                <li>Option</li>
-                <li>Documents à joindre</li>
-                <li>Synthèse & Signature</li>
-            </ul>
-        </div>
-    </section>
-
     <section class="main">
-        <a href="/asset/pages/formules.html">
-        <div class="return">
-            <img id="logo_return" src="/asset/images/icon_form/return.png" alt="logo_return"></a>
-            <span>Retour</span>
 
-        </div>
-        <div class="titre">
-            <h1>Garantie Optionelle</h1>
-            
-        </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
-        <table>
-            <tr>
-                <th>PRENIUM RÉSERVISTE <br>Garantie de base</br></th>
-                <th> OPTION 1</th>
-                <th> OPTION 2 </th>
-            </tr>
-            <tr>
-                <td>Indémnité versée dès le 1er jour d’incapacité et jusqu’à 180 jours</td>
-                <td>20,57 € par jour </td>
-                <td>41 ,40 € par jour </td>
-            </tr>
-            <tr>
-                <td>Cotisation annuelle*</td>
-                <td> 35 € </td>
-                <td> 70 € </td>
-            </tr>
-        </table>
-        <div class="condition">
-            <p>*Montant des garanties et tarifs applicable au 01/01/2023</p>
-            <p>** N est le taux de séquelles retenu.</p>
-            </div>
+<div class="wrapper">
+	<div class="header">
+		<ul>
+			<li class="active form_1_progessbar">
+				<div>
+					<p>1</p>
+				</div>
+			</li>
+			<li class="form_2_progessbar">
+				<div>
+					<p>2</p>
+				</div>
+			</li>
+			<li class="form_3_progessbar">
+				<div>
+					<p>3</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="form_wrap">
+		<div class="form_1 data_info">
+			<h2>Demande de souscription<br>Prénium réserviste </h2>
+			<form>
+				<div class="form_container">
+					<div class="input_wrap">
+						<label for="Name">Nom</label>
+						<input type="text" name="name" class="input" id="name">
+					</div>
+					<div class="input_wrap">
+						<label for="prenom">Prénom</label>
+						<input type="prenom" name="prenom" class="input" id="prenom">
+					</div>
+					<div class="input_wrap">
+						<label for="birthdate">Date de naissance</label>
+						<input type="birthdate" name="birthdate" class="input" id="birthdate">
+					</div>
+                    <div class="input_wrap">
+						<label for="birthdate">Nom de naissance</label>
+						<input type="birthdate" name="birthdate" class="input" id="birthdate">
+                        <p><span>*</span>champ obligatoire</p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="form_2 data_info" style="display: none;">
+			<h2>Personal Info</h2>
+			<form>
+				<div class="form_container">
+					<div class="input_wrap">
+						<label for="user_name">User Name</label>
+						<input type="text" name="User Name" class="input" id="user_name">
+					</div>
+					<div class="input_wrap">
+						<label for="first_name">First Name</label>
+						<input type="text" name="First Name" class="input" id="first_name">
+					</div>
+					<div class="input_wrap">
+						<label for="last_name">Last Name</label>
+						<input type="text" name="Last Name" class="input" id="last_name">
 
+					</div>
+                  
+				</div>
+			</form>
+		</div>
+		<div class="form_3 data_info" style="display: none;">
+			<h2>Professional Info</h2>
+			<form>
+				<div class="form_container">
+					<div class="input_wrap">
+						<label for="company">Current Company</label>
+						<input type="text" name="Current Company" class="input" id="company">
+					</div>
+					<div class="input_wrap">
+						<label for="experience">Total Experience</label>
+						<input type="text" name="Total Experience" class="input" id="experience">
+					</div>
+					<div class="input_wrap">
+						<label for="designation">Designation</label>
+						<input type="text" name="Designation" class="input" id="designation">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="btns_wrap">
+		<div class="common_btns form_1_btns">
+			<button type="button" class="btn_next">Suivant <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_2_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Précedent</button>
+			<button type="button" class="btn_next">Suivant <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_3_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
+			<button type="button" class="btn_done">Done</button>
+		</div>
+	</div>
+</div>
 
-
-            <div class="container_card">
-                <div class="card_promo">
-                    <h4>Offre de bienvenue 2023 : 2 mois d’assurance gratuits
-                        sur la cotisation de la 1ère année (Formule 1 ou 2)
-                        et 4 mois gratuit pour la souscription de l’une des options complémentaires </h4>
-                </div>
-
-                
-                <div class="card_promo_police">
-                    <img class="img_police"src="/asset/images/icon_form/flic 1.png" alt="img_police">
-                    <h4>En cas d'incapacité temporaire totale, le versement, dès le 1er jour d'incapacité, d'une indemnité journalière pouvant atteindre 41,14 €*.
-                        Du domicile du réserviste au lieu de son affectation, quelle que soit sa mission, dans le monde entier, y compris en OPEX. </h4>
-                </div>
-
-     
-
-                <div class="container_formules">
-                    <div class="card_1">
-                 <div id="formule1"> Option 1<br> Indémnité de 20,57  € par jour </div>
-                      
-                    </div>
-                    <div class="card_2">
-                        <div id="formule2"> Option 2<br>Indémnité de 41,14  € par jour</div>
-
-                    </div>
-                </div>
-
-                <div class="card_form">
-                    <div class="card_content">
-                        <p>Je souhaite bénéficier d’une protection complète et souscrire également l’option “Indémnité journalière”:</p>
-                        <div class="radio_input">
-                            <div class="input1">
-                                <input name="formules" value="formule_1" type="radio" />
-                                <label for="formule_1"><span>Option 1
-                                    </span> Indémnité de 20,57  € par jour </label>
-                            </div>
-                            <div class="input2">
-                                <input name="formules" value="formule_2" type="radio" />
-                                <label for="formule_2"><span>Option 2
-                                        </span> Indémnité de 41,14  € par jour</label>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="btn">
-
-        <a href="/asset/pages/formules.html"><button class="form__btn2" id="btn-1">Etape précédente</a></button>
-            <a href="/asset/pages/form.html"> <button class="form__btn" id="btn-1">Suivant</a></button>
+<div class="modal_wrapper">
+	<div class="shadow"></div>
+	<div class="success_wrap">
+		<span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+		<p>You have successfully completed the process.</p>
+	</div>
+</div>
 
     </section>
 
@@ -254,6 +265,7 @@
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/817262485e.js" crossorigin="anonymous"></script>
     <script src="/asset/js/script.js"></script>
+   <script src="/asset/js/script_form.js"></script>
 </body>
 
 </html>
