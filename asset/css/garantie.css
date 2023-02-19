@@ -370,6 +370,7 @@ footer .legale a {
 
 /*Tableau */
 table {
+  margin-top: 20px;
   width: 60vw;
 }
 @media (max-width: 320px) {
@@ -378,7 +379,7 @@ table {
   }
 }
 table tr th {
-  background-color: var(--color-blue);
+  background-color: var(--color-yellow);
   text-align: center;
   color: var(--color-white);
 }
@@ -387,8 +388,10 @@ table td {
   text-align: center;
   padding: var(--smalling-size);
   font-size: var(--medium-size);
+  font-weight: var(--bold-weight);
   border-radius: 0.5rem;
   width: 33.3333333333%;
+  background: var(--color-yellow-transparent);
 }
 @media (max-width: 600px) {
   table th,
@@ -402,11 +405,8 @@ table td {
     font-size: var(--smalling-size);
   }
 }
-table .color_table2 {
-  background-color: var(--color-icons-transparent);
-}
-table .color_table {
-  background-color: var(--color-blue-transparent);
+table td {
+  height: 10vh;
 }
 
 .condition p {
@@ -422,6 +422,7 @@ table .color_table {
   align-items: center;
   width: 100vw;
   flex-direction: column;
+  /*Card Police */
   /* Card formules only mobil */
   /*Card Form */
   /*Etapes */
@@ -434,6 +435,7 @@ table .color_table {
   text-align: center;
   padding: 20px;
   width: 60vw;
+  height: 15vh;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -445,11 +447,47 @@ table .color_table {
 @media (max-width: 400px) {
   .container_card .card_promo {
     width: 85vw;
-    height: 10vh;
+    height: 15vh;
   }
 }
 .container_card .card_promo h4 {
   color: red;
+  text-decoration: none;
+  font-size: var(--light-weight);
+  font-weight: var(--semi-bold);
+}
+.container_card .card_promo_police {
+  margin-top: var(--hight-size2);
+  text-align: center;
+  width: 60vw;
+  height: 30vh;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1024px) {
+  .container_card .card_promo_police {
+    height: 25vh;
+  }
+}
+@media (max-width: 768px) {
+  .container_card .card_promo_police {
+    height: 25vh;
+  }
+}
+@media (max-width: 400px) {
+  .container_card .card_promo_police {
+    width: 85vw;
+    height: 21vh;
+  }
+}
+.container_card .card_promo_police .img_police {
+  max-width: 100%;
+  height: auto;
+}
+.container_card .card_promo_police h4 {
+  padding: 5px;
+  margin-top: 2px;
+  color: black;
   text-decoration: none;
   font-size: var(--light-weight);
   font-weight: var(--semi-bold);
@@ -547,6 +585,7 @@ table .color_table {
 .container_card .radio_input .input2 span {
   color: var(--color-blue);
   font-weight: var(--bold-weight);
+  margin-right: 5px;
 }
 
 /*Bouton */
@@ -627,4 +666,4 @@ table .color_table {
 }
 */
 
-/*# sourceMappingURL=form.css.map */
+/*# sourceMappingURL=garantie.css.map */
