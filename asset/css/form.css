@@ -1,3 +1,4 @@
+/*https://codepen.io/RajRajeshDn/pen/oNowJGJ*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 :root {
   --primary: #6b59d3;
@@ -21,11 +22,11 @@
 
 .wrapper {
   width: 500px;
-  height: 650px;
+  height: 660px;
   max-width: 100%;
   background: var(--white);
   margin: 130px auto 0;
-  padding: 50px;
+  padding: 20px;
   border-radius: 5px;
 }
 
@@ -214,7 +215,7 @@ p {
   left: 50%;
   transform: translate(-50%, -800px);
   background: var(--white);
-  padding: 50px;
+  padding: 30px;
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -223,8 +224,8 @@ p {
 
 .modal_wrapper .success_wrap .modal_icon {
   margin-right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background: var(--color-orange);
   color: var(--color-white);
   border-radius: 50%;
