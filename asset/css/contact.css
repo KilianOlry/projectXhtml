@@ -257,19 +257,22 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: auto;
+  height: auto;
 }
-.main .container .title h2,
-.main .container .title p {
+.main .container .title h1 {
   text-align: center;
+  background-color: var(--color-white);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
 }
 .main .container .container_infos {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
   margin-top: 4rem;
-  gap: 5rem;
-  background-color: var(--color-white);
   box-shadow: var(--box-shadow);
+  background-color: var(--color-white);
   border-radius: 4px;
 }
 @media (max-width: 1024px) {
