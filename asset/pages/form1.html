@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
+
 </head>
 
 <body>
@@ -72,39 +73,46 @@
     <div class="slide"> </div>
 
     <section class="main">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-<div class="wrapper">
-	<div class="header">
-		<ul>
-			<li class="active form_1_progessbar">
-				<div>
-					<p>1</p>
-				</div>
-			</li>
-			<li class="form_2_progessbar">
-				<div>
-					<p>2</p>
-				</div>
-			</li>
-			<li class="form_3_progessbar">
-				<div>
-					<p>3</p>
-				</div>
-			</li>
-            <li class="form_4_progessbar">
-				<div>
-					<p>2</p>
-				</div>
-			</li>
-		</ul>
-	</div>
+        <div class="wrapper">
+            <div class="header">
+                <ul>
+                    <li class="active form_1_progessbar">
+                        <div>
+                        <p>1</p>
+                        </div>
+                    </li>
+                    <li class="form_2_progessbar">
+                        <div>
+                            <p>2</p>
+                        </div>
+                    </li>
+                    <li class="form_3_progessbar">
+                        <div>
+                            <p>3</p>
+                        </div>
+                    </li>
+                    <li class="form_4_progessbar">
+                        <div>
+                            <p>4</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 	<div class="form_wrap">
 		<div class="form_1 data_info">
-			<h2>Demande de souscription<br>Prénium réserviste </h2>
+			<p>Demande de souscription<br>Prénium réserviste </p>
 			<form>
 				<div class="form_container">
+                    <div class="input_wrap">
+                        <label for="civilite">Civilité :</label>
+                        <select id="civilite" name="civilite">
+                            <option value="M.">M.</option>
+                            <option value="Mme">Mme</option>
+                            <option value="Mlle">Mlle</option>
+                        </select>
+					</div>
 					<div class="input_wrap">
 						<label for="Name">Nom</label>
 						<input type="text" name="name" class="input" id="name">
@@ -120,13 +128,13 @@
                     <div class="input_wrap">
 						<label for="birthdate">Nom de naissance</label>
 						<input type="text" name="birthdate" class="input" id="birthdate">
-                        <p><span>*</span>champ obligatoire</p>
+                        <span>*</span>champ obligatoire
 					</div>
 				</div>
 			</form>
 		</div>
 		<div class="form_2 data_info" style="display: none;">
-			<h2>Information complémentaires</h2>
+			<p>Information complémentaires</p>
 			<form>
 				<div class="form_container">
 					<div class="input_wrap">
@@ -150,31 +158,67 @@
                     <div class="input_wrap">
 						<label for="birthdate">Nom de naissance</label>
 						<input type="text" name="birthdate" class="input" id="birthdate">
-                        <p><span>*</span>champ obligatoire</p>
-                  
+             </div>
+                        <div class="input_wrap">
+                            <label for="email">Entrer votre email</label>
+                            <input type="email" name="email" class="input" id="email">
+                            <span>*</span>champ obligatoire
+                        </div>
 				</div>
 			</form>
 		</div>
-		<div class="form_3 data_info" style="display: none;">
-			<h2>Professional Info</h2>
+        <div class="form_3 data_info" style="display: none;">
+			<p>Vous êtes réserviste</p>
 			<form>
 				<div class="form_container">
 					<div class="input_wrap">
-						<label for="company">Current Company</label>
-						<input type="text" name="Current Company" class="input" id="company">
+                        <label for="civilite">Vous êtes réserviste de :</label>
+                        <select style="font-weight:bold;" id="civilite" name="civilite">
+                            <option value="M.">de la Gendarmerie Nationale</option>
+                            <option value="Mme">du Ministère des Armées</option>
+                            <option value="Mlle">civil de la Police Nationale</option>
+                        </select>
 					</div>
 					<div class="input_wrap">
-						<label for="experience">Total Experience</label>
-						<input type="text" name="Total Experience" class="input" id="experience">
+						<label for="date_militar">Vous avez intégré ou allez intégrer une Préparation Militaire le :</label>
+						<input type="date" name="date_militar" class="input" id="date_militar">
 					</div>
 					<div class="input_wrap">
-						<label for="designation">Designation</label>
-						<input type="text" name="Designation" class="input" id="designation">
+						<label for="job">Profession</label>
+						<input type="text" name="job" class="input" id="job">
 					</div>
-				</div>
-			</form>
-		</div>
-	</div>
+                    <div class="input_wrap">
+                        <p>Importation de fichiers</p>
+                        <label for="identity_file">Pièce d'identité</label>
+                        <input type="file" class="input" id="identity_file" name="identity_file"><br>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="cart_file">Carte réserviste</label>
+                        <input type="file" class="input" id="cart_file" name="cart_file"><br>
+                        </div>
+                        </div>
+                        </form>
+                 </div>
+                 <div class="form_4 data_info" style="display: none;">
+                    <p>Présentation du produit</p>
+                    <form>
+                        <div class="form_container">
+                            <div class="input_wrap">
+                               
+                            </div>
+                            <div class="input_wrap">
+                              
+                            </div>
+                            <div class="input_wrap">
+                               
+                            </div>
+                            <div class="input_wrap">
+                            
+                            </div>
+                                </div>
+                                </form>
+                         </div>
+				
 	<div class="btns_wrap">
 		<div class="common_btns form_1_btns">
 			<button type="button" class="btn_next">Suivant <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
@@ -184,8 +228,12 @@
 			<button type="button" class="btn_next">Suivant <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
 		</div>
 		<div class="common_btns form_3_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_done">Done</button>
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Précedent</button>
+			<button type="button" class="btn_next">Suivant</button>
+		</div>
+        <div class="common_btns form_4_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Précedent</button>
+			<button type="button" class="btn_done">Envoyez</button>
 		</div>
 	</div>
 </div>
@@ -279,8 +327,10 @@ Veuillez vérifier vos mails pour accéder au document PDF pour la signature él
 
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/817262485e.js" crossorigin="anonymous"></script>
+    
     <script src="/asset/js/script.js"></script>
-   <script src="/asset/js/script_form.js"></script>
+    <script src="/asset/js/script_form.js"></script>
+    
 </body>
 
 </html>
