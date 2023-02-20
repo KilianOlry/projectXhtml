@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
@@ -57,8 +57,8 @@
                 <ul class="nav_menu" id="ID_nav_menu">
                     <li class="navbar__link first"><a href="../pages/nos-offres.html">Espace Gendarmerie</a></li>
                     <li class="navbar__link second"><a href="#">Espace Pompier</a></li>
-                    <li class="navbar__link third"><a href="../pages/contact.html">Nous Contacter</a></li>
-                    <li class="navbar__link four"><a href="../pages/signin.html">Se connecter</a></li>
+                    <li class="navbar__link third"><a href="#">Nous Contacter</a></li>
+                    <li class="navbar__link four"><a href="#">Se connecter</a></li>
                 </ul>
                 <button class="burger">
                     <span class="bar"></span>
@@ -70,44 +70,53 @@
     </nav>
 
     <section class="main">
-
         <div class="container">
-            <h2>Création de compte</h2>
-            <form action="" method="post" class="formulaire">
-                <div class="first">
-                    <div class="prenom">
-                        <label for="ID_prenom">Prénom</label>
-                        <input type="text" id="ID_Prenom" placeholder="Prénom">
+            <div class="title">
+                <h1>Nous trouver</h1>
+            </div>
+            <div class="container_infos">
+                <div class="left">
+                    <div class="position">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="st0" viewBox="0 0 24 24" width="42" height="42">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+                        </svg>
+                        <div class="postion_info">
+                            <h3>Adresse</h3>
+                            <p>3 rue chanzy <br>45000 <br> Orléans</p>
+                        </div>
                     </div>
-                    <div class="nom">
-                        <label for="ID_nom">Nom</label>
-                        <input type="text" id="ID_nom" placeholder="Nom">
-                    </div>
-                </div>
-                <div class="second">
-                    <div class="tel">
-                        <label for="ID_tel">Téléphone</label>
-                        <input type="tel" id="ID_tel" placeholder="Téléphone">
-                    </div>
-                    <div class="date">
-                        <label for="ID_date">Date de naissance</label>
-                        <input type="date" id="ID_nom">
-                    </div>
-                </div>
-                <div class="mail">
-                    <label for="ID_email">Adresse mail</label>
-                    <input type="text" id="ID_email" placeholder="Veuillez entrer votre adresse mail">
-                </div>
-                <div class="mdp">
-                    <label for="ID_mot-de-passe">Mot de passe</label>
-                    <input type="password" id="ID_mot-de-passe" placeholder="Veuillez entrer votre mot de passe">
-                </div>
+                    <div class="phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="st0" viewBox="0 0 24 24" width="42" height="42">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z" />
+                        </svg>
 
-
-            </form>
-            <div class="btn_2">
-                <div class="btn">
-                    <input type="submit" value="Créer son compte">
+                        <div class="phone_info">
+                            <h3>Téléphone</h3>
+                            <p>0238240506</p>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="st0" viewBox="0 0 24 24" width="42" height="42">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M2.243 6.854L11.49 1.31a1 1 0 0 1 1.029 0l9.238 5.545a.5.5 0 0 1 .243.429V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.283a.5.5 0 0 1 .243-.429zm16.103 1.39l-6.285 5.439-6.414-5.445-1.294 1.524 7.72 6.555 7.581-6.56-1.308-1.513z" />
+                        </svg>
+                        <div class="email_info">
+                            <h3>Adresse email</h3>
+                            <p>quentin.duflos@sarpgn.fr</p>
+                            <p>corentin.fremont@sarpgn.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.5054845976906!2d1.897375351519978!3d47.90725597910362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4fb2aa1709a65%3A0xdadb9d1d1c7a3b9f!2sSARPGN!5e0!3m2!1sfr!2sfr!4v1676621950408!5m2!1sfr!2sfr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -119,5 +128,6 @@
     <script src="https://kit.fontawesome.com/817262485e.js" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 </body>
+
 
 </html>
