@@ -292,13 +292,19 @@ footer .legale a {
 }
 
 .wrapper {
-  width: 600px;
-  height: 700px;
+  width: 780px;
+  height: 750px;
   max-width: 100%;
   padding: 30px;
   background: var(--color-white);
   margin: 130px auto 0;
   border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: 350px;
+    height: 690px;
+  }
 }
 @media (max-width: 600px) {
   .wrapper {
@@ -387,28 +393,28 @@ footer .legale a {
 }
 
 .wrapper .form_wrap .input_wrap {
-  width: 350px;
+  width: 600px;
   max-width: 100%;
   margin: 20px auto 20px;
 }
 
 .radio_input {
-  width: 350px;
+  width: 100%;
   max-width: 100%;
-  margin: 50px auto 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.radio_input .input_mix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .radio_input .input1,
 .radio_input .input2 {
-  flex-direction: column;
-}
-@media (max-width: 1024px) {
-  .radio_input .input1,
-  .radio_input .input2 {
-    margin-top: 10px;
-  }
+  margin: 20px 20px;
 }
 .radio_input .input1 span,
 .radio_input .input2 span {
@@ -445,12 +451,87 @@ p {
   padding: 6px;
   display: block;
   width: 100%;
-  font-size: 9px;
+  font-size: 13px;
   transition: 0.5s ease;
 }
 
 .wrapper .form_wrap .input_wrap .input:focus {
   border-color: var(--color-orange);
+}
+
+.wrapper .form_wrap .input_check {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.wrapper .form_wrap .input_check .btn1, .btn2, .btn3 {
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.368);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  background: var(--color-white);
+}
+
+.wrapper .form_wrap .input_check .btn1:hover, .btn2:hover, .btn3:hover {
+  background: var(--color-blue);
+  color: white;
+}
+
+.wrapper .form_wrap .input_wrap2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.wrapper .form_wrap .input_wrap2 .content_wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapper .form_wrap .input_wrap2 .content_wrap .input {
+  margin-top: 20px;
+  font-size: 20px;
+  transition: 0.5s ease;
+  border-radius: 3px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.upload-box {
+  font-size: 10px;
+  background: var(--color-white);
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.368);
+  width: 280px;
+  outline: none;
+}
+
+::-webkit-file-upload-button {
+  color: var(--color-white);
+  background: #f39200;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 0 1px 1px var(--color-orange);
+  outline: none;
 }
 
 .wrapper .btns_wrap .common_btns {
@@ -475,6 +556,7 @@ p {
 
 .wrapper .btns_wrap .common_btns button {
   border: none;
+  letter-spacing: 1px;
   width: 17rem;
   height: 2.5rem;
   border-radius: var(--medium-size);
@@ -482,7 +564,8 @@ p {
   cursor: pointer;
   background: var(--color-orange);
   color: var(--color-white);
-  transition: 0.5s ease;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 600px) {
   .wrapper .btns_wrap .common_btns button {
@@ -491,27 +574,20 @@ p {
 }
 
 .wrapper .btns_wrap .common_btns button.btn_back {
-  background: var(--color-forms);
   background-color: var(--color-blue);
-}
-
-.wrapper .btns_wrap .common_btns button.btn_next .icon {
-  display: flex;
-  margin-left: 10px;
-}
-
-.wrapper .btns_wrap .common_btns button.btn_back .icon {
-  display: flex;
-  margin-right: 10px;
 }
 
 .wrapper .btns_wrap .common_btns button.btn_next:hover,
 .wrapper .btns_wrap .common_btns button.btn_done:hover {
   background: var(--next-btn-hover);
+  box-shadow: 0px 5px 10px var(--color-yellow);
+  transform: translateY(-4px);
 }
 
 .wrapper .btns_wrap .common_btns button.btn_back:hover {
   background: var(--back-btn-hover);
+  box-shadow: 0px 5px 10px var(--back-btn-hover);
+  transform: translateY(-4px);
 }
 
 .modal_wrapper {
