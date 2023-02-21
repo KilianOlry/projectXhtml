@@ -282,11 +282,6 @@ footer .legale a {
   padding: 1rem;
 }
 
-:root {
-  --next-btn-hover: #8577d2;
-  --back-btn-hover: #8b8c8c;
-}
-
 .main {
   background-image: url(/asset/images/icon_form/gendarmerie-nationale-14-04-2022\ \(1\)\ 1.png);
   background-size: cover;
@@ -297,24 +292,24 @@ footer .legale a {
 }
 
 .wrapper {
-  width: 500px;
-  height: 660px;
+  width: 600px;
+  height: 700px;
   max-width: 100%;
+  padding: 30px;
   background: var(--color-white);
   margin: 130px auto 0;
-  padding: 20px;
   border-radius: 5px;
 }
 @media (max-width: 600px) {
   .wrapper {
     width: 350px;
-    height: 600px;
+    height: 690px;
   }
 }
 @media (max-width: 400px) {
   .wrapper {
     width: 300px;
-    height: 620px;
+    height: 710px;
   }
 }
 
@@ -397,6 +392,30 @@ footer .legale a {
   margin: 20px auto 20px;
 }
 
+.radio_input {
+  width: 350px;
+  max-width: 100%;
+  margin: 50px auto 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.radio_input .input1,
+.radio_input .input2 {
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .radio_input .input1,
+  .radio_input .input2 {
+    margin-top: 10px;
+  }
+}
+.radio_input .input1 span,
+.radio_input .input2 span {
+  color: var(--color-blue);
+  font-weight: var(--bold-weight);
+}
+
 input[type=file] {
   display: block;
   margin: 20px 0;
@@ -423,10 +442,10 @@ p {
 .wrapper .form_wrap .input_wrap .input {
   border: 2px solid var(--color-forms);
   border-radius: 3px;
-  padding: 10px;
+  padding: 6px;
   display: block;
   width: 100%;
-  font-size: 16px;
+  font-size: 9px;
   transition: 0.5s ease;
 }
 
@@ -434,39 +453,46 @@ p {
   border-color: var(--color-orange);
 }
 
-.wrapper .btns_wrap {
-  width: 350px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
 .wrapper .btns_wrap .common_btns {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
+}
+@media (max-width: 600px) {
+  .wrapper .btns_wrap .common_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .wrapper .btns_wrap .common_btns.form_1_btns {
-  justify-content: flex-end;
-}
-
-.wrapper .btns_wrap .common_btns button {
-  border: 0;
-  padding: 12px 15px;
-  background: var(--color-orange);
-  color: var(--color-white);
-  width: 135px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  border-radius: 3px;
-  transition: 0.5s ease;
+}
+
+.wrapper .btns_wrap .common_btns button {
+  border: none;
+  width: 17rem;
+  height: 2.5rem;
+  border-radius: var(--medium-size);
+  font-weight: var(--bold-weight);
   cursor: pointer;
-  margin: 20px;
+  background: var(--color-orange);
+  color: var(--color-white);
+  transition: 0.5s ease;
+}
+@media (max-width: 600px) {
+  .wrapper .btns_wrap .common_btns button {
+    margin-top: 20px;
+  }
 }
 
 .wrapper .btns_wrap .common_btns button.btn_back {
   background: var(--color-forms);
+  background-color: var(--color-blue);
 }
 
 .wrapper .btns_wrap .common_btns button.btn_next .icon {
