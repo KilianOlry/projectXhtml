@@ -180,15 +180,14 @@ table {
     margin-top: var(--hight-size2);
     text-align: center;
     width: 60vw;
-    height: 30vh;
+    height: 25vh;
     border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
     @include tablette {
-    height:25vh;
+    height:20vh;
     }
     @include medium-tablette {
-      height: 25vh;
+      height: 20vh;
     }
     @include smartphone {
       width: 85vw;

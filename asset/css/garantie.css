@@ -460,18 +460,18 @@ table td {
   margin-top: var(--hight-size2);
   text-align: center;
   width: 60vw;
-  height: 30vh;
+  height: 25vh;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1024px) {
   .container_card .card_promo_police {
-    height: 25vh;
+    height: 20vh;
   }
 }
 @media (max-width: 768px) {
   .container_card .card_promo_police {
-    height: 25vh;
+    height: 20vh;
   }
 }
 @media (max-width: 400px) {
