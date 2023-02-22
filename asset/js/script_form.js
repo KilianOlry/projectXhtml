@@ -1,3 +1,7 @@
+/* Form with progressBar à modifier avec boucle */ 
+
+
+
 var form_1 = document.querySelector(".form_1");
 var form_2 = document.querySelector(".form_2");
 var form_3 = document.querySelector(".form_3");
@@ -101,13 +105,11 @@ shadow.addEventListener("click", function(){
 
 
 
-/*Soumission du formulaire
-form.addEventListener('submit', (e) => {
-	e.preventDefault();
-	const formData = new FormData(form);
-	const data = {};
-	for (let [name, value] of formData) {
-		data[name] = value;
-	}
-	console.log(data);
-}); */
+
+
+
+
+
+
+
+

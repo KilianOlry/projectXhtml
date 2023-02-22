@@ -281,86 +281,12 @@ footer .legale a {
   padding: 1rem;
 }
 
-/*Barre de progression */
-.step {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 15%;
+.main {
+  margin-top: 20%;
 }
-
-.container_step {
-  margin-top: 20rem;
-  max-width: 835px;
-  width: 100%;
-}
-.container_step .progress--bar {
-  display: flex;
-}
-.container_step .progress--bar li {
-  position: relative;
-  text-align: center;
-  color: var(--color-icons-transparent);
-  width: 100%;
-  font-weight: var(--bold-weight);
-}
-.container_step .progress--bar li::before {
-  content: counter(step);
-  counter-increment: step;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid var(--color-icons-transparent);
-  display: block;
-  text-align: center;
-  margin: 0 auto 10px auto;
-  border-radius: 50%;
-  background-color: white;
-  color: white;
-}
-.container_step .progress--bar li::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.2rem;
-  top: 25px;
-  left: -50%;
-  z-index: -1;
-  background: var(--color-icons-transparent);
-}
-.container_step .progress--bar li:first-child::after {
-  content: none;
-}
-.container_step .progress--bar li.active {
-  color: var(--color-orange);
-}
-.container_step .progress--bar li.active::before {
-  border-color: var(--color-orange);
-  background: var(--color-orange);
-  background-image: url(/asset/images/icons8-euro-50.png);
-}
-.container_step .progress--bar li.active + li::after {
-  background-color: var(--color-orange);
-}
-
-/*Bouton retour */
-@media (max-width: 1600px) {
-  .return {
-    display: none;
-  }
-}
-@media (max-width: 599px) {
-  .return {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 10%;
-    cursor: pointer;
-  }
-  .return #logo_return {
-    width: 40px;
-    height: 40px;
+@media (max-width: 400px) {
+  .main {
+    margin-top: 30%;
   }
 }
 
@@ -423,7 +349,7 @@ table .color_table {
   width: 100vw;
   flex-direction: column;
   /* Card formules only mobil */
-  /*Card Form */
+  /*Card minimal protect */
   /*Etapes */
 }
 .container_card .card_promo {
@@ -455,25 +381,27 @@ table .color_table {
   font-weight: var(--semi-bold);
 }
 .container_card .container_formules {
-  display: none;
-}
-@media (max-width: 768px) {
-  .container_card .container_formules {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 70px;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 70px;
+  cursor: pointer;
 }
 .container_card .container_formules .card_1,
 .container_card .container_formules .card_2 {
-  width: 25vw;
-  height: 15vh;
+  width: 18vw;
+  height: 12vh;
   border-radius: 0.5rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .container_card .container_formules .card_1,
+  .container_card .container_formules .card_2 {
+    width: 25vw;
+    height: 15vh;
+  }
 }
 .container_card .container_formules .card_1 #formule1,
 .container_card .container_formules .card_1 #formule2,
@@ -506,18 +434,19 @@ table .color_table {
 .container_card .card_form {
   margin-top: var(--hight-size2);
   width: 60vw;
-  height: 22vh;
+  height: 8vh;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 768px) {
   .container_card .card_form {
-    display: none;
+    height: 12vh;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .container_card .card_form {
     width: 90vw;
+    height: 12vh;
   }
 }
 .container_card p {
@@ -572,12 +501,6 @@ table .color_table {
   font-weight: var(--bold-weight);
   cursor: pointer;
 }
-@media (max-width: 320px) {
-  .form__btn {
-    margin: 2rem auto;
-    width: 20rem;
-  }
-}
 
 .form__btn2 {
   background: var(--color-blue);
@@ -586,15 +509,9 @@ table .color_table {
   width: 17rem;
   height: 2.5rem;
   margin: 5rem auto;
-  padding: 0.2rem;
   border-radius: var(--medium-size);
   font-weight: var(--bold-weight);
   cursor: pointer;
-}
-@media (max-width: 600px) {
-  .form__btn2 {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=formules.css.map */

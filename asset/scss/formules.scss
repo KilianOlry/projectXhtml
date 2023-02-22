@@ -3,91 +3,14 @@
 @import "footer";
 @import "mixins";
 
-/*Barre de progression */
 
-.step {
-  @include flex-jccenter;
-  width: 100%;
-  height: 15%;
-}
-
-.container_step {
-  margin-top: 20rem;
-  max-width: 835px;
-  width: 100%;
-
-  .progress--bar {
-    display: flex;
-
-    li {
-      position: relative;
-      text-align: center;
-      color: var(--color-icons-transparent);
-      width: 100%;
-      font-weight: var(--bold-weight);
-
-      &::before {
-        content: counter(step);
-        counter-increment: step;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        border: 1px solid var(--color-icons-transparent);
-        display: block;
-        text-align: center;
-        margin: 0 auto 10px auto;
-        border-radius: 50%;
-        background-color: white;
-        color: white;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 0.2rem;
-        top: 25px;
-        left: -50%;
-        z-index: -1;
-        background: var(--color-icons-transparent);
-      }
-
-      &:first-child::after {
-        content: none;
-      }
-
-      &.active {
-        color: var(--color-orange);
-        &::before {
-          border-color: var(--color-orange);
-          background: var(--color-orange);
-          background-image: url(/asset/images/icons8-euro-50.png);
-        }
-
-        + li::after {
-          background-color: var(--color-orange);
-        }
-      }
-    }
-  }
-}
 
 //Page formulaire //
 
-/*Bouton retour */
-.return {
-  @include desktop {
-    display: none;
-  }
-  @include for-size(all-smartphone) {
-    @include flex-jccenter-ai-center;
-    width: 100%;
-    margin-top: 10%;
-    cursor: pointer;
-
-    #logo_return {
-      width: 40px;
-      height: 40px;
-    }
+.main {
+  margin-top: 20%;
+  @include smartphone {
+    margin-top:30%;
   }
 }
 
@@ -179,9 +102,8 @@ table {
   /* Card formules only mobil */
 
   .container_formules {
-    display: none;
 
-    @include medium-tablette {
+  
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -189,14 +111,18 @@ table {
       width: 100%;
       margin-top: 70px;
       cursor: pointer;
-    }
+  
 
     .card_1,
     .card_2 {
-      width: 25vw;
-      height: 15vh;
+      width: 18vw;
+      height: 12vh;
       border-radius: 0.5rem;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      @include small-tablette {
+        width: 25vw;
+      height: 15vh;
+      }
 
       #formule1,
       #formule2 {
@@ -220,20 +146,24 @@ table {
     }
   }
 
-  /*Card Form */
+  /*Card minimal protect */
+
   .card_form {
     margin-top: var(--hight-size2);
     width: 60vw;
-    height: 22vh;
+    height: 8vh;
     border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
+
     @include medium-tablette {
-      display: none;
+      height:12vh;
     }
 
-    @include small-smartphone {
+    @include smartphone {
       width: 90vw;
+      height:12vh;
+      
     }
   }
   p {
@@ -286,10 +216,6 @@ table {
   border-radius: var(--medium-size);
   font-weight: var(--bold-weight);
   cursor: pointer;
-  @include small-smartphone {
-    margin: 2rem auto;
-    width: 20rem;
-  }
 }
 .form__btn2 {
   background: var(--color-blue);
@@ -298,13 +224,11 @@ table {
   width: 17rem;
   height: 2.5rem;
   margin: 5rem auto;
-  padding: 0.2rem;
+
   border-radius: var(--medium-size);
   font-weight: var(--bold-weight);
   cursor: pointer;
-  @include small-tablette {
-    display: none;
-  }
+
 }
 
 
