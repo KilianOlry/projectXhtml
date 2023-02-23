@@ -313,7 +313,7 @@ table td {
   text-align: center;
   padding: var(--smalling-size);
   font-size: var(--medium-size);
-  border-radius: 0.5rem;
+  border-radius: var(--smalling-size2);
   width: 33.3333333333%;
 }
 @media (max-width: 600px) {
@@ -338,7 +338,7 @@ table .color_table {
 .condition p {
   text-align: center;
   font-size: var(--smalling-size);
-  margin: 0.5rem;
+  margin: var(--smalling-size2);
 }
 
 /*Card Promo */
@@ -348,9 +348,8 @@ table .color_table {
   align-items: center;
   width: 100vw;
   flex-direction: column;
-  /* Card formules only mobil */
+  /* Card formules */
   /*Card minimal protect */
-  /*Etapes */
 }
 .container_card .card_promo {
   display: flex;
@@ -358,7 +357,7 @@ table .color_table {
   align-items: center;
   margin-top: var(--hight-size2);
   text-align: center;
-  padding: 20px;
+  padding: var(--medium-size);
   width: 60vw;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -393,7 +392,7 @@ table .color_table {
 .container_card .container_formules .card_2 {
   width: 18vw;
   height: 12vh;
-  border-radius: 0.5rem;
+  border-radius: var(--smalling-size2);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 600px) {
@@ -407,7 +406,7 @@ table .color_table {
 .container_card .container_formules .card_1 #formule2,
 .container_card .container_formules .card_2 #formule1,
 .container_card .container_formules .card_2 #formule2 {
-  font-size: 1rem;
+  font-size: var(--smalling-size);
   width: 100%;
   height: 100%;
   display: flex;
@@ -456,33 +455,12 @@ table .color_table {
   text-align: center;
   padding: var(--medium-size);
 }
-.container_card .radio_input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.container_card .radio_input .input1,
-.container_card .radio_input .input2 {
-  margin-top: 20px;
-}
-@media (max-width: 1024px) {
-  .container_card .radio_input .input1,
-  .container_card .radio_input .input2 {
-    margin-top: 10px;
-  }
-}
-.container_card .radio_input .input1 span,
-.container_card .radio_input .input2 span {
-  color: var(--color-blue);
-  font-weight: var(--bold-weight);
-}
 
 /*Bouton */
 .btn {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: var(--medium-size);
 }
 @media (max-width: 400px) {
   .btn {

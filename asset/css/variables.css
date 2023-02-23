@@ -28,6 +28,7 @@
   --small-size: 1.6rem;
   --smaller-size: 1.4rem;
   --smalling-size: 1.1rem;
+  --smalling-size2: 0.5rem;
   /* Font Weight */
   --thin-weight: thin;
   --extra-light: 200;
@@ -38,7 +39,7 @@
   --bold-weight: 700;
   --extra-bold: 800;
   /*Effect */
-  --next-btn-hover:#f39200;
+  --next-btn-hover: #f39200;
   --back-btn-hover: #8b8c8c;
 }
 

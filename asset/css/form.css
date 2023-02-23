@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*https://codepen.io/RajRajeshDn/pen/oNowJGJ*/
 * {
   margin: 0;
   padding: 0;
@@ -292,19 +291,20 @@ footer .legale a {
   align-items: center;
 }
 
+/*Card formulaire */
 .wrapper {
   width: 670px;
-  height: 760px;
+  height: 820px;
   max-width: 100%;
-  padding: 30px;
+  padding: var(--hight-size);
   background: var(--color-white);
   margin: 130px auto 0;
-  border-radius: 5px;
+  border-radius: var(--smalling-size2);
 }
 @media (max-width: 768px) {
   .wrapper {
     width: 595px;
-    height: 730px;
+    height: 800px;
   }
 }
 @media (max-width: 600px) {
@@ -320,6 +320,7 @@ footer .legale a {
   }
 }
 
+/*Progress bar*/
 .wrapper .header {
   margin-bottom: 40px;
   display: flex;
@@ -331,12 +332,12 @@ footer .legale a {
 }
 
 .wrapper .header ul li {
-  margin-right: 30px;
+  margin-right: var(--hight-size2);
   position: relative;
 }
 @media (max-width: 400px) {
   .wrapper .header ul li {
-    margin-right: 10px;
+    margin-right: var(--smalling-size2);
   }
 }
 
@@ -360,17 +361,17 @@ footer .legale a {
 }
 
 .wrapper .header ul li div {
-  padding: 5px;
+  padding: var(--smalling-size2);
   border-radius: 50%;
 }
 
 .wrapper .header ul li p {
-  width: 50px;
-  height: 50px;
+  width: var(--hight-size2);
+  height: var(--hight-size2);
   background: var(--color-forms);
   color: var(--color-white);
   text-align: center;
-  line-height: 50px;
+  line-height: var(--hight-size2);
   border-radius: 50%;
 }
 
@@ -390,7 +391,7 @@ footer .legale a {
   color: var(--color-blue);
   text-align: center;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: var(--semi-bold);
 }
 
 .wrapper .form_wrap .input_wrap {
@@ -399,15 +400,44 @@ footer .legale a {
   margin: 20px auto 20px;
 }
 
+.wrapper .form_wrap .input_wrap .input {
+  border: 2px solid var(--color-forms);
+  border-radius: var(--small-size);
+  padding: 6px;
+  display: block;
+  width: 100%;
+  font-size: var(--smaller-size);
+  transition: 0.5s ease;
+}
+
+.wrapper .form_wrap .input_wrap .input:focus {
+  border-color: var(--color-orange);
+}
+
+.wrapper .form_wrap .input_wrap label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wrapper .form_wrap .input_wrap:last-child {
+  margin-bottom: 0;
+}
+
 .wrapper .form_wrap .obligatory {
-  color: black;
-  font-size: 10px;
-  font-weight: 300;
+  color: var(--color-black);
+  font-size: var(--smalling-size);
+  font-weight: var(--light-weight);
   text-align: left;
-  margin-top: 10px;
+  margin-top: var(--smalling-size);
   text-transform: none;
 }
 
+span {
+  font-size: var(--smalling-size);
+  color: red;
+}
+
+/* Input choice */
 .radio_input {
   width: 100%;
   max-width: 100%;
@@ -434,44 +464,13 @@ footer .legale a {
   font-weight: var(--bold-weight);
 }
 
-.wrapper .form_wrap .input_wrap:last-child {
-  margin-bottom: 0;
-}
-
-.wrapper .form_wrap .input_wrap label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-span {
-  font-size: 12px;
-  color: red;
-}
-
-p {
-  font-weight: lighter;
-}
-
-.wrapper .form_wrap .input_wrap .input {
-  border: 2px solid var(--color-forms);
-  border-radius: 15px;
-  padding: 6px;
-  display: block;
-  width: 100%;
-  font-size: 13px;
-  transition: 0.5s ease;
-}
-
-.wrapper .form_wrap .input_wrap .input:focus {
-  border-color: var(--color-orange);
-}
-
+/* Btn choice */
 .wrapper .form_wrap .input_check {
   display: flex;
   justify-content: space-between;
-  align-self: center;
+  align-items: center;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: var(--hight-size);
 }
 @media (max-width: 600px) {
   .wrapper .form_wrap .input_check {
@@ -485,19 +484,19 @@ p {
 .btn3 {
   background: var(--color-white);
   border: 2px solid var(--color-forms);
-  border-radius: 15px;
+  border-radius: var(--small-size);
   padding: 6px;
   display: block;
-  font-size: 13px;
+  font-size: var(--smaller-size);
   transition: 0.5s ease;
-  margin-top: 10px;
+  margin-top: var(--smalling-size);
 }
 
 .wrapper .form_wrap .input_check .btn1:hover,
 .btn2:hover,
 .btn3:hover {
   background: var(--color-blue);
-  color: white;
+  color: var(--color-white);
 }
 
 .wrapper .form_wrap .input_wrap2 {
@@ -506,7 +505,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: var(--hight-size2);
 }
 
 .wrapper .form_wrap .input_wrap2 .content_wrap {
@@ -519,22 +518,23 @@ p {
 
 .wrapper .form_wrap .input_wrap2 .content_wrap .input {
   border: 2px solid var(--color-forms);
-  border-radius: 15px;
+  border-radius: var(--small-size);
   padding: 6px;
   display: block;
-  font-size: 13px;
+  font-size: var(--smaller-size);
   transition: 0.5s ease;
-  margin-top: 20px;
+  margin-top: var(--medium-size);
 }
 
+/*Container upload */
 .container_upload {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: var(--hight-size2);
 }
 @media (max-width: 768px) {
   .container_upload {
-    margin-top: 30px;
+    margin-top: var(--hight-size);
   }
 }
 @media (max-width: 600px) {
@@ -545,18 +545,18 @@ p {
 }
 
 .select_upload {
-  margin-top: 10px;
+  margin-top: var(--smalling-size);
   height: 100px;
 }
 
 .upload-box {
-  font-size: 11px;
+  font-size: var(--smalling-size);
   background: var(--color-white);
-  border-radius: 50px;
+  border-radius: var(--hight-size2);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.368);
   width: 180px;
   outline: none;
-  margin-top: 15px;
+  margin-top: var(--small-size);
 }
 
 ::-webkit-file-upload-button {
@@ -564,11 +564,12 @@ p {
   background: rgba(10, 24, 17, 0.421);
   padding: 8px;
   border: none;
-  border-radius: 50px;
+  border-radius: var(--hight-size2);
   box-shadow: 1px 0 1px 1px;
   cursor: pointer;
 }
 
+/*Final Card */
 .card {
   width: 100%;
   height: 100%;
@@ -579,7 +580,7 @@ p {
 
 .card-content {
   max-height: 500px;
-  padding: 20px;
+  padding: var(--medium-size);
   box-sizing: border-box;
   overflow-y: scroll; /* affiche une barre de défilement verticale */
   scroll-behavior: smooth;
@@ -603,23 +604,23 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: var(--biggest-size);
 }
 
 .img_firm {
   width: 580px;
   height: 150px;
-  margin-top: 30px;
+  margin-top: var(--hight-size);
 }
 
 .content_download .container p {
-  margin-right: 15px;
-  font-size: 12px;
+  margin-right: var(--small-size);
+  font-size: var(--smalling-size);
   color: var(--color-black);
 }
 
 .content_download .container .logo_download {
-  margin-top: 50px;
+  margin-top: var(--hight-size2);
   width: 35px;
   height: 35px;
 }
@@ -629,10 +630,20 @@ p {
   height: 60px;
   margin-top: 60px;
 }
+@media (max-width: 768px) {
+  .content_download .container .scroll_down {
+    margin-top: var(--hight-size);
+  }
+}
+@media (max-width: 320px) {
+  .content_download .container .scroll_down {
+    margin-top: 0;
+  }
+}
 
 .container_final .text_content {
-  font-size: 12px;
-  padding: 12px;
+  font-size: var(--smalling-size);
+  padding: var(--smalling-size);
 }
 
 .container_final .text_content p {
@@ -643,7 +654,7 @@ p {
 .container_final .text_content .container ul li {
   text-align: justify;
   list-style: disc;
-  margin-top: 30px;
+  margin-top: var(--hight-size);
 }
 
 .input_checkbox {
@@ -655,9 +666,9 @@ p {
 }
 
 .input_checkbox .container {
-  margin-right: 20px;
+  margin-right: var(--medium-size);
   font-weight: bold;
-  font-size: 12px;
+  font-size: var(--smalling-size);
 }
 
 .container_final .text_content .container .scroll_up {
@@ -666,6 +677,7 @@ p {
   transform: rotate(180deg);
 }
 
+/* Buttons */
 .wrapper .btns_wrap .common_btns {
   display: flex;
   justify-content: space-around;
@@ -677,7 +689,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: var(--hight-size);
   }
 }
 
@@ -685,7 +697,7 @@ p {
   border: none;
   letter-spacing: 1px;
   width: 17rem;
-  height: 2.5rem;
+  height: var(--biggest-size);
   border-radius: var(--medium-size);
   font-weight: var(--bold-weight);
   cursor: pointer;
@@ -696,7 +708,7 @@ p {
 }
 @media (max-width: 600px) {
   .wrapper .btns_wrap .common_btns button {
-    margin-top: 20px;
+    margin-top: var(--medium-size);
   }
 }
 
@@ -721,6 +733,7 @@ p {
   transform: translateY(-4px);
 }
 
+/*Modal page final */
 .modal_wrapper {
   position: fixed;
   top: 0;
@@ -747,7 +760,7 @@ p {
   left: 50%;
   transform: translate(-50%, -800px);
   background: var(--color-white);
-  padding: 30px;
+  padding: var(--hight-size);
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -761,9 +774,9 @@ p {
 }
 
 .modal_wrapper .success_wrap .modal_icon {
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
+  margin-right: var(--medium-size);
+  width: var(--hight-size);
+  height: var(--hight-size);
   background: var(--color-orange);
   color: var(--color-white);
   border-radius: 50%;

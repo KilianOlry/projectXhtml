@@ -36,33 +36,6 @@
   }
 }
 
-
-
-
-@mixin for-size($size) {
-  @if $size == all-smartphone {
-    @media (max-width: 599px) {
-      @content;
-    }
-  } @else if $size == small-tablette {
-    @media (min-width: 600px) {
-      @content;
-    }
-  } @else if $size == medium-tablette {
-    @media (min-width: 768px) {
-      @content;
-    }
-  } @else if $size == tablette {
-    @media (min-width: 1024px) {
-      @content;
-    }
-  } @else if $size == desktop {
-    @media (min-width: 1800px) {
-      @content;
-    }
-  }
-}
-
 //ALIGNEMENT
 @mixin flex-jccenter-ai-center {
   display: flex;
@@ -78,15 +51,40 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin flex-jcaround-ai-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-jcevenly-ai-center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 @mixin flex-ai-center {
   display: flex;
   align-items: center;
+}
+
+@mixin flex-jcaround {
+  display: flex;
+  justify-content: space-around;
 }
 
 @mixin flex-ai-flex-start-jc-center-direction-column {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin flex-ai-center-jc-center-direction-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 

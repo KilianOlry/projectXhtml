@@ -3,8 +3,6 @@
 @import "footer";
 @import "mixins";
 
-
-
 //Page formulaire //
 
 .main {
@@ -38,11 +36,9 @@ table {
     text-align: center;
     padding: var(--smalling-size);
     font-size: var(--medium-size);
-    border-radius: 0.5rem;
+    border-radius: var(--smalling-size2);
     width: calc(100% / 3);
-    @include small-smartphone {
-    }
-
+ 
     @include small-tablette {
       font-size: var(--smaller-size);
     }
@@ -63,16 +59,14 @@ table {
   p {
     text-align: center;
     font-size: var(--smalling-size);
-    margin: 0.5rem;
+    margin: var(--smalling-size2);
   }
 }
 
 /*Card Promo */
 
 .container_card {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include flex-jcevenly-ai-center;
   width: 100vw;
   flex-direction: column;
 
@@ -80,7 +74,7 @@ table {
     @include flex-jccenter-ai-center;
     margin-top: var(--hight-size2);
     text-align: center;
-    padding: 20px;
+    padding: var(--medium-size);
     width: 60vw;
     border-radius: 0.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -99,14 +93,10 @@ table {
     }
   }
 
-  /* Card formules only mobil */
+  /* Card formules */
 
   .container_formules {
-
-  
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+      @include flex-jcevenly-ai-center;
       flex-direction: row;
       width: 100%;
       margin-top: 70px;
@@ -117,7 +107,7 @@ table {
     .card_2 {
       width: 18vw;
       height: 12vh;
-      border-radius: 0.5rem;
+      border-radius: var(--smalling-size2);
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
       @include small-tablette {
         width: 25vw;
@@ -126,7 +116,7 @@ table {
 
       #formule1,
       #formule2 {
-        font-size: 1rem;
+        font-size: var(--smalling-size);
         width: 100%;
         height: 100%;
         @include flex-jccenter-ai-center;
@@ -147,7 +137,6 @@ table {
   }
 
   /*Card minimal protect */
-
   .card_form {
     margin-top: var(--hight-size2);
     width: 60vw;
@@ -173,34 +162,13 @@ table {
     text-align: center;
     padding: var(--medium-size);
   }
-
-  /*Etapes */
-
-  .radio_input {
-    @include flex-jccenter-ai-center;
-    flex-direction: column;
-    .input1,
-    .input2 {
-      margin-top: 20px;
-      @include tablette {
-        margin-top: 10px;
-      }
-    }
-
-    .input1 span,
-    .input2 span {
-      color: var(--color-blue);
-      font-weight: var(--bold-weight);
-    }
-  }
 }
 
 /*Bouton */
 
 .btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+ @include flex-jccenter;
+  margin-top: var(--medium-size);
   @include smartphone {
     flex-direction: column-reverse;
   }
@@ -224,7 +192,6 @@ table {
   width: 17rem;
   height: 2.5rem;
   margin: 5rem auto;
-
   border-radius: var(--medium-size);
   font-weight: var(--bold-weight);
   cursor: pointer;
