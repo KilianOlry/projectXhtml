@@ -35,6 +35,7 @@
   }
 }
 
+
 /*Progress bar*/
 
 .wrapper .header {
@@ -166,18 +167,20 @@ span {
   .input1,
   .input2 {
     margin: 20px 20px;
-  }
+  
 
-  .input1 span,
-  .input2 span {
+   span {
     color: var(--color-blue);
     font-weight: var(--bold-weight);
   }
 }
+}
 
 /* Btn choice */
 
-.wrapper .form_wrap .input_check {
+.wrapper {
+.form_wrap {
+.input_check {
   @include flex-jcbetween-ai-center;
   flex-direction: row;
   margin-top: var(--hight-size);
@@ -187,7 +190,7 @@ span {
   }
 }
 
-.wrapper .form_wrap .input_check .btn1,
+.btn1,
 .btn2,
 .btn3 {
   background: var(--color-white);
@@ -200,26 +203,26 @@ span {
   margin-top: var(--smalling-size);
 }
 
-.wrapper .form_wrap .input_check .btn1:hover,
+.btn1:hover,
 .btn2:hover,
 .btn3:hover {
   background: var(--color-blue);
   color: var(--color-white);
 }
 
-.wrapper .form_wrap .input_wrap2 {
+ .input_wrap2 {
   width: 100%;
   @include flex-jccenter-ai-center;
   text-align: center;
   margin-top: var(--hight-size2);
-}
 
-.wrapper .form_wrap .input_wrap2 .content_wrap {
+
+.content_wrap {
   @include flex-jcaround-ai-center;
   flex-direction: column;
   width: 100%;
-}
-.wrapper .form_wrap .input_wrap2 .content_wrap .input {
+
+ .input {
   border: 2px solid var(--color-forms);
   border-radius: var(--small-size);
   padding: 6px;
@@ -228,7 +231,10 @@ span {
   transition: 0.5s ease;
   margin-top: var(--medium-size);
 }
-
+}
+ }
+}
+}
 /*Container upload */
 
 .container_upload {
@@ -243,14 +249,16 @@ span {
     flex-direction: column;
     align-items: center;
   }
-}
 
-.select_upload {
+
+ .select_upload {
   margin-top: var(--smalling-size);
   height: 100px;
-}
+ }
 
-.upload-box {
+
+
+ .upload-box {
   font-size: var(--smalling-size);
   background: var(--color-white);
   border-radius: var(--hight-size2);
@@ -259,6 +267,8 @@ span {
   outline: none;
   margin-top: var(--small-size);
 }
+ }
+
 
 ::-webkit-file-upload-button {
   color: var(--color-white);
@@ -369,17 +379,20 @@ span {
 
 /* Buttons */
 
-.wrapper .btns_wrap .common_btns {
+.wrapper {
+.btns_wrap {
+ .common_btns {
   @include flex-jcaround;
   margin-top: 100px;
+
   @include small-tablette {
     @include flex-jccenter-ai-center;
     flex-direction: column;
     margin-top: var(--hight-size);
   }
-}
 
-.wrapper .btns_wrap .common_btns button {
+
+ button {
   border: none;
   letter-spacing: 1px;
   width: 17rem;
@@ -391,30 +404,30 @@ span {
   color: var(--color-white);
   transition: all 0.3s ease 0s;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
   @include small-tablette {
     margin-top: var(--medium-size);
   }
-}
 
-.wrapper .btns_wrap .common_btns button.btn_back {
+  &.btn_back, &.btn_back2  {
   background-color: var(--color-blue);
 }
 
-.wrapper .btns_wrap .common_btns button.btn_back2 {
-  background-color: var(--color-blue);
-}
 
-.wrapper .btns_wrap .common_btns button.btn_next:hover,
-.wrapper .btns_wrap .common_btns button.btn_done:hover {
+&.btn_next:hover, &.btn_done:hover {
   background: var(--next-btn-hover);
   box-shadow: 0px 5px 10px var(--color-yellow);
   transform: translateY(-4px);
 }
 
-.wrapper .btns_wrap .common_btns button.btn_back:hover {
+&.btn_back:hover {
   background: var(--back-btn-hover);
   box-shadow: 0px 5px 10px var(--back-btn-hover);
   transform: translateY(-4px);
+}
+ }
+}
+}
 }
 
 /*Modal page final */
@@ -426,9 +439,10 @@ span {
   width: 100%;
   height: 100%;
   visibility: hidden;
-}
+ 
 
-.modal_wrapper .shadow {
+
+.shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -439,7 +453,7 @@ span {
   transition: 0.2s ease;
 }
 
-.modal_wrapper .success_wrap {
+ .success_wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -449,13 +463,9 @@ span {
   @include flex-ai-center;
   border-radius: 5px;
   transition: 0.5s ease;
-  @include small-smartphone {
-    width: 290px;
-    height: 160px;
-  }
-}
 
-.modal_wrapper .success_wrap .modal_icon {
+
+.modal_icon {
   margin-right: var(--medium-size);
   width: var(--hight-size);
   height: var(--hight-size);
@@ -467,19 +477,28 @@ span {
   font-weight: 700;
 }
 
-.modal_wrapper .success_wrap p {
+ p {
   width: 200px;
   height: 100px;
 }
 
-.modal_wrapper.active {
-  visibility: visible;
+@include small-smartphone {
+  width: 290px;
+  height: 195px;
+}
 }
 
-.modal_wrapper.active .shadow {
+&.active {
+  visibility: visible;
+
+
+ .shadow {
   opacity: 1;
 }
 
-.modal_wrapper.active .success_wrap {
+ .success_wrap {
   transform: translate(-50%, -50%);
 }
+}
+ }
+

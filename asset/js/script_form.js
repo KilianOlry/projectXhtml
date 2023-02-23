@@ -1,7 +1,6 @@
 /* Form with progressBar à modifier avec boucle */ 
 
 
-
 var form_1 = document.querySelector(".form_1");
 var form_2 = document.querySelector(".form_2");
 var form_3 = document.querySelector(".form_3");

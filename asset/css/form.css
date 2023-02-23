@@ -478,10 +478,9 @@ span {
     margin-top: 1px;
   }
 }
-
-.wrapper .form_wrap .input_check .btn1,
-.btn2,
-.btn3 {
+.wrapper .form_wrap .btn1,
+.wrapper .form_wrap .btn2,
+.wrapper .form_wrap .btn3 {
   background: var(--color-white);
   border: 2px solid var(--color-forms);
   border-radius: var(--small-size);
@@ -491,14 +490,12 @@ span {
   transition: 0.5s ease;
   margin-top: var(--smalling-size);
 }
-
-.wrapper .form_wrap .input_check .btn1:hover,
-.btn2:hover,
-.btn3:hover {
+.wrapper .form_wrap .btn1:hover,
+.wrapper .form_wrap .btn2:hover,
+.wrapper .form_wrap .btn3:hover {
   background: var(--color-blue);
   color: var(--color-white);
 }
-
 .wrapper .form_wrap .input_wrap2 {
   width: 100%;
   display: flex;
@@ -507,7 +504,6 @@ span {
   text-align: center;
   margin-top: var(--hight-size2);
 }
-
 .wrapper .form_wrap .input_wrap2 .content_wrap {
   display: flex;
   justify-content: space-around;
@@ -515,7 +511,6 @@ span {
   flex-direction: column;
   width: 100%;
 }
-
 .wrapper .form_wrap .input_wrap2 .content_wrap .input {
   border: 2px solid var(--color-forms);
   border-radius: var(--small-size);
@@ -543,13 +538,11 @@ span {
     align-items: center;
   }
 }
-
-.select_upload {
+.container_upload .select_upload {
   margin-top: var(--smalling-size);
   height: 100px;
 }
-
-.upload-box {
+.container_upload .upload-box {
   font-size: var(--smalling-size);
   background: var(--color-white);
   border-radius: var(--hight-size2);
@@ -692,7 +685,6 @@ span {
     margin-top: var(--hight-size);
   }
 }
-
 .wrapper .btns_wrap .common_btns button {
   border: none;
   letter-spacing: 1px;
@@ -711,22 +703,14 @@ span {
     margin-top: var(--medium-size);
   }
 }
-
-.wrapper .btns_wrap .common_btns button.btn_back {
+.wrapper .btns_wrap .common_btns button.btn_back, .wrapper .btns_wrap .common_btns button.btn_back2 {
   background-color: var(--color-blue);
 }
-
-.wrapper .btns_wrap .common_btns button.btn_back2 {
-  background-color: var(--color-blue);
-}
-
-.wrapper .btns_wrap .common_btns button.btn_next:hover,
-.wrapper .btns_wrap .common_btns button.btn_done:hover {
+.wrapper .btns_wrap .common_btns button.btn_next:hover, .wrapper .btns_wrap .common_btns button.btn_done:hover {
   background: var(--next-btn-hover);
   box-shadow: 0px 5px 10px var(--color-yellow);
   transform: translateY(-4px);
 }
-
 .wrapper .btns_wrap .common_btns button.btn_back:hover {
   background: var(--back-btn-hover);
   box-shadow: 0px 5px 10px var(--back-btn-hover);
@@ -742,7 +726,6 @@ span {
   height: 100%;
   visibility: hidden;
 }
-
 .modal_wrapper .shadow {
   position: absolute;
   top: 0;
@@ -753,7 +736,6 @@ span {
   opacity: 0;
   transition: 0.2s ease;
 }
-
 .modal_wrapper .success_wrap {
   position: absolute;
   top: 50%;
@@ -766,13 +748,6 @@ span {
   border-radius: 5px;
   transition: 0.5s ease;
 }
-@media (max-width: 320px) {
-  .modal_wrapper .success_wrap {
-    width: 290px;
-    height: 160px;
-  }
-}
-
 .modal_wrapper .success_wrap .modal_icon {
   margin-right: var(--medium-size);
   width: var(--hight-size);
@@ -786,20 +761,22 @@ span {
   font-size: 32px;
   font-weight: 700;
 }
-
 .modal_wrapper .success_wrap p {
   width: 200px;
   height: 100px;
 }
-
+@media (max-width: 320px) {
+  .modal_wrapper .success_wrap {
+    width: 290px;
+    height: 195px;
+  }
+}
 .modal_wrapper.active {
   visibility: visible;
 }
-
 .modal_wrapper.active .shadow {
   opacity: 1;
 }
-
 .modal_wrapper.active .success_wrap {
   transform: translate(-50%, -50%);
 }
