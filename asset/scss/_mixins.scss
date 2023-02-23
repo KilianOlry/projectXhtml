@@ -12,6 +12,7 @@
   }
 }
 
+
 @mixin small-tablette {
   @media (max-width: 600px) {
     @content;
@@ -20,6 +21,10 @@
 
 @mixin medium-tablette {
   @media (max-width: 768px) {
+
+@mixin small-smartphone {
+  @media (max-width: 320px) {
+
     @content;
   }
 }
@@ -30,8 +35,13 @@
   }
 }
 
+
 @mixin desktop {
   @media (max-width: 1600px) {
+
+@mixin large-tablette {
+  @media (max-width: 1440px) {
+
     @content;
   }
 }
@@ -42,15 +52,24 @@
   justify-content: center;
   align-items: center;
 }
+
+
+
+
 @mixin flex-jccenter {
   display: flex;
   justify-content: center;
 }
+
+
+
+
 @mixin flex-jcbetween-ai-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 @mixin flex-jcaround-ai-center {
   display: flex;
@@ -64,6 +83,7 @@
   align-items: center;
 }
 
+
 @mixin flex-ai-center {
   display: flex;
   align-items: center;
@@ -72,6 +92,11 @@
 @mixin flex-jcaround {
   display: flex;
   justify-content: space-around;
+
+@mixin flex-ai-start {
+  display: flex;
+  align-items: start;
+
 }
 
 @mixin flex-ai-flex-start-jc-center-direction-column {
@@ -81,12 +106,14 @@
   flex-direction: column;
 }
 
+
 @mixin flex-ai-center-jc-center-direction-column {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 
 //BTN
 @mixin btn_forms {

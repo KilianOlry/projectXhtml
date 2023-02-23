@@ -9,6 +9,7 @@
   --color-forms: #d2d2d2;
   --color-red: #d71818;
   --color-white: #ffff;
+
   --color-black: black;
   --color-blue-transparent: #0e4d9113;
   --color-icons-transparent: #50505026;
@@ -21,12 +22,23 @@
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.944);
   --border-radius-carousel-btn: 3px 0 0 3px;
 
+
+  // box
+  --border-radius: 7px;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --border-radius-carousel-btn: 3px 0 0 3px;
+  --border-radius-input: 4px;
+
+
   /* Font */
 
   --font-family: "Open Sans", sans-serif;
 
   /* Font Size */
+
   --hight-size2: 5rem;
+
+
   --hight-size: 3rem;
   --biggest-size: 2.6rem;
   --big-size: 2.4rem;
@@ -35,6 +47,7 @@
   --small-size: 1.6rem;
   --smaller-size: 1.4rem;
   --smalling-size: 1.1rem;
+
   --smalling-size2: 0.5rem;
 
   /* Font Weight */
@@ -52,4 +65,6 @@
 
   --next-btn-hover: #f39200;
   --back-btn-hover: #8b8c8c;
+=======
+
 }
