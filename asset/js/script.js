@@ -45,7 +45,7 @@ toggleMenu();
 
 
 /*Caroussel infoGlobale */
-=======
+
 
 /*Card formules et garantie */
 
@@ -55,19 +55,47 @@ const card2 = document.querySelector('.card_2');
 const text = document.getElementById('formule1');
 const text2 = document.getElementById('formule2');
 
-card1.addEventListener('click', function() {
-    card1.style.backgroundColor = 'var(--color-blue-transparent)';
-    text.style.color = 'var(--color-yellow)';
-    card2.style.backgroundColor = "white";
-    text2.style.color = "var(--color-blue)";
+card1.addEventListener('click', function () {
+  card1.style.backgroundColor = 'var(--color-blue-transparent)';
+  text.style.color = 'var(--color-yellow)';
+  card2.style.backgroundColor = "white";
+  text2.style.color = "var(--color-blue)";
 });
 
-  card2.addEventListener('click', function() {
-    card1.style.backgroundColor = "white";
-    text.style.color = "var(--color-blue)";
-      card2.style.backgroundColor = 'var(--color-blue-transparent)';
-      text2.style.color = 'var(--color-yellow)';
-  });
+card2.addEventListener('click', function () {
+  card1.style.backgroundColor = "white";
+  text.style.color = "var(--color-blue)";
+  card2.style.backgroundColor = 'var(--color-blue-transparent)';
+  text2.style.color = 'var(--color-yellow)';
+});
+
+
+function openOverlay() {
+  document.getElementById("overlay").style.visibility = "visible";
+}
+
+
+function openOverlayWarning() {
+  document.getElementById("overlay_warning").style.visibility = "visible";
+}
+function openOverlayCross() {
+  document.getElementById("overlay_cross").style.visibility = "visible";
+}
+function openOverlayGlobe() {
+  document.getElementById("overlay_globe").style.visibility = "visible";
+}
+function openOverlayHand() {
+  document.getElementById("overlay_hand").style.visibility = "visible";
+}
+function openOverlayResiliation() {
+  document.getElementById("overlay_resiliation").style.visibility = "visible";
+}
+function openOverlayTime() {
+  document.getElementById("overlay_time").style.visibility = "visible";
+}
+function openOverlayMoney() {
+  document.getElementById("overlay_money").style.visibility = "visible";
+}
 
 
 

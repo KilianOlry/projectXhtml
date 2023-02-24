@@ -257,8 +257,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: auto;
-  height: auto;
 }
 .main .container .title h1 {
   text-align: center;
@@ -268,8 +266,8 @@ body {
 }
 .main .container .container_infos {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: 4rem;
   box-shadow: var(--box-shadow);
   background-color: var(--color-white);

@@ -21,13 +21,11 @@
 
 @mixin medium-tablette {
   @media (max-width: 768px) {
-
-@mixin small-smartphone {
-  @media (max-width: 320px) {
-
     @content;
   }
 }
+
+
 
 @mixin tablette {
   @media (max-width: 1024px) {
@@ -37,7 +35,8 @@
 
 
 @mixin desktop {
-  @media (max-width: 1600px) {
+  @media (max-width: 1600px) {}
+}
 
 @mixin large-tablette {
   @media (max-width: 1440px) {
@@ -48,37 +47,50 @@
 
 //ALIGNEMENT
 
-@mixin flex-jccenter-ai-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex-jccenter-ai-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@mixin flex-jccenter{
-    display: flex;
-    justify-content: center;
+
+@mixin flex-jccenter {
+  display: flex;
+  justify-content: center;
 }
-@mixin flex-jcbetween-ai-center{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+@mixin flex-jcbetween-ai-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@mixin flex-ai-center{
-    display: flex;
-    align-items: center;
+
+@mixin flex-ai-center {
+  display: flex;
+  align-items: center;
 }
 
 //BUTTON
 
 @mixin button {
-    background-color: var(--color-blue);
-    width: 150px;
-    height: 30px;
-    margin: 50px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: var(--box-shadow);
+  background-color: var(--color-blue);
+  width: 150px;
+  height: 30px;
+  margin: 50px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: var(--box-shadow);
 }
-=======
+
+@mixin button {
+  background-color: var(--color-blue);
+  width: 150px;
+  height: 30px;
+  margin: 50px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
 @mixin flex-jccenter-ai-center {
   display: flex;
   justify-content: center;
@@ -124,6 +136,7 @@
 @mixin flex-jcaround {
   display: flex;
   justify-content: space-around;
+}
 
 @mixin flex-ai-start {
   display: flex;
@@ -156,4 +169,3 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
