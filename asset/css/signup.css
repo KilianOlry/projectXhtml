@@ -234,93 +234,103 @@ p {
     z-index: 1;
   }
 }
-footer {
-  background: var(--color-yellow);
-  margin-top: 5rem;
-}
-footer .social {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem 0;
-}
-footer .social .st3 {
-  fill: var(--color-white);
-}
-footer .container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 5rem;
-}
-@media (max-width: 400px) {
-  footer .container {
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-  }
-  footer .container div {
-    margin: 2rem;
-  }
-}
-footer ul li {
-  margin: 1.2rem 0;
-  font-size: var(--small-size);
-}
-footer ul li a {
-  color: var(--color-white);
-}
-footer .legale,
-footer .legale a {
-  text-align: center;
-  background: var(--color-white);
-  color: var(--color-blue);
-  font-size: var(--small-size);
-  padding: 1rem;
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 .main {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.main .container_mentions {
-  padding-top: 20rem;
-}
-.main .container_mentions h2 {
-  font-size: var(--big-size);
-  margin: 2rem 0;
-}
-.main .content {
-  margin: 2rem 0;
+  background: url(/asset/images/banniere.png);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.main h3 {
-  margin: 2rem 0;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-}
-.main h3::before {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 1px;
-  background-color: var(--color-blue);
-}
-.main h3::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 1px;
-  background-color: var(--color-blue);
-}
-.main ul {
-  font-size: var(--smaller-size);
-  padding: 0rem 1rem;
+  padding-top: 15rem;
+  height: 100%;
 }
 
-/*# sourceMappingURL=mention_legales.css.map */
+.container {
+  background-color: var(--color-forms);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: var(--border-radius-input);
+  box-shadow: var(--box-shadow);
+}
+.container h2 {
+  font-size: var(--normal-size);
+  text-align: center;
+  display: flex;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  color: black;
+}
+.container .first,
+.container .second {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  .container .first,
+  .container .second {
+    flex-direction: column;
+  }
+}
+.container .first .prenom,
+.container .first .nom,
+.container .first .tel,
+.container .first .date,
+.container .second .prenom,
+.container .second .nom,
+.container .second .tel,
+.container .second .date {
+  width: 40%;
+}
+@media (max-width: 400px) {
+  .container .first .prenom,
+  .container .first .nom,
+  .container .first .tel,
+  .container .first .date,
+  .container .second .prenom,
+  .container .second .nom,
+  .container .second .tel,
+  .container .second .date {
+    width: 100%;
+  }
+}
+.container .formulaire {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.container .formulaire input {
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius-input);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+.container .formulaire input::placeholder {
+  padding-left: 1rem;
+}
+.container .formulaire label {
+  font-size: var(--smaller-size);
+}
+.container input[type=submit] {
+  margin: 2rem 0;
+  width: auto;
+  padding: 1rem 0.5rem;
+  font-size: var(--smaller-size);
+  border: none;
+  border-radius: var(--border-radius-input);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/*# sourceMappingURL=signup.css.map */

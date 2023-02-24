@@ -1,0 +1,239 @@
+@import "reset";
+@import "header";
+@import "footer";
+@import "mixins";
+
+
+//Page formulaire //
+.main {
+  margin-top: 20%;
+  @include smartphone {
+    margin-top:30%;
+  }
+}
+
+.titre {
+  text-align: center;
+}
+
+/*Tableau */
+
+table {
+
+  width: 60vw;
+  @include small-smartphone {
+    width: 90vw;
+  }
+  tr {
+    th {
+      background-color: var(--color-yellow);
+      text-align: center;
+      color: var(--color-white);
+    }
+  }
+
+  th,
+  td {
+    text-align: center;
+    padding: var(--smalling-size);
+    font-size: var(--medium-size);
+    font-weight: var(--bold-weight);
+    border-radius: var(--smalling-size2);
+    width: calc(100% / 3);
+    background: var(--color-yellow-transparent);
+
+    @include small-tablette {
+      font-size: var(--smaller-size);
+    }
+
+    @include tablette {
+      font-size: var(--smalling-size);
+    }
+  }
+  td {
+    height: 10vh;
+  }
+}
+.condition {
+  p {
+    text-align: center;
+    font-size: var(--smalling-size);
+    margin: var(--smalling-size2);
+  }
+}
+
+/*Card Promo */
+
+.container_card {
+  @include flex-jcevenly-ai-center;
+  width: 100vw;
+  flex-direction: column;
+
+  .card_promo {
+    @include flex-jccenter-ai-center;
+    margin-top: var(--hight-size2);
+    text-align: center;
+    padding: var(--medium-size);
+    width: 60vw;
+    height: 15vh;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @include medium-tablette {
+      width: 60vw;
+    }
+    @include smartphone {
+      width: 85vw;
+      height: 15vh;
+    }
+    h4 {
+      color: red;
+      text-decoration: none;
+      font-size: var(--light-weight);
+      font-weight: var(--semi-bold);
+    }
+  }
+
+  /*Card Police */
+
+  .card_promo_police {
+    margin-top: var(--hight-size2);
+    text-align: center;
+    width: 60vw;
+    height: 25vh;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @include tablette {
+    height:20vh;
+    }
+    @include medium-tablette {
+      height: 20vh;
+    }
+    @include smartphone {
+      width: 85vw;
+      height: 18vh;
+    }
+
+    .img_police {
+      max-width: 100%;
+      height: auto;
+    }
+    h4 {
+      padding: var(--smalling-size2);
+      margin-top: 2px;
+      color: var(--color-black);
+      text-decoration: none;
+      font-size: var(--light-weight);
+      font-weight: var(--semi-bold);
+    }
+  }
+
+  /* Card formules  */
+  .container_formules {
+    @include flex-jcevenly-ai-center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 70px;
+    cursor: pointer;
+
+
+    .card_1,
+    .card_2 {
+      width: 25vw;
+      height: 15vh;
+      border-radius: var(--smalling-size2);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      @include small-tablette {
+        width: 25vw;
+      height: 15vh;
+      }
+
+      #formule1,
+      #formule2 {
+        font-size: var(--smalling-size);
+        width: 100%;
+        height: 100%;
+        @include flex-jccenter-ai-center;
+        text-align: center;
+        color: var(--color-blue);
+        font-weight: var(--bold-weight);
+      }
+
+      @include small-tablette {
+        width: 35vw;
+        height: 15vh;
+      }
+      @include small-smartphone {
+        width: 38vw;
+        height: 12vh;
+      }
+    }
+  }
+
+  /*Card protect max */
+
+  .card_form {
+    margin-top: var(--hight-size2);
+    width: 60vw;
+    height: 8vh;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+    @include medium-tablette {
+     height:12vh;
+    }
+
+    @include smartphone {
+      width: 90vw;
+      height:12vh;
+    }
+  }
+  p {
+    color: var(--color-blue);
+    font-weight: var(--semi-bold);
+    font-size: var(--smaller-size);
+    text-align: center;
+    padding: var(--medium-size);
+  }
+}
+
+
+/*Bouton */
+
+
+.btn {
+  @include flex-jccenter;
+   margin-top: var(--medium-size);
+   @include smartphone {
+     flex-direction: column-reverse;
+   }
+ }
+
+.form__btn {
+  background: var(--color-orange);
+  color: #fff;
+  border: none;
+  width: 17rem;
+  height: 2.5rem;
+  margin: 5rem auto;
+  border-radius: var(--medium-size);
+  font-weight: var(--bold-weight);
+  cursor: pointer;
+
+}
+.form__btn2 {
+  background: var(--color-blue);
+  color: #fff;
+  border: none;
+  width: 17rem;
+  height: 2.5rem;
+  margin: 5rem auto;
+  padding: 0.2rem;
+  border-radius: var(--medium-size);
+  font-weight: var(--bold-weight);
+  cursor: pointer;
+
+}
+
+
+

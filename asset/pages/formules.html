@@ -7,16 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" href="asset/css/variables.css">
-    <link rel="stylesheet" href="asset/css/styles.css">
+    <link rel="stylesheet" href="/asset/css/variables.css">
+    <link rel="stylesheet" href="/asset/css/styles.css">
+    <link rel="stylesheet" href="/asset/css/formules.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Accueil</title>
 </head>
 
 <body>
-
-
 
     <nav class="nav">
         <header class="header">
@@ -57,10 +56,10 @@
                     </div>
                 </div>
                 <ul class="nav_menu" id="ID_nav_menu">
-                    <li class="navbar__link first"><a href="asset/pages/nos-offres.html">Espace Gendarmerie</a></li>
+                    <li class="navbar__link first"><a href="#">Espace Gendarmerie</a></li>
                     <li class="navbar__link second"><a href="#">Espace Pompier</a></li>
-                    <li class="navbar__link third"><a href="asset/pages/contact.html">Nous Contacter</a></li>
-                    <li class="navbar__link four"><a href="asset/pages/signin.html">Se connecter</a></li>
+                    <li class="navbar__link third"><a href="#">Nous Contacter</a></li>
+                    <li class="navbar__link four"><a href="#">Se connecter</a></li>
                 </ul>
                 <button class="burger">
                     <span class="bar"></span>
@@ -70,76 +69,87 @@
 
         </header>
     </nav>
+    <div class="slide"> </div>
 
-
-    <section class="container_picture">
-        <div id="carousel">
-            <div class="slide">
-                <h5>jusqu'à 4 mois d'assurance gratuits</h5>
-                <p>PREMIUM RÉSERVISTE</p>
-                <button class="btn"><a href="#">profitez de notre offre</a></button>
-            </div>
-            <div class="slide">
-                <p>Assurance Auto</p>
-                <button class="btn"><a href="#">profitez de notre offre</a></button>
-            </div>
-            <div class="slide">
-
-                <p>INITIO</p>
-                <button class="btn"><a href="#">profitez de notre offre</a></button>
-            </div>
-            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-    </section>
+    
 
     <section class="main">
-        <div class="container-about">
-            <div class="about">
-                <h1>SERVICE D'ASSURANCE RÉSERVÉ AU PERSONNEL DE LA GENDARMERIE NATIONALE</h1>
-                <p>
-                    Notre mission à nous, c'est vous !
-
-                    Spécialiste de l'assurance de la Gendarmerie Nationale, en cas de sinistre, comme au quotidien, vous
-                    pouvez compter sur nous.
-                    C'est notre mission depuis près de 50 ans déjà !
-                    Nous ne sommes pas un plateau téléphonique anonyme, au SARPGN un Conseiller vous est personnellement
-                    dédié.
-                    Au moment de choisir une garantie, il est indispensable de se poser les bonnes questions. Votre
-                    Conseiller, spécialiste de la protection des biens et des personnes, fait le bon diagnostic et vous
-                    propose la solution la mieux adaptée à vos besoins.
-                    Au sein des écoles de formation initiale, le Conseiller SARPGN prend le temps d'expliquer aux élèves
-                    le contenu des garanties proposées. Réactivité et disponibilité, c'est pour lui une mission toute
-                    naturelle puisque, ancien gendarme, il était à leur place quelques années plus tôt.</p>
-            </div>
+       
+        <div class="titre">
+            <h1>SOUSCRIPTION PREMIUM RESERVISTE</h1>
         </div>
 
-        <div class="container_cards">
-            <div class="card">
-                <div class="contain img-left"></div>
-                <div class="contain_text">
-                    <h3>30 000 <br>assurés gendarmes</h3>
-                    <p class="stat-paragraphe">actifs et retraités</p>
-                </div>
+        <table>
+            <tr>
+                <th>PRENIUM RÉSERVISTE <br>Garantie de base</br></th>
+                <th> FORMULE 1 <br>Seuil d’intervention A AIPP : 10 % </th>
+                <th> FORMULE 2 <br>Seuil d’intervention A AIPP : <br>5 %</th>
+            </tr>
+            <tr class="color_table">
+                <td>Atteinte Permanente à l’intégrité Physique et Psychique (AIPP)</td>
+                <td>N** x 164 560 € </td>
+                <td>N** x 164 560 € </td>
+            </tr>
+            <tr class="color_table2">
+                <td>Décès</td>
+                <td> 41 140 € </td>
+                <td> 41 140 € </td>
+            </tr>
+            <tr class="color_table">
+                <td>Frais d’obsèques </td>
+                <td> 6 171 € </td>
+                <td> 6 171 € </td>
+            </tr>
+            <tr class="color_table2">
+                <td>Cotisation annuelle</td>
+                <td> 15 € </td>
+                <td> 18 € </td>
+            </tr>
+        </table>
+        <div class="condition">
+            <p>*Montant des garanties et tarifs applicable au 01/01/2023</p>
+            <p>** N est le taux de séquelles retenu.</p>
             </div>
-            <div class="card">
-                <div class="contain img-mid"></div>
-                <div class="contain_text">
-                    <h3>86 000<br>contrats suivis</h3>
-                    <p class="stat-paragraphe">par des conseillers personnels dédiés</p>
+
+
+
+            <div class="container_card">
+                <div class="card_promo">
+                    <h4>Offre de bienvenue 2023 : 2 mois d’assurance gratuits
+                        sur la cotisation de la 1ère année (Formule 1 ou 2)
+                        et 4 mois gratuit pour la souscription de l’une des options complémentaires </h4>
                 </div>
-            </div>
-            <div class="card">
-                <div class="contain img-right"></div>
-                <div class="contain_text">
-                    <h3>40<br>hommes et femmes</h3>
-                    <p class="stat-paragraphe">à votre écoute et à votre service</p>
+
+                <div class="card_form">
+                    <div class="card_content">
+                        <p>Je souhaite bénéficier d’une protection minimale et souscrire seulement la garantie de
+                            base:</p>
+                
+                    </div>
                 </div>
+
+
+                <div class="container_formules">
+                    <div class="card_1">
+                        <div id="formule1"> Formule 1<br>Seuil d’intervention de 10 %</div>
+
+                    </div>
+                    <div class="card_2">
+                        <div id="formule2"> Formule 2<br>Seuil d’intervention de 10 %</div>
+
+                    </div>
+                </div>
+
             </div>
-        </div>
+    </section>
+
+    <section class="btn">
+
+       <a href="/asset/pages/infoDetail.html"> <button class="form__btn2">Etape précédente</a></button>
+       <a href="/asset/pages/garantie.html"> <button class="form__btn">Enregistrer et continuer</a></button>
 
     </section>
+
 
     <footer>
         <div class="social">
@@ -213,13 +223,13 @@
         </div>
 
         <div class="legale">
-            <a href="./asset/pages/mention_legales.html">Mention légale/SARPGN</a>
+            <a href="asset/pages/mention_legales.html">Mention légale/SARPGN</a>
         </div>
     </footer>
 
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/817262485e.js" crossorigin="anonymous"></script>
-    <script src="./asset/js/script.js"></script>
+    <script src="/asset/js/script.js"></script>
 </body>
 
 </html>
