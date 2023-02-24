@@ -44,6 +44,38 @@ function toggleMenu () {
 toggleMenu();
 
 
-/*Caroussel infoGlobale */
+/*Overlay infoDetail */
+
+
+function openOverlay() {
+  document.getElementById("overlay").style.visibility = "visible";
+}
+
+
+function openOverlayWarning() {
+  document.getElementById("overlay_warning").style.visibility = "visible";
+}
+function openOverlayCross() {
+  document.getElementById("overlay_cross").style.visibility = "visible";
+}
+function openOverlayGlobe() {
+  document.getElementById("overlay_globe").style.visibility = "visible";
+}
+function openOverlayHand() {
+  document.getElementById("overlay_hand").style.visibility = "visible";
+}
+function openOverlayResiliation() {
+  document.getElementById("overlay_resiliation").style.visibility = "visible";
+}
+function openOverlayTime() {
+  document.getElementById("overlay_time").style.visibility = "visible";
+}
+function openOverlayMoney() {
+  document.getElementById("overlay_money").style.visibility = "visible";
+}
+
+
+
+
 
 
