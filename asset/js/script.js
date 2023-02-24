@@ -44,6 +44,9 @@ toggleMenu();
 
 
 
+/*Caroussel infoGlobale */
+=======
+
 /*Card formules et garantie */
 
 
@@ -65,5 +68,6 @@ card1.addEventListener('click', function() {
       card2.style.backgroundColor = 'var(--color-blue-transparent)';
       text2.style.color = 'var(--color-yellow)';
   });
+
 
 

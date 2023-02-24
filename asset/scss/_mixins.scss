@@ -47,6 +47,38 @@
 }
 
 //ALIGNEMENT
+
+@mixin flex-jccenter-ai-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-jccenter{
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-jcbetween-ai-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-ai-center{
+    display: flex;
+    align-items: center;
+}
+
+//BUTTON
+
+@mixin button {
+    background-color: var(--color-blue);
+    width: 150px;
+    height: 30px;
+    margin: 50px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+=======
 @mixin flex-jccenter-ai-center {
   display: flex;
   justify-content: center;
@@ -124,3 +156,4 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
