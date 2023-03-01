@@ -266,12 +266,10 @@
   border: 1px solid black;
   border-radius: 4px;
   overflow: hidden; /* cache le contenu débordant de la card */
+  overflow-y: scroll;
   .card-content {
     max-height: 550px;
     padding: var(--medium-size);
-    @include medium-tablette {
-      overflow-y: scroll; /* affiche une barre de défilement verticale */
-    }
     .header_final {
       @include flex-jccenter-ai-center;
       flex-direction: column;

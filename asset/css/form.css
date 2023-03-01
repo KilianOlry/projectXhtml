@@ -539,15 +539,11 @@ footer .legale a {
   border: 1px solid black;
   border-radius: 4px;
   overflow: hidden; /* cache le contenu débordant de la card */
+  overflow-y: scroll;
 }
 .card .card-content {
   max-height: 550px;
   padding: var(--medium-size);
-}
-@media (max-width: 768px) {
-  .card .card-content {
-    overflow-y: scroll; /* affiche une barre de défilement verticale */
-  }
 }
 .card .card-content .header_final {
   display: flex;
