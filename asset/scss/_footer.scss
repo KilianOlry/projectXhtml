@@ -16,7 +16,7 @@ footer {
         justify-content: space-evenly;
         flex-wrap: wrap;
         margin-top: 5rem;
-        @include smartphone {
+        @include small-tablette {
             flex-direction: column;
             align-content: center;
             text-align: center;

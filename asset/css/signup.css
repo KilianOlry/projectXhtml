@@ -240,7 +240,7 @@ body {
 }
 
 .main {
-  background: url(/asset/images/banniere.png);
+  background: url(../images/banniere.png);
   background-size: cover;
   background-position: center;
   display: flex;
