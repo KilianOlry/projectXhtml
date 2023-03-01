@@ -4,7 +4,7 @@
 @import "mixins";
 
 .main {
-  background-image: url(/asset/images/banniere.png);
+  background-image: url(../images/banniere.png);
   background-size: cover;
   height: 100vh;
   @include flex-jccenter-ai-center;
