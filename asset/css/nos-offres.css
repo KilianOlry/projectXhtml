@@ -297,6 +297,7 @@ p {
   border-radius: var(--border-radius);
   text-transform: uppercase;
   box-shadow: var(--box-shadow);
+  font-size: var(--smaller-size);
 }
 @media (max-width: 320px) {
   .container_picture #carousel .slide .btn {

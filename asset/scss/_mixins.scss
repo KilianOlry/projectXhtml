@@ -91,22 +91,10 @@
   box-shadow: var(--box-shadow);
 }
 
-@mixin flex-jccenter-ai-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
 @mixin flex-jccenter {
   display: flex;
   justify-content: center;
 }
-
-
-
 
 @mixin flex-jcbetween-ai-center {
   display: flex;
@@ -126,7 +114,6 @@
   justify-content: space-evenly;
   align-items: center;
 }
-
 
 @mixin flex-ai-center {
   display: flex;
@@ -159,7 +146,6 @@
   flex-direction: column;
 }
 
-
 //BTN
 @mixin btn_forms {
   padding: 1rem 0.5rem;
@@ -168,4 +154,34 @@
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
   cursor: pointer;
+  color: white;
+}
+
+@mixin btn_garantie_formule{
+  .btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem;
+    width: 100%;
+     .form_btn {
+      background-color: transparent;
+      background: var(--color-orange);
+      border: none;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-weight: var(--bold-weight);
+      cursor: pointer;
+      width: 15rem;
+      padding: 1rem 0;
+    }
+    #btn-2{
+      background-color: var(--color-blue);
+    }
+    @include smartphone {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 50%;
+      gap: 2rem;
+    }
+   }
 }

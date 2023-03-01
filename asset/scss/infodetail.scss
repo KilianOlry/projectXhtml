@@ -153,6 +153,13 @@
         }
     }
 }
+@include small-tablette{
+    .container_clause{
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 .container_clause .txt {
     padding: 40px;
@@ -188,6 +195,16 @@
 @include smartphone {
     .cross {
         position: absolute;
+        top: 4rem;
+        right: 4rem;
+        font-size: 2rem;
+
+
+    }
+}
+@include small-smartphone{
+    .cross {
+        position: absolute;
         top: 1rem;
         right: 1rem;
         font-size: 2rem;
@@ -208,6 +225,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity .4s;
@@ -318,24 +336,103 @@
         }
     }
 
-    @include smartphone {
+    @include medium-tablette{
+  
         .container_popup_umbrella {
-            padding-top: 10px;
-            width: 100%;
-
+            
             .header_umbrella {
-                display: flex;
-                flex-direction: column;
-                margin: 0;
+                h3 {
+                    font-size: 1.3em;
+                }
 
+                h1 {
+                    font-size: 1.5em;
+                    margin: 0;
+                }
+               
+            }
+            #img_umbrella1 {
+                height: 45px;
+            }
+
+            .txt_popup_umbrella {
+                h3 {
+                    font-size: 1.3em;
+                }
+
+                p {
+                    font-size: 1.1em;
+                }
+            }
+
+            .options {
+                h3 {
+                    font-size: 1.3em;
+                }
+
+                p {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+    @include small-tablette {
+        .container_popup_umbrella {
+            
+            .header_umbrella {
                 h3 {
                     font-size: 1.2em;
+                }
+
+                h1 {
+                    font-size: 1em;
+                    margin: 0;
+                }
+               
+            }
+            #img_umbrella1 {
+                height: 40px;
+            }
+
+            .txt_popup_umbrella {
+                h3 {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            .options {
+                h3 {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    
+
+    @include smartphone {
+        .container_popup_umbrella {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            .header_umbrella {
+                background-color: #12FCF8;
+                height: 40px;
+                h3 {
+                    font-size: 1em;
                     margin: 0;
                 }
 
                 h1 {
-                    font-size: 1.2em;
-                    margin: 10px;
+                    font-size: 1em;
+                    margin: 0;
                 }
             }
 
@@ -344,21 +441,13 @@
                 flex-direction: column;
                 margin: 0;
                 padding: 0;
-                width: 100%;
-
-                .indemnisation {
-                    margin: 5px 0;
-                    padding: 0;
-                }
-
-                .garanties {
-                    margin: 5px 0;
-                    padding: 0;
-                }
-
-                h3 {
-                    font-size: 1em;
+                .indemnisation{
                     margin: 0;
+                }.garanties{
+                    margin: 0;
+                }
+                h3 {
+                    font-size: 0.8em;
                 }
 
                 p {
@@ -368,10 +457,8 @@
 
             .options {
                 margin: 0;
-                padding: 0;
-
                 h3 {
-                    font-size: 1em;
+                    font-size: 0.8em;
                 }
 
                 p {
@@ -381,15 +468,14 @@
         }
     }
 }
-
+@include small-tablette{
+    .popup_umbrella{
+        width:90% ;
+    }
+}
 @include smartphone {
     .popup_umbrella {
-
-        width: 95%;
-        height: auto;
-        margin: 1rem;
-        padding: 2rem;
-
+        width: 85%;
         #img_umbrella1 {
             height: 30px;
             width: 30px;
@@ -397,46 +483,48 @@
 
         .img_umbrella1 {
             position: absolute;
-            top: 2rem;
-            left: 2rem;
+            top: 4rem;
+            left: 3rem;
         }
     }
 }
 
 @include small-smartphone {
     .popup_umbrella {
-        padding: 10px;
-        margin: 5px;
         position: relative;
+        width: 80%;
 
+    
+    .container_popup_umbrella {
+        width: 100%;
         .img_umbrella1 {
             position: absolute;
-            top: 10px;
+            top: 12px;
             left: 10px;
         }
-    }
-}
-
-@include small-smartphone {
-    .container_popup_umbrella {
-        padding-top: 10px;
-        width: 100%;
+        #img_umbrella1 {
+            height: 20px;
+            width: 20px;
+        }
 
         .header_umbrella {
-            margin-top: 20px;
-
             h3 {
-                font-size: 1em;
+                font-size: 0.8em;
                 margin: 0;
-                padding: 0;
             }
 
             h1 {
                 font-size: 0.8em;
-                margin: 10px;
+                margin: 0;
+            }
+        }
+        .txt_popup_umbrella{
+            p{
+                font-size: 0.7em;
             }
         }
     }
+}
 }
 
 .overlay {
@@ -451,6 +539,7 @@
         border-radius: 5px;
         width: 80%;
         height: auto;
+        padding:30px;
         position: relative;
         transition: all 0.4s ease-in-out;
 
@@ -477,15 +566,36 @@
             }
 
         }
+        @include medium-tablette{
+            .header_warning {
+                h1 {
+                    font-size: 2em;
+                }
+
+                h3 {
+                    font-size: 2em;
+                    margin: 5px;
+                }
+
+                .img_warning {
+                    height: 60px;
+                    width: 60px;
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                }
+            }
+        }
 
         @include smartphone {
             .header_warning {
                 h1 {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
+                    margin: 0;
                 }
 
                 h3 {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     margin: 5px;
                 }
 
@@ -506,7 +616,7 @@
                 }
 
                 h3 {
-                    font-size: 1em;
+                    font-size: 0.9em;
                     margin: 5px;
                 }
 
@@ -550,14 +660,35 @@
 
 
         }
-
-        @include smartphone {
-            .exclusions_popup_warning {
+        @include medium-tablette{
+            .exclusions_popup_warning{
                 line-height: 10px;
                 margin: 0 0;
 
                 p {
                     font-size: 1em;
+                }
+            }
+            .restrictions_popup_warning {
+                line-height: 10px;
+                margin: 0 0;
+
+                h3 {
+                    font-size: 2em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+            }   
+        }
+        @include smartphone {
+            .exclusions_popup_warning {
+                margin: 0 0;
+
+                p {
+                    font-size: 0.8em;
+                    line-height: 12px;
                 }
             }
 
@@ -566,22 +697,23 @@
                 margin: 0 0;
 
                 h3 {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                 }
 
                 p {
-                    font-size: 1em;
+                    font-size: 0.8em;
+                    line-height: 12px;
                 }
             }
         }
 
         @include small-smartphone {
             .exclusions_popup_warning {
-                line-height: 10px;
-                margin: 0 0;
 
                 p {
                     font-size: 0.8em;
+                    margin:0;
+                    padding: 5px;
                 }
             }
 
@@ -590,11 +722,13 @@
                 margin: 0 0;
 
                 h3 {
-                    font-size: 1em;
+                    font-size: 0.9em;
                 }
 
                 p {
                     font-size: 0.8em;
+                    padding:5px;
+                    margin: 0;
                 }
             }
         }
@@ -616,6 +750,7 @@
         border-radius: 5px;
         width: 60%;
         height: auto;
+        padding: 5%;
         position: relative;
 
         .header_cross {
@@ -636,19 +771,33 @@
                 color: red;
             }
         }
-
+        @include small-tablette{
+            .header_cross{
+                h1{
+                    font-size: 1.7em;
+                    margin-top:40px;
+                }
+                .img_cross {
+                    height: 30px;
+                    width: 30px;
+                }
+                h3{
+                    font-size: 1.4em;
+                }
+            }
+        }
         @include smartphone {
             .header_cross {
                 h1 {
                     font-size: 1.5em;
-                    margin: 0;
+                    margin: 40px;
                 }
 
                 .img_cross {
                     height: 20px;
                     width: 20px;
                     position: absolute;
-                    top: 0.5rem;
+                    top: 2rem;
                     left: 2rem;
                 }
 
@@ -672,9 +821,10 @@
 
         @include smartphone {
             .txt_popup_cross {
-                line-height: 10px;
+                line-height: 15px;
                 text-align: start;
                 width: 85%;
+                padding: 5px;
 
                 p {
                     font-size: 1em;
@@ -682,6 +832,12 @@
             }
         }
 
+    }
+    @include smartphone{
+        .popup_cross{
+        height: 50%;
+        width: 75%;
+        }
     }
 }
 
@@ -703,11 +859,11 @@
         flex-direction: column;
         text-align: center;
         margin: 5rem auto;
-        padding-top: 5rem;
+        padding-top: 7rem;
         background: #fff;
         border-radius: 5px;
-        width: 60%;
-        height: 40%;
+        width: 70%;
+        height: 50%;
         position: relative;
 
         .header_globe {
@@ -725,7 +881,21 @@
             }
 
         }
+        @include medium-tablette{
+            .header_globe {
+                h1 {
+                    font-size: 2em;
+                }
 
+                .img_globe1 {
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem
+                }
+            }
+        }
         @include smartphone {
             .header_globe {
                 h1 {
@@ -746,7 +916,7 @@
             line-height: 25px;
             text-align: center;
             width: 60%;
-            height: auto;
+            height: 50%;
             margin: auto;
 
             background-color: var(--color-card);
@@ -783,7 +953,7 @@
         flex-direction: column;
         text-align: center;
         margin: 5rem auto;
-        padding: auto;
+        padding: 20px;
         background: #fff;
         border-radius: 5px;
         width: 80%;
@@ -807,17 +977,36 @@
                 width: 60px;
             }
         }
+        @include medium-tablette {
+            .header_hand {
+                h1{
+                    font-size: 2em;
+                }
+                h3{
+                    font-size: 1.8em;
+                }
+            }
+        }
+        @include small-tablette {
+            .header_hand {
+                h1{
+                    font-size: 1.5em;
+                }
+                h3{
+                    font-size: 1.3em;
+                }
+            }
+        }
 
         @include smartphone {
             .header_hand {
                 h1 {
-                    font-size: 1.5em;
-                    background-color: #12FCF8;
+                    font-size: 1.4em;
                     padding-top: 25%;
                 }
 
                 h3 {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     margin: 5px;
                 }
 
@@ -832,7 +1021,7 @@
         .txt_popup_hand {
             line-height: 25px;
             text-align: center;
-            width: 80%;
+            width: 90%;
             height: auto;
             margin: auto;
 
@@ -843,6 +1032,8 @@
                 text-align: start;
                 width: 100%;
                 padding: 20px;
+                display: flex;
+                flex-direction: column;
             }
 
             .courscontrat {
@@ -868,7 +1059,42 @@
 
 
         }
-
+        @include medium-tablette {
+            .txt_popup_hand{
+                width: 100%;
+                line-height: 18px;
+                p{
+                    font-size: 1.2em;
+                }
+                h3{
+                    font-size: 1.4em;
+                }
+                .souscription{
+                    padding: 10px;
+                    margin:auto;
+                }
+                .courscontrat{
+                    padding: 10px;
+                    margin:auto;
+                }
+                .courssinistre{
+                    padding: 10px;
+                    margin:auto;
+                }
+            }
+        }
+        @include small-tablette {
+            .txt_popup_hand{
+                width: 100%;
+                line-height: 20px;
+                p{
+                    font-size: 1.1em;
+                }
+                h3{
+                    font-size: 1.3em;
+                }
+            }
+        }
         @include smartphone {
             .txt_popup_hand {
                 line-height: 10px;
@@ -876,7 +1102,8 @@
                 width: 100%;
 
                 p {
-                    font-size: 1em;
+                    font-size: 0.9em;
+                    padding: 0;
                 }
 
                 h3 {
@@ -889,6 +1116,13 @@
 
                 .courscontrat {
                     padding: 5px;
+                }
+            }
+        }
+        @include small-smartphone{
+            .txt_popup_hand{
+                p{
+                    font-size: 0.8em;
                 }
             }
         }
@@ -910,7 +1144,7 @@
         background: #fff;
         border-radius: 5px;
         width: 60%;
-        height: 40%;
+        height: 50%;
         position: relative;
 
         .header_resiliation {
@@ -936,7 +1170,32 @@
                 }
             }
         }
-
+        
+        @include medium-tablette {
+            .header_resiliation {
+                margin-top: 20px;
+                h1 {
+                    font-size: 1.8em;
+                }
+                .img_vector1 {
+                    position: absolute;
+                    top: 1rem;
+                    left: 22rem;
+                    height: 40px;
+                    width: 40px;
+    
+                }
+            }
+        }
+        @include small-tablette {
+            .header_resiliation {
+                .img_vector1 {
+                    position: absolute;
+                    top: 1rem;
+                    left: 16rem;
+                   }
+            }
+        }
         @include smartphone {
             .header_resiliation {
                 h1 {
@@ -968,13 +1227,32 @@
         .txt_popup_resiliation {
             line-height: 25px;
             text-align: start;
-            width: 60%;
+            width: 80%;
             height: auto;
             margin: auto;
-            padding: 15px;
+            padding: 30px;
             background-color: var(--color-card);
             border-radius: 5px;
             box-shadow: var(--box-shadow);
+        }
+
+        @include medium-tablette{
+            .txt_popup_resiliation {
+                line-height: 20px;
+                width: 85%;
+                padding: 10px;
+
+                p {
+                    font-size: 1.4em;
+                }
+            }
+        }
+        @include small-tablette{
+            .txt_popup_resiliation {
+                p {
+                    font-size: 1.2em;
+                }
+            }
         }
 
         @include smartphone {
@@ -1033,7 +1311,17 @@
             }
 
         }
-
+        @include medium-tablette{
+            .header_time {
+                h1 {
+                    font-size: 2em;
+                }
+                .img_time_popup {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
         @include smartphone {
             .header_time {
                 h1 {
@@ -1059,7 +1347,17 @@
             border-radius: 5px;
             box-shadow: var(--box-shadow);
         }
+        @include medium-tablette {
+            .txt_popup_time {
+                line-height: 20px;
+                width: 100%;
+                padding: 10px;
 
+                p {
+                    font-size: 1.3em;
+                }
+            }
+        }
         @include smartphone {
             .txt_popup_time {
                 line-height: 15px;
@@ -1112,7 +1410,19 @@
             }
 
         }
+        @include small-tablette{
+            .header_money {
+                h1 {
+                    font-size: 2em;
 
+                }
+
+                .img_money_popup {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
         @include smartphone {
             .header_money {
                 h1 {
@@ -1126,6 +1436,14 @@
                 }
             }
         }
+        @include small-smartphone {
+            .header_money {
+                h1 {
+                    font-size: 1.3em;
+
+                }
+        }
+    }
 
         .txt_popup_money {
             line-height: 25px;
@@ -1138,12 +1456,31 @@
             border-radius: 5px;
             box-shadow: var(--box-shadow);
         }
-
+        @include small-tablette{
+            .txt_popup_money {
+                line-height: 20px;
+                font-size: 1em;
+                width: 90%;
+            }
+        }
         @include smartphone {
             .txt_popup_money {
-                line-height: 15px;
-                font-size: 1em;
+                line-height: 20px;
                 width: 80%;
+                padding: 0;
+                p{
+                    font-size: 1.2em;
+                }
+            }
+        }
+        @include small-smartphone {
+            .txt_popup_money {
+                line-height: 20px;
+                width: 100%;
+                padding: 0;
+                p{
+                    font-size: 1.1em;
+                }
             }
         }
 
@@ -1153,7 +1490,8 @@
 
     @include smartphone {
         .popup_money {
-            width: 100%;
+            width: 90%;
+            height: 70%;
         }
     }
 }

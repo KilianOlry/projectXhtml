@@ -307,6 +307,7 @@ body {
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
   cursor: pointer;
+  color: white;
   padding: 1rem 2rem;
   background-color: var(--color-blue);
   color: var(--color-white);
@@ -325,6 +326,7 @@ body {
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
   cursor: pointer;
+  color: white;
   background-color: var(--color-orange);
 }
 @media (max-width: 400px) {
@@ -340,6 +342,7 @@ body {
   border-radius: var(--border-radius-input);
   text-transform: uppercase;
   cursor: pointer;
+  color: white;
   background-color: var(--color-yellow);
 }
 @media (max-width: 400px) {

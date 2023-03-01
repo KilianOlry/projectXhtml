@@ -100,6 +100,11 @@
                             <p>4</p>
                         </div>
                     </li>
+                    <li class="form_5_progessbar">
+                        <div>
+                            <p>5</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="form_wrap">
@@ -165,7 +170,8 @@
 
                             </div>
                             <div class="radio_input">
-                                <p>Etes-vous réserviste ? *</p>
+                                <p>Quelle est votre situation actuelle ?</p>
+                                <p>Vous êtes réserviste ?</p>
                                 <div class="input_mix">
                                     <div class="input1">
                                         <input name="reserviste" value="yes" type="radio" />
@@ -174,7 +180,6 @@
                                     <div class="input2">
                                         <input name="reserviste" value="no" type="radio" />
                                         <label style="font-weight: bold;" for="no">NON </label>
-
                                     </div>
                                 </div>
                             </div>
@@ -243,41 +248,13 @@
                                     <div class="card-content">
                                         <div id="header_final" class="header_final">
                                             <p>Synthèse</p>
-                                            <img class="img_firm"
-                                                src="/asset/images/icon_form/assurances-des-entreprises.jpg"
-                                                alt="img_firm">
-
-                                            <div class="content_download">
-                                                <div class="container">
-                                                    <p>Document d'information sur le produit d'assurance télechargeable
-                                                        en PDF </p>
-                                                    <a href="/asset/images/Assurance Réserviste.pdf" download><img
-                                                            class="logo_download"
-                                                            src="/asset/images/icon_form/logo_dowload.png"
-                                                            alt="logo_download"></a>
-                                                </div>
-
-                                                <div class="container">
-
-                                                    <p>Télécharger le document</p>
-                                                    <a href="#final"><img class="scroll_down"
-                                                            src="/asset/images/icon_form/scroll.png" alt="scroll"></a>
-
-                                                </div>
-                                            </div>
-
                                             <div id="final" class="container_final">
                                                 <div class="text_content">
-                                                    <h3>Demande de souscription Prénium Réserviste</h3>
-
-
+                                                    <h3>Demande de souscription Prémium Réserviste</h3>
 
                                                     <div class="container">
                                                         <h2>Je déclare </h2>
                                                         <ul>
-                                                            <li>Avoir pris connaissance du PDF "Assurance Réserviste"
-                                                                télechargeable sur le lien en haut de page.</li>
-
                                                             <li class="space_list">Être informé(e) que les données
                                                                 recuillies dans ce
                                                                 formulaire font l’objet d’un traitement par BARRUEL ET
@@ -304,34 +281,50 @@
 
                                                     </div>
                                                     <div class="input_checkbox">
-                                                        <div class="container">
+                                                        <div class="container_checkbox">
                                                             <input type="checkbox" id="check_list" class="list_checkbox"
                                                                 name="check_list">
+                                                                <label for="list_checkbox">
+                                                                    Je reconnais avoir lu le texte des conditions générales
+                                                                    dans son intégralité<br> et en accepter tous les
+                                                                    termes. <a href="#">Téléchargeable ici</a></label>
                                                         </div>
-                                                        <div class="container">
-                                                            <label for="list_checkbox">
-                                                                Je reconnais avoir lu le texte des conditions générales
-                                                                dans son intégralité<br> et en accepter tous les
-                                                                termes.</label>
+                                                        <div class="container_checkbox">
+                                                            <input type="checkbox" id="check_list" class="list_checkbox"
+                                                                name="check_list">
+                                                                <label for="list_checkbox">
+                                                                    Je reconnais avoir lu le texte décrivant l'IPPID et en accepter tous les
+                                                                    termes. <br><a href="../images/Assurance Réserviste.pdf" download="">Téléchargeable ici</a></label>
                                                         </div>
-
+                                                        <div class="container_checkbox">
+                                                            <input type="checkbox" id="check_list" class="list_checkbox"
+                                                                name="check_list">
+                                                                <label for="list_checkbox">
+                                                                    Je reconnais avoir lu le texte des conditions générales
+                                                                    dans son intégralité<br> et en accepter tous les
+                                                                    termes. <a href="#">Téléchargeable ici</a></label>
+                                                        </div>
+                                                        <div class="container_checkbox">
+                                                            <label for="list_checkbox">Vous souhaitez que la garantie prenne effet le </label>
+                                                            <input type="date" id="check_list" class="list_checkbox"
+                                                                name="check_list">
+                                                                
+                                                        </div>
+                                                        
+                                                        </div>
                                                     </div>
-                                                    <div class="container">
-                                                        <a href="#header_final"><img class="scroll_up"
-                                                                src="/asset/images/icon_form/scroll.png"
-                                                                alt="scroll"></a>
-                                                    </div>
-
-
-
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form_5 data_info" style="display: none;">
+                            <p>Complitude dossier</p>
+                            <form>
+                         
                     </form>
                 </div>
 
@@ -351,6 +344,10 @@
                     </div>
                     <div class="common_btns form_4_btns" style="display: none;">
                         <button type="button" class="btn_back">Précedent</button>
+                        <button type="button" class="btn_next">Suivant</button>
+                    </div>
+                    <div class="common_btns form_5_btns" style="display: none;">
+                        <button type="button" class="btn_back">Précedent</button>
                         <button type="button" class="btn_done">Envoyez</button>
                     </div>
                 </div>
@@ -360,7 +357,7 @@
                 <div class="shadow"></div>
                 <div class="success_wrap">
                     <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
-                    <p>Vous avez presque terminé !
+                    <p>Vous avez presque terminé ! <br>
                         Veuillez vérifier vos mails pour accéder au document PDF pour la signature électronique </p>
                 </div>
             </div>

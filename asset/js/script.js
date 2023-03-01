@@ -99,3 +99,21 @@ function openOverlayMoney() {
 
 
 
+/*Modal AIPP */
+const mots = document.querySelectorAll(".infos");
+const monModal = document.getElementById("modal");
+
+for (let i = 0; i < mots.length; i++) {
+  mots[i].addEventListener("mouseover", function() {
+    monModal.style.display = "block";
+  });
+  
+  mots[i].addEventListener("mouseout", function() {
+    monModal.style.display = "none";
+  });
+}
+
+const fermerModal = document.getElementById("fermer-modal");
+fermerModal.addEventListener("click", function() {
+  monModal.style.display = "none";
+});

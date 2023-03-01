@@ -282,34 +282,29 @@ footer .legale a {
 }
 
 .main {
-  margin-top: 20%;
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-@media (max-width: 400px) {
-  .main {
-    margin-top: 30%;
-  }
-}
-
-.titre {
+.main .titre {
   text-align: center;
 }
-
-/*Tableau */
-table {
+.main table {
   width: 60vw;
 }
 @media (max-width: 320px) {
-  table {
+  .main table {
     width: 90vw;
   }
 }
-table tr th {
+.main table tr th {
   background-color: var(--color-blue);
-  text-align: center;
   color: var(--color-white);
 }
-table th,
-table td {
+.main table th,
+.main table td {
   text-align: center;
   padding: var(--smalling-size);
   font-size: var(--medium-size);
@@ -317,96 +312,115 @@ table td {
   width: 33.3333333333%;
 }
 @media (max-width: 600px) {
-  table th,
-  table td {
+  .main table th,
+  .main table td {
     font-size: var(--smaller-size);
   }
 }
 @media (max-width: 1024px) {
-  table th,
-  table td {
+  .main table th,
+  .main table td {
     font-size: var(--smalling-size);
   }
 }
-table .color_table2 {
+.main table .color_table2 {
   background-color: var(--color-icons-transparent);
 }
-table .color_table {
+.main table .color_table {
   background-color: var(--color-blue-transparent);
 }
-
-.condition p {
+.main .condition p {
   text-align: center;
   font-size: var(--smalling-size);
   margin: var(--smalling-size2);
 }
-
-/*Card Promo */
-.container_card {
+.main .container_card {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100vw;
-  flex-direction: column;
-  /* Card formules */
-  /*Card minimal protect */
+  margin-top: 8rem;
+  gap: 2rem;
 }
-.container_card .card_promo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1024px) {
+  .main .container_card {
+    flex-direction: column;
+  }
+}
+.main .container_card .card_promo {
+  padding: 0.5rem;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .main .container_card .card_promo {
+    width: 300px;
+    height: 300px;
+  }
+}
+.main .container_card .card_promo img {
+  width: 100%;
+  height: 100%;
+}
+.main .container_card .card_form {
   margin-top: var(--hight-size2);
-  text-align: center;
-  padding: var(--medium-size);
-  width: 60vw;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 768px) {
-  .container_card .card_promo {
-    width: 60vw;
-  }
-}
 @media (max-width: 400px) {
-  .container_card .card_promo {
-    width: 85vw;
-    height: 10vh;
+  .main .container_card .card_form {
+    width: 90vw;
   }
 }
-.container_card .card_promo h4 {
-  color: red;
-  text-decoration: none;
-  font-size: var(--light-weight);
+.main .container_card p {
+  color: var(--color-blue);
   font-weight: var(--semi-bold);
+  font-size: var(--smaller-size);
+  text-align: center;
+  padding: var(--medium-size);
 }
-.container_card .container_formules {
+
+/*Card Promo */
+/*Card Police */
+/* Card formules  */
+.container_formules {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 7rem;
   cursor: pointer;
 }
-.container_card .container_formules .card_1,
-.container_card .container_formules .card_2 {
-  width: 18vw;
-  height: 12vh;
-  border-radius: var(--smalling-size2);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 600px) {
-  .container_card .container_formules .card_1,
-  .container_card .container_formules .card_2 {
-    width: 25vw;
-    height: 15vh;
+@media (max-width: 320px) {
+  .container_formules {
+    flex-direction: column;
   }
 }
-.container_card .container_formules .card_1 #formule1,
-.container_card .container_formules .card_1 #formule2,
-.container_card .container_formules .card_2 #formule1,
-.container_card .container_formules .card_2 #formule2 {
-  font-size: var(--smalling-size);
+.container_formules .card_1,
+.container_formules .card_2 {
+  width: 25rem;
+  border-radius: var(--smalling-size2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  padding: 5rem 1rem;
+}
+@media (max-width: 600px) {
+  .container_formules .card_1,
+  .container_formules .card_2 {
+    width: 15rem;
+  }
+}
+@media (max-width: 320px) {
+  .container_formules .card_1,
+  .container_formules .card_2 {
+    width: 80vw;
+    margin: 1rem 0;
+  }
+}
+.container_formules .card_1 #formule1,
+.container_formules .card_1 #formule2,
+.container_formules .card_2 #formule1,
+.container_formules .card_2 #formule2 {
+  font-size: var(--small-size);
   width: 100%;
   height: 100%;
   display: flex;
@@ -416,80 +430,88 @@ table .color_table {
   color: var(--color-blue);
   font-weight: var(--bold-weight);
 }
-@media (max-width: 600px) {
-  .container_card .container_formules .card_1,
-  .container_card .container_formules .card_2 {
-    width: 35vw;
-    height: 15vh;
-  }
-}
-@media (max-width: 320px) {
-  .container_card .container_formules .card_1,
-  .container_card .container_formules .card_2 {
-    width: 38vw;
-    height: 12vh;
-  }
-}
-.container_card .card_form {
-  margin-top: var(--hight-size2);
-  width: 60vw;
-  height: 8vh;
-  border-radius: 0.8rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  height: 170px;
 }
 @media (max-width: 768px) {
-  .container_card .card_form {
-    height: 12vh;
+  #modal {
+    height: 195px;
+  }
+}
+@media (max-width: 600px) {
+  #modal {
+    height: 180px;
+    width: 500px;
   }
 }
 @media (max-width: 400px) {
-  .container_card .card_form {
-    width: 90vw;
-    height: 12vh;
+  #modal {
+    height: 220px;
+    width: 300px;
   }
 }
-.container_card p {
-  color: var(--color-blue);
-  font-weight: var(--semi-bold);
-  font-size: var(--smaller-size);
-  text-align: center;
-  padding: var(--medium-size);
+
+#modal p {
+  font-size: 11px;
+  font-weight: bolder;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#modal button {
+  background-color: var(--color-yellow);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#modal button:hover {
+  background-color: var(--color-blue);
 }
 
 /*Bouton */
 .btn {
   display: flex;
-  justify-content: center;
-  margin-top: var(--medium-size);
+  justify-content: space-evenly;
+  margin: 5rem;
+  width: 100%;
+}
+.btn .form_btn {
+  background-color: transparent;
+  background: var(--color-orange);
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: var(--bold-weight);
+  cursor: pointer;
+  width: 15rem;
+  padding: 1rem 0;
+}
+.btn #btn-2 {
+  background-color: var(--color-blue);
 }
 @media (max-width: 400px) {
   .btn {
     flex-direction: column-reverse;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
   }
-}
-
-.form__btn {
-  background: var(--color-orange);
-  color: #fff;
-  border: none;
-  width: 17rem;
-  height: 2.5rem;
-  margin: 5rem auto;
-  border-radius: var(--medium-size);
-  font-weight: var(--bold-weight);
-  cursor: pointer;
-}
-
-.form__btn2 {
-  background: var(--color-blue);
-  color: #fff;
-  border: none;
-  width: 17rem;
-  height: 2.5rem;
-  margin: 5rem auto;
-  border-radius: var(--medium-size);
-  font-weight: var(--bold-weight);
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=formules.css.map */
