@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Accueil</title>
+    <title>Formulaire</title>
 
 </head>
 
@@ -108,7 +108,7 @@
             <div class="form_wrap">
                 <div class="form_1 data_info">
                     <p>Demande de souscription<br>Prénium réserviste </p>
-                    <form>
+                    <form method="post">
                         <div class="form_container">
                             <div class="input_wrap">
                                 <label for="civilite">Civilité :</label>
@@ -116,18 +116,20 @@
                                     <option value="M.">M.</option>
                                     <option value="Mme">Mme</option>
                                     <option value="Mlle">Mlle</option>
+
                                 </select>
+
                             </div>
                             <div class="input_wrap">
-                                <label for="name">Nom</label>
+                                <label for="name">Nom<span>*</span></label>
                                 <input type="text" name="name" class="input" id="name">
                             </div>
                             <div class="input_wrap">
-                                <label for="prenom">Prénom</label>
+                                <label for="prenom">Prénom<span>*</span></label>
                                 <input type="text" name="prenom" class="input" id="prenom">
                             </div>
                             <div class="input_wrap">
-                                <label for="birthdate">Date de naissance</label>
+                                <label for="birthdate">Date de naissance<span>*</span></label>
                                 <input type="date" name="birthdate" class="input" id="birthdate">
                             </div>
                             <div class="input_wrap">
@@ -136,7 +138,7 @@
 
                             </div>
                             <div class="input_wrap">
-                                <label for="email">Entrer votre email</label>
+                                <label for="email">Entrer votre email<span>*</span></label>
                                 <input type="email" name="email" class="input" id="email">
 
                             </div>
@@ -163,10 +165,11 @@
 
                             </div>
                             <div class="input_wrap">
-                                <label for="phone">Télephone</label>
+                                <label for="phone">Télephone<span>*</span></label>
                                 <input type="text" name="phone" class="input" id="phone">
 
                             </div>
+                            <p class="obligatory"><span>*</span>champ obligatoire </p>
                             <div class="radio_input">
                                 <p>Quelle est votre situation actuelle ?</p>
                                 <p>Vous êtes réserviste ?</p>
@@ -178,8 +181,11 @@
                                     <div class="input2">
                                         <input id="no" name="reserviste" value="no" type="radio">
                                         <label style="font-weight: bold;" for="no">NON </label>
+
                                     </div>
+
                                 </div>
+
                             </div>
                         </div>
                     </form>
@@ -197,13 +203,13 @@
 
                             <div class="input_wrap2">
                                 <div class="content_wrap">
-                                    <label for="nb_reserviste"> N° de carte de réserviste *</label>
+                                    <label for="nb_reserviste"> N° de carte de réserviste <span>*</span></label>
                                     <input type="number" name="nb_reserviste" class="input" id="nb_reserviste" min="10"
                                         max="10000">
                                 </div>
                                 <div class="content_wrap">
-                                    <label for="date_reserviste">Date de délivrance :
-                                        *</label>
+                                    <label for="date_reserviste">Date de délivrance : <span>*</span>
+                                    </label>
                                     <input type="date" name="date_reserviste" class="input" id="date_reserviste">
                                 </div>
                             </div>
@@ -240,6 +246,11 @@
                 </div>
 
                 <div class="form_4 data_info" style="display: none;">
+                    <p>PAGE EN COURS DE REALISATION</p>
+
+                </div>
+
+                <div class="form_5 data_info" style="display: none;">
                     <form>
                         <div class="form_container">
                             <div class="input_wrap">
@@ -327,14 +338,11 @@
                             </div>
                         </div>
                     </form>
-                </div>
-
-                <div class="form_5 data_info" style="display: none;">
-                    <p>Complitude dossier</p>
 
 
 
                 </div>
+
 
                 <div class="btns_wrap">
                     <div class="common_btns form_1_btns">

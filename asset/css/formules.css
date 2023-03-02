@@ -282,13 +282,13 @@ footer .legale a {
 }
 
 .main {
-  margin-top: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .main .titre {
+  margin-top: 15rem;
   text-align: center;
 }
 .main table {
