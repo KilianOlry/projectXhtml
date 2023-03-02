@@ -87,7 +87,7 @@
         }
 
         .img_stop {
-            background-image: url(../images/imgInfoDetail/Vector\ \(1\).png);
+            background-image: url(../images/imgInfoDetail/VectorResiliation.png);
             margin: auto;
             padding-top: 20px;
             height: 45px;
@@ -121,7 +121,7 @@
         }
 
         .img_vector {
-            background-image: url(../images/imgInfoDetail/Vector.png);
+            background-image: url(../images/imgInfoDetail/Vector\ \(1\).png);
             margin: auto;
             padding-top: 20px;
             height: 60px;
@@ -153,8 +153,9 @@
         }
     }
 }
-@include small-tablette{
-    .container_clause{
+
+@include small-tablette {
+    .container_clause {
         display: flex;
         justify-content: center;
     }
@@ -202,7 +203,8 @@
 
     }
 }
-@include small-smartphone{
+
+@include small-smartphone {
     .cross {
         position: absolute;
         top: 1rem;
@@ -261,8 +263,10 @@
         .header_umbrella {
             line-height: 20px;
 
-            h1 {
+            .titre_umbrella {
                 margin: 30px;
+                color: var(--color-blue);
+                font-size: 3em;
             }
 
             #titre {
@@ -287,11 +291,6 @@
                 box-shadow: var(--box-shadow);
                 margin: 10px;
             }
-
-            #icon {
-                color: green;
-
-            }
         }
 
         .options {
@@ -309,8 +308,8 @@
                     font-size: 1.5em;
                 }
 
-                h1 {
-                    font-size: 1.5em;
+                .titre_umbrella {
+                    font-size: 2em;
                 }
             }
 
@@ -336,21 +335,22 @@
         }
     }
 
-    @include medium-tablette{
-  
+    @include medium-tablette {
+
         .container_popup_umbrella {
-            
+
             .header_umbrella {
                 h3 {
                     font-size: 1.3em;
                 }
 
-                h1 {
+                .titre_umbrella {
                     font-size: 1.5em;
-                    margin: 0;
+                    margin: 5px;
                 }
-               
+
             }
+
             #img_umbrella1 {
                 height: 45px;
             }
@@ -376,20 +376,22 @@
             }
         }
     }
+
     @include small-tablette {
         .container_popup_umbrella {
-            
+
             .header_umbrella {
                 h3 {
                     font-size: 1.2em;
                 }
 
-                h1 {
-                    font-size: 1em;
+                .titre_umbrella {
+                    font-size: 1.5em;
                     margin: 0;
                 }
-               
+
             }
+
             #img_umbrella1 {
                 height: 40px;
             }
@@ -415,25 +417,36 @@
             }
         }
     }
-    
+
 
     @include smartphone {
         .container_popup_umbrella {
             padding: 0;
             margin: 0;
             width: 100%;
+
             .header_umbrella {
-                background-color: #12FCF8;
                 height: 40px;
+
                 h3 {
                     font-size: 1em;
                     margin: 0;
                 }
 
-                h1 {
-                    font-size: 1em;
+                .titre_umbrella {
+                    font-size: 1.2em;
                     margin: 0;
                 }
+            }
+
+            #img_umbrella1 {
+                height: 30px;
+            }
+
+            .img_umbrella1 {
+                position: absolute;
+                top: 4rem;
+                left: 3rem;
             }
 
             .txt_popup_umbrella {
@@ -441,11 +454,15 @@
                 flex-direction: column;
                 margin: 0;
                 padding: 0;
-                .indemnisation{
-                    margin: 0;
-                }.garanties{
+
+                .indemnisation {
                     margin: 0;
                 }
+
+                .garanties {
+                    margin: 0;
+                }
+
                 h3 {
                     font-size: 0.8em;
                 }
@@ -457,6 +474,7 @@
 
             .options {
                 margin: 0;
+
                 h3 {
                     font-size: 0.8em;
                 }
@@ -468,24 +486,16 @@
         }
     }
 }
-@include small-tablette{
-    .popup_umbrella{
-        width:90% ;
+
+@include small-tablette {
+    .popup_umbrella {
+        width: 90%;
     }
 }
+
 @include smartphone {
     .popup_umbrella {
         width: 85%;
-        #img_umbrella1 {
-            height: 30px;
-            width: 30px;
-        }
-
-        .img_umbrella1 {
-            position: absolute;
-            top: 4rem;
-            left: 3rem;
-        }
     }
 }
 
@@ -494,37 +504,40 @@
         position: relative;
         width: 80%;
 
-    
-    .container_popup_umbrella {
-        width: 100%;
-        .img_umbrella1 {
-            position: absolute;
-            top: 12px;
-            left: 10px;
-        }
-        #img_umbrella1 {
-            height: 20px;
-            width: 20px;
-        }
 
-        .header_umbrella {
-            h3 {
-                font-size: 0.8em;
-                margin: 0;
+        .container_popup_umbrella {
+            width: 100%;
+
+            .img_umbrella1 {
+                position: absolute;
+                top: 12px;
+                left: 10px;
             }
 
-            h1 {
-                font-size: 0.8em;
-                margin: 0;
+            #img_umbrella1 {
+                height: 20px;
+                width: 20px;
             }
-        }
-        .txt_popup_umbrella{
-            p{
-                font-size: 0.7em;
+
+            .header_umbrella {
+                h3 {
+                    font-size: 0.8em;
+                    margin: 0;
+                }
+
+                .titre_umbrella {
+                    font-size: 1em;
+                    margin: 0;
+                }
+            }
+
+            .txt_popup_umbrella {
+                p {
+                    font-size: 0.7em;
+                }
             }
         }
     }
-}
 }
 
 .overlay {
@@ -539,7 +552,7 @@
         border-radius: 5px;
         width: 80%;
         height: auto;
-        padding:30px;
+        padding: 30px;
         position: relative;
         transition: all 0.4s ease-in-out;
 
@@ -561,15 +574,18 @@
                 margin: 20px;
             }
 
-            h1 {
+            .titre_warning {
                 margin: 30px auto 10px auto;
+                color: var(--color-blue);
+                font-size: 3em;
             }
 
         }
-        @include medium-tablette{
+
+        @include medium-tablette {
             .header_warning {
-                h1 {
-                    font-size: 2em;
+                .titre_warning {
+                    font-size: 2.5em;
                 }
 
                 h3 {
@@ -589,9 +605,9 @@
 
         @include smartphone {
             .header_warning {
-                h1 {
-                    font-size: 1.3em;
-                    margin: 0;
+                .titre_warning {
+                    font-size: 1.6em;
+                    margin: 5px;
                 }
 
                 h3 {
@@ -611,8 +627,8 @@
 
         @include small-smartphone {
             .header_warning {
-                h1 {
-                    font-size: 1em;
+                .titre_warning {
+                    font-size: 1.3em;
                 }
 
                 h3 {
@@ -660,8 +676,9 @@
 
 
         }
-        @include medium-tablette{
-            .exclusions_popup_warning{
+
+        @include medium-tablette {
+            .exclusions_popup_warning {
                 line-height: 10px;
                 margin: 0 0;
 
@@ -669,6 +686,7 @@
                     font-size: 1em;
                 }
             }
+
             .restrictions_popup_warning {
                 line-height: 10px;
                 margin: 0 0;
@@ -680,8 +698,9 @@
                 p {
                     font-size: 1em;
                 }
-            }   
+            }
         }
+
         @include smartphone {
             .exclusions_popup_warning {
                 margin: 0 0;
@@ -712,7 +731,7 @@
 
                 p {
                     font-size: 0.8em;
-                    margin:0;
+                    margin: 0;
                     padding: 5px;
                 }
             }
@@ -727,7 +746,7 @@
 
                 p {
                     font-size: 0.8em;
-                    padding:5px;
+                    padding: 5px;
                     margin: 0;
                 }
             }
@@ -754,8 +773,10 @@
         position: relative;
 
         .header_cross {
-            h1 {
-                margin: 20px;
+            .titre_cross {
+                margin: 15px;
+                color: var(--color-blue);
+                font-size: 2.5em;
             }
 
             .img_cross {
@@ -771,24 +792,29 @@
                 color: red;
             }
         }
-        @include small-tablette{
-            .header_cross{
-                h1{
-                    font-size: 1.7em;
-                    margin-top:40px;
+
+        @include small-tablette {
+            .header_cross {
+                .titre_cross {
+                    font-size: 2em;
+                    margin-top: 20px;
+                    padding: 0;
                 }
+
                 .img_cross {
                     height: 30px;
                     width: 30px;
                 }
-                h3{
+
+                h3 {
                     font-size: 1.4em;
                 }
             }
         }
+
         @include smartphone {
             .header_cross {
-                h1 {
+                .titre_cross {
                     font-size: 1.5em;
                     margin: 40px;
                 }
@@ -833,10 +859,11 @@
         }
 
     }
-    @include smartphone{
-        .popup_cross{
-        height: 50%;
-        width: 75%;
+
+    @include smartphone {
+        .popup_cross {
+            height: 50%;
+            width: 75%;
         }
     }
 }
@@ -867,8 +894,9 @@
         position: relative;
 
         .header_globe {
-            h1 {
+            .titre_globe {
                 margin: 0;
+                font-size: 3em;
             }
 
             .img_globe1 {
@@ -881,10 +909,11 @@
             }
 
         }
-        @include medium-tablette{
+
+        @include medium-tablette {
             .header_globe {
-                h1 {
-                    font-size: 2em;
+                .titre_globe {
+                    font-size: 2.5em;
                 }
 
                 .img_globe1 {
@@ -896,10 +925,11 @@
                 }
             }
         }
+
         @include smartphone {
             .header_globe {
-                h1 {
-                    font-size: 1.5em;
+                .titre_globe {
+                    font-size: 2em;
                 }
 
                 .img_globe1 {
@@ -926,21 +956,23 @@
 
         @include smartphone {
             .txt_popup_globe {
-                line-height: 15px;
+                line-height: 20px;
                 text-align: justify;
                 width: 70%;
 
+                p {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        @include small-smartphone {
+            .txt_popup_globe {
                 p {
                     font-size: 1em;
                 }
             }
         }
-
-        #icon {
-            color: green;
-        }
-
-
     }
 }
 
@@ -961,8 +993,9 @@
         position: relative;
 
         .header_hand {
-            h1 {
+            .titre_hand {
                 margin: 0;
+                font-size: 2.5em;
             }
 
             h3 {
@@ -977,22 +1010,22 @@
                 width: 60px;
             }
         }
+
         @include medium-tablette {
             .header_hand {
-                h1{
-                    font-size: 2em;
-                }
-                h3{
+                h3 {
                     font-size: 1.8em;
                 }
             }
         }
+
         @include small-tablette {
             .header_hand {
-                h1{
-                    font-size: 1.5em;
+                .titre_hand {
+                    font-size: 1.7em;
                 }
-                h3{
+
+                h3 {
                     font-size: 1.3em;
                 }
             }
@@ -1000,8 +1033,8 @@
 
         @include smartphone {
             .header_hand {
-                h1 {
-                    font-size: 1.4em;
+                .titre_hand {
+                    font-size: 1.5em;
                     padding-top: 25%;
                 }
 
@@ -1059,42 +1092,52 @@
 
 
         }
+
         @include medium-tablette {
-            .txt_popup_hand{
+            .txt_popup_hand {
                 width: 100%;
                 line-height: 18px;
-                p{
+
+                p {
                     font-size: 1.2em;
                 }
-                h3{
+
+                h3 {
                     font-size: 1.4em;
                 }
-                .souscription{
+
+                .souscription {
                     padding: 10px;
-                    margin:auto;
+                    margin: auto;
                 }
-                .courscontrat{
+
+                .courscontrat {
                     padding: 10px;
-                    margin:auto;
+                    margin: auto;
                 }
-                .courssinistre{
+
+                .courssinistre {
                     padding: 10px;
-                    margin:auto;
+                    margin: auto;
                 }
             }
         }
+
         @include small-tablette {
-            .txt_popup_hand{
+            .txt_popup_hand {
                 width: 100%;
                 line-height: 20px;
-                p{
+
+                p {
                     font-size: 1.1em;
                 }
-                h3{
+
+                h3 {
                     font-size: 1.3em;
                 }
             }
         }
+
         @include smartphone {
             .txt_popup_hand {
                 line-height: 10px;
@@ -1119,9 +1162,10 @@
                 }
             }
         }
-        @include small-smartphone{
-            .txt_popup_hand{
-                p{
+
+        @include small-smartphone {
+            .txt_popup_hand {
+                p {
                     font-size: 0.8em;
                 }
             }
@@ -1148,8 +1192,9 @@
         position: relative;
 
         .header_resiliation {
-            h1 {
+            .titre_resiliation {
                 margin: 0;
+                font-size: 2.3em;
             }
 
             .img_vector1 {
@@ -1165,40 +1210,44 @@
 
         @include tablette {
             .header_resiliation {
-                h1 {
+                .titre_resiliation {
                     margin: 10px;
                 }
             }
         }
-        
+
         @include medium-tablette {
             .header_resiliation {
                 margin-top: 20px;
-                h1 {
-                    font-size: 1.8em;
+
+                .titre_resiliation {
+                    font-size: 2em;
                 }
+
                 .img_vector1 {
                     position: absolute;
                     top: 1rem;
                     left: 22rem;
                     height: 40px;
                     width: 40px;
-    
+
                 }
             }
         }
+
         @include small-tablette {
             .header_resiliation {
                 .img_vector1 {
                     position: absolute;
                     top: 1rem;
                     left: 16rem;
-                   }
+                }
             }
         }
+
         @include smartphone {
             .header_resiliation {
-                h1 {
+                .titre_resiliation {
                     font-size: 1.5em;
                     margin-bottom: 0;
                 }
@@ -1206,20 +1255,26 @@
                 .img_vector1 {
                     height: 40px;
                     width: 40px;
+                    position: absolute;
+                    top: 1rem;
+                    left: 10rem;
                 }
             }
         }
 
         @include small-smartphone {
             .header_resiliation {
-                h1 {
-                    font-size: 1.2em;
+                .titre_resiliation {
+                    font-size: 1.5em;
                     margin: 5px;
                 }
 
                 .img_vector1 {
                     height: 30px;
                     width: 30px;
+                    position: absolute;
+                    top: 1rem;
+                    left: 8rem;
                 }
             }
         }
@@ -1236,7 +1291,7 @@
             box-shadow: var(--box-shadow);
         }
 
-        @include medium-tablette{
+        @include medium-tablette {
             .txt_popup_resiliation {
                 line-height: 20px;
                 width: 85%;
@@ -1247,7 +1302,8 @@
                 }
             }
         }
-        @include small-tablette{
+
+        @include small-tablette {
             .txt_popup_resiliation {
                 p {
                     font-size: 1.2em;
@@ -1262,14 +1318,14 @@
                 padding: 5px;
 
                 p {
-                    font-size: 1em;
+                    font-size: 1.1em;
                 }
             }
         }
 
         @include small-smartphone {
             .txt_popup_resiliation {
-                line-height: 10px;
+                line-height: 15px;
 
                 p {
                     font-size: 1em;
@@ -1297,8 +1353,9 @@
         position: relative;
 
         .header_time {
-            h1 {
+            .titre_time {
                 margin: 20px;
+                font-size: 2.3em;
             }
 
             .img_time_popup {
@@ -1311,27 +1368,30 @@
             }
 
         }
-        @include medium-tablette{
+
+        @include medium-tablette {
             .header_time {
-                h1 {
+                .titre_time {
                     font-size: 2em;
                 }
+
                 .img_time_popup {
                     height: 50px;
                     width: 50px;
                 }
             }
         }
+
         @include smartphone {
             .header_time {
-                h1 {
+                .titre_time {
                     font-size: 1.5em;
                     margin: 10px
                 }
 
                 .img_time_popup {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                 }
             }
         }
@@ -1347,6 +1407,7 @@
             border-radius: 5px;
             box-shadow: var(--box-shadow);
         }
+
         @include medium-tablette {
             .txt_popup_time {
                 line-height: 20px;
@@ -1358,6 +1419,7 @@
                 }
             }
         }
+
         @include smartphone {
             .txt_popup_time {
                 line-height: 15px;
@@ -1396,8 +1458,9 @@
         position: relative;
 
         .header_money {
-            h1 {
+            .titre_money {
                 margin: 20px;
+                font-size: 2.5em;
             }
 
             .img_money_popup {
@@ -1410,7 +1473,8 @@
             }
 
         }
-        @include small-tablette{
+
+        @include small-tablette {
             .header_money {
                 h1 {
                     font-size: 2em;
@@ -1423,10 +1487,11 @@
                 }
             }
         }
+
         @include smartphone {
             .header_money {
-                h1 {
-                    font-size: 1.5em;
+                .titre_money {
+                    font-size: 2em;
 
                 }
 
@@ -1436,14 +1501,15 @@
                 }
             }
         }
+
         @include small-smartphone {
             .header_money {
-                h1 {
-                    font-size: 1.3em;
+                .titre_money {
+                    font-size: 1.5em;
 
                 }
+            }
         }
-    }
 
         .txt_popup_money {
             line-height: 25px;
@@ -1456,29 +1522,34 @@
             border-radius: 5px;
             box-shadow: var(--box-shadow);
         }
-        @include small-tablette{
+
+        @include small-tablette {
             .txt_popup_money {
                 line-height: 20px;
                 font-size: 1em;
                 width: 90%;
             }
         }
+
         @include smartphone {
             .txt_popup_money {
                 line-height: 20px;
                 width: 80%;
                 padding: 0;
-                p{
+
+                p {
                     font-size: 1.2em;
                 }
             }
         }
+
         @include small-smartphone {
             .txt_popup_money {
                 line-height: 20px;
                 width: 100%;
                 padding: 0;
-                p{
+
+                p {
                     font-size: 1.1em;
                 }
             }
