@@ -87,7 +87,7 @@
         }
 
         .img_stop {
-            background-image: url(../images/imgInfoDetail/Vector\ \(1\).png);
+            background-image: url(../images/imgInfoDetail/VectorResiliation.png);
             margin: auto;
             padding-top: 20px;
             height: 45px;
@@ -261,8 +261,10 @@
         .header_umbrella {
             line-height: 20px;
 
-            h1 {
+            .titre_umbrella {
                 margin: 30px;
+                color: var(--color-blue);
+                font-size: 3em;
             }
 
             #titre {
@@ -287,11 +289,6 @@
                 box-shadow: var(--box-shadow);
                 margin: 10px;
             }
-
-            #icon {
-                color: green;
-
-            }
         }
 
         .options {
@@ -309,8 +306,8 @@
                     font-size: 1.5em;
                 }
 
-                h1 {
-                    font-size: 1.5em;
+                .titre_umbrella {
+                    font-size: 2em;
                 }
             }
 
@@ -345,9 +342,9 @@
                     font-size: 1.3em;
                 }
 
-                h1 {
+                .titre_umbrella {
                     font-size: 1.5em;
-                    margin: 0;
+                    margin: 5px;
                 }
                
             }
@@ -384,8 +381,8 @@
                     font-size: 1.2em;
                 }
 
-                h1 {
-                    font-size: 1em;
+                .titre_umbrella {
+                    font-size: 1.5em;
                     margin: 0;
                 }
                
@@ -423,17 +420,24 @@
             margin: 0;
             width: 100%;
             .header_umbrella {
-                background-color: #12FCF8;
                 height: 40px;
                 h3 {
                     font-size: 1em;
                     margin: 0;
                 }
 
-                h1 {
-                    font-size: 1em;
+                .titre_umbrella {
+                    font-size: 1.2em;
                     margin: 0;
                 }
+            }
+            #img_umbrella1{
+                height: 30px;
+            }
+            .img_umbrella1 {
+                position: absolute;
+                top: 4rem;
+                left: 3rem;
             }
 
             .txt_popup_umbrella {
@@ -476,16 +480,6 @@
 @include smartphone {
     .popup_umbrella {
         width: 85%;
-        #img_umbrella1 {
-            height: 30px;
-            width: 30px;
-        }
-
-        .img_umbrella1 {
-            position: absolute;
-            top: 4rem;
-            left: 3rem;
-        }
     }
 }
 
@@ -513,8 +507,8 @@
                 margin: 0;
             }
 
-            h1 {
-                font-size: 0.8em;
+            .titre_umbrella {
+                font-size: 1em;
                 margin: 0;
             }
         }
@@ -561,15 +555,17 @@
                 margin: 20px;
             }
 
-            h1 {
+            .titre_warning {
                 margin: 30px auto 10px auto;
+                color: var(--color-blue);
+                font-size: 3em;
             }
 
         }
         @include medium-tablette{
             .header_warning {
-                h1 {
-                    font-size: 2em;
+                .titre_warning {
+                    font-size: 2.5em;
                 }
 
                 h3 {
@@ -589,9 +585,9 @@
 
         @include smartphone {
             .header_warning {
-                h1 {
-                    font-size: 1.3em;
-                    margin: 0;
+                .titre_warning {
+                    font-size: 1.6em;
+                    margin: 5px;
                 }
 
                 h3 {
@@ -611,8 +607,8 @@
 
         @include small-smartphone {
             .header_warning {
-                h1 {
-                    font-size: 1em;
+                .titre_warning {
+                    font-size: 1.3em;
                 }
 
                 h3 {
@@ -754,8 +750,10 @@
         position: relative;
 
         .header_cross {
-            h1 {
-                margin: 20px;
+            .titre_cross {
+                margin: 15px;
+                color: var(--color-blue);
+                font-size: 2.5em;
             }
 
             .img_cross {
@@ -773,9 +771,10 @@
         }
         @include small-tablette{
             .header_cross{
-                h1{
-                    font-size: 1.7em;
-                    margin-top:40px;
+                .titre_cross {
+                    font-size: 2em;
+                    margin-top:20px;
+                    padding: 0;
                 }
                 .img_cross {
                     height: 30px;
@@ -788,7 +787,7 @@
         }
         @include smartphone {
             .header_cross {
-                h1 {
+                .titre_cross {
                     font-size: 1.5em;
                     margin: 40px;
                 }
@@ -867,8 +866,9 @@
         position: relative;
 
         .header_globe {
-            h1 {
+            .titre_globe {
                 margin: 0;
+                font-size: 3em;
             }
 
             .img_globe1 {
@@ -883,8 +883,8 @@
         }
         @include medium-tablette{
             .header_globe {
-                h1 {
-                    font-size: 2em;
+                .titre_globe {
+                    font-size: 2.5em;
                 }
 
                 .img_globe1 {
@@ -898,8 +898,8 @@
         }
         @include smartphone {
             .header_globe {
-                h1 {
-                    font-size: 1.5em;
+                .titre_globe {
+                    font-size: 2em;
                 }
 
                 .img_globe1 {
@@ -926,21 +926,22 @@
 
         @include smartphone {
             .txt_popup_globe {
-                line-height: 15px;
+                line-height: 20px;
                 text-align: justify;
                 width: 70%;
 
+                p {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        @include small-smartphone {
+            .txt_popup_globe {
                 p {
                     font-size: 1em;
                 }
             }
         }
-
-        #icon {
-            color: green;
-        }
-
-
     }
 }
 
@@ -961,8 +962,9 @@
         position: relative;
 
         .header_hand {
-            h1 {
+            .titre_hand {
                 margin: 0;
+                font-size: 2.5em;
             }
 
             h3 {
@@ -979,18 +981,15 @@
         }
         @include medium-tablette {
             .header_hand {
-                h1{
-                    font-size: 2em;
-                }
-                h3{
+                 h3{
                     font-size: 1.8em;
                 }
             }
         }
         @include small-tablette {
             .header_hand {
-                h1{
-                    font-size: 1.5em;
+                .titre_hand{
+                    font-size: 1.7em;
                 }
                 h3{
                     font-size: 1.3em;
@@ -1000,8 +999,8 @@
 
         @include smartphone {
             .header_hand {
-                h1 {
-                    font-size: 1.4em;
+                .titre_hand {
+                    font-size: 1.5em;
                     padding-top: 25%;
                 }
 
@@ -1148,8 +1147,9 @@
         position: relative;
 
         .header_resiliation {
-            h1 {
+            .titre_resiliation {
                 margin: 0;
+                font-size: 2.3em;
             }
 
             .img_vector1 {
@@ -1165,7 +1165,7 @@
 
         @include tablette {
             .header_resiliation {
-                h1 {
+                .titre_resiliation {
                     margin: 10px;
                 }
             }
@@ -1174,8 +1174,8 @@
         @include medium-tablette {
             .header_resiliation {
                 margin-top: 20px;
-                h1 {
-                    font-size: 1.8em;
+                .titre_resiliation {
+                    font-size: 2em;
                 }
                 .img_vector1 {
                     position: absolute;
@@ -1198,7 +1198,7 @@
         }
         @include smartphone {
             .header_resiliation {
-                h1 {
+                .titre_resiliation {
                     font-size: 1.5em;
                     margin-bottom: 0;
                 }
@@ -1206,20 +1206,26 @@
                 .img_vector1 {
                     height: 40px;
                     width: 40px;
+                    position: absolute;
+                    top: 1rem;
+                    left: 10rem;
                 }
             }
         }
 
         @include small-smartphone {
             .header_resiliation {
-                h1 {
-                    font-size: 1.2em;
+                .titre_resiliation {
+                    font-size: 1.5em;
                     margin: 5px;
                 }
 
                 .img_vector1 {
                     height: 30px;
                     width: 30px;
+                    position: absolute;
+                    top: 1rem;
+                    left: 8rem;
                 }
             }
         }
@@ -1262,14 +1268,14 @@
                 padding: 5px;
 
                 p {
-                    font-size: 1em;
+                    font-size: 1.1em;
                 }
             }
         }
 
         @include small-smartphone {
             .txt_popup_resiliation {
-                line-height: 10px;
+                line-height: 15px;
 
                 p {
                     font-size: 1em;
@@ -1297,8 +1303,9 @@
         position: relative;
 
         .header_time {
-            h1 {
+            .titre_time {
                 margin: 20px;
+                font-size: 2.3em;
             }
 
             .img_time_popup {
@@ -1313,7 +1320,7 @@
         }
         @include medium-tablette{
             .header_time {
-                h1 {
+                .titre_time {
                     font-size: 2em;
                 }
                 .img_time_popup {
@@ -1324,14 +1331,14 @@
         }
         @include smartphone {
             .header_time {
-                h1 {
+                .titre_time {
                     font-size: 1.5em;
                     margin: 10px
                 }
 
                 .img_time_popup {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                 }
             }
         }
@@ -1396,8 +1403,9 @@
         position: relative;
 
         .header_money {
-            h1 {
+            .titre_money {
                 margin: 20px;
+                font-size: 2.5em;
             }
 
             .img_money_popup {
@@ -1425,8 +1433,8 @@
         }
         @include smartphone {
             .header_money {
-                h1 {
-                    font-size: 1.5em;
+                .titre_money {
+                    font-size: 2em;
 
                 }
 
@@ -1438,8 +1446,8 @@
         }
         @include small-smartphone {
             .header_money {
-                h1 {
-                    font-size: 1.3em;
+                .titre_money {
+                    font-size: 1.5em;
 
                 }
         }

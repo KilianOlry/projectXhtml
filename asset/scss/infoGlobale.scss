@@ -159,25 +159,25 @@
         box-shadow: var(--box-shadow);
         
     }
+    .btn_infos:hover {
+        transform: scale(1.1);
+        transition: ease-out 0.2s;
+    }
+    
+    .btn_souscription:hover {
+        transform: scale(1.1);
+        transition: ease-out 0.2s;
+    }
+    
+    .btn_souscription{
+        @include button;
+       
+    }
+    
+    .img_promo {
+        height: 300px;
+        width: 300px;
+    
+    }
 }
 
-.btn_infos:hover {
-    transform: scale(1.1);
-    transition: ease-out 0.2s;
-}
-
-.btn_souscription:hover {
-    transform: scale(1.1);
-    transition: ease-out 0.2s;
-}
-
-.btn_souscription{
-    @include button;
-   
-}
-
-img {
-    height: 200px;
-    width: 200px;
-
-}
