@@ -143,20 +143,25 @@
 
 .container_confirm {
     display: flex;
+    flex-direction: column;
     padding: 50px;
-    justify-content:flex-end;
-    justify-content: space-around;
-   
+    margin: 10%;
+    align-items: center;
     width: 100%;
-    
+    .btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
     .btn_infos {
+        padding: 1rem 5rem;
+        margin: 1rem 6rem;
         background-color: var(--color-orange);
-        width: 150px;
-        height: 30px;
-        margin: 50px;
-        border-radius: 15px;
         border: none;
+        border-radius: 15px;
+        text-transform: uppercase;
         box-shadow: var(--box-shadow);
+        font-size: var(--smaller-size);
         
     }
     .btn_infos:hover {
@@ -164,20 +169,55 @@
         transition: ease-out 0.2s;
     }
     
-    .btn_souscription:hover {
-        transform: scale(1.1);
-        transition: ease-out 0.2s;
-    }
-    
     .btn_souscription{
-        @include button;
+       @include button;
        
     }
-    
-    .img_promo {
+}
+    #img_promo {
         height: 300px;
         width: 300px;
-    
-    }
+        }
 }
+@include medium-tablette {
+    .container_confirm{
+    .btn{
+        margin: 40px;
+      }
+    }
+    }
+
+@include small-tablette{
+    .container_confirm{
+        .btn{
+            .btn_infos{
+                margin:20px;
+                padding: 1em;
+            }
+            .btn_souscription{
+                margin:2em;
+                padding: 1em 2.5em;
+            }
+        }
+        }
+
+}
+@include smartphone{
+    .container_confirm{
+        .btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            .btn_infos{
+                padding: 1em 2em;
+            }
+            .btn_souscription{
+                padding: 1em 3.2em;
+            }
+        }
+        }
+
+}
+
 
