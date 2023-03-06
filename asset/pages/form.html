@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Accueil</title>
+    <title>Formulaire</title>
 
 </head>
 
@@ -63,7 +63,7 @@
                     <span class="bar"></span>
                 </button>
             </div>
-            </div>
+
 
         </header>
     </nav>
@@ -104,10 +104,11 @@
                     </li>
                 </ul>
             </div>
+
             <div class="form_wrap">
                 <div class="form_1 data_info">
                     <p>Demande de souscription<br>Prénium réserviste </p>
-                    <form>
+                    <form method="post">
                         <div class="form_container">
                             <div class="input_wrap">
                                 <label for="civilite">Civilité :</label>
@@ -115,27 +116,29 @@
                                     <option value="M.">M.</option>
                                     <option value="Mme">Mme</option>
                                     <option value="Mlle">Mlle</option>
+
                                 </select>
-                            </div>
-                            <div class="input_wrap">
-                                <label for="Name">Nom</label>
-                                <input type="text" name="name" class="input" id="name">
-                            </div>
-                            <div class="input_wrap">
-                                <label for="prenom">Prénom</label>
-                                <input type="text" name="prenom" class="input" id="prenom">
-                            </div>
-                            <div class="input_wrap">
-                                <label for="birthdate">Date de naissance</label>
-                                <input type="date" name="birthdate" class="input" id="birthdate">
-                            </div>
-                            <div class="input_wrap">
-                                <label for="birthdate">Nom de naissance</label>
-                                <input type="text" name="birthdate" class="input" id="birthdate">
 
                             </div>
                             <div class="input_wrap">
-                                <label for="email">Entrer votre email</label>
+                                <label for="name">Nom<span>*</span></label>
+                                <input type="text" name="name" class="input" id="name">
+                            </div>
+                            <div class="input_wrap">
+                                <label for="prenom">Prénom<span>*</span></label>
+                                <input type="text" name="prenom" class="input" id="prenom">
+                            </div>
+                            <div class="input_wrap">
+                                <label for="birthdate">Date de naissance<span>*</span></label>
+                                <input type="date" name="birthdate" class="input" id="birthdate">
+                            </div>
+                            <div class="input_wrap">
+                                <label for="namedate">Nom de naissance</label>
+                                <input type="text" name="namedate" class="input" id="namedate">
+
+                            </div>
+                            <div class="input_wrap">
+                                <label for="email">Entrer votre email<span>*</span></label>
                                 <input type="email" name="email" class="input" id="email">
 
                             </div>
@@ -162,23 +165,27 @@
 
                             </div>
                             <div class="input_wrap">
-                                <label for="phone">Télephone</label>
+                                <label for="phone">Télephone<span>*</span></label>
                                 <input type="text" name="phone" class="input" id="phone">
 
                             </div>
+                            <p class="obligatory"><span>*</span>champ obligatoire </p>
                             <div class="radio_input">
                                 <p>Quelle est votre situation actuelle ?</p>
                                 <p>Vous êtes réserviste ?</p>
                                 <div class="input_mix">
                                     <div class="input1">
-                                        <input name="reserviste" value="yes" type="radio" />
+                                        <input id="yes" name="reserviste" value="yes" type="radio">
                                         <label style="font-weight: bold;" for="yes">OUI</label>
                                     </div>
                                     <div class="input2">
-                                        <input name="reserviste" value="no" type="radio" />
+                                        <input id="no" name="reserviste" value="no" type="radio">
                                         <label style="font-weight: bold;" for="no">NON </label>
+
                                     </div>
+
                                 </div>
+
                             </div>
                         </div>
                     </form>
@@ -196,13 +203,13 @@
 
                             <div class="input_wrap2">
                                 <div class="content_wrap">
-                                    <label for="nb_reserviste"> N° de carte de réserviste *</label>
+                                    <label for="nb_reserviste"> N° de carte de réserviste <span>*</span></label>
                                     <input type="number" name="nb_reserviste" class="input" id="nb_reserviste" min="10"
                                         max="10000">
                                 </div>
                                 <div class="content_wrap">
-                                    <label for="date_reserviste">Date de délivrance :
-                                        *</label>
+                                    <label for="date_reserviste">Date de délivrance : <span>*</span>
+                                    </label>
                                     <input type="date" name="date_reserviste" class="input" id="date_reserviste">
                                 </div>
                             </div>
@@ -211,22 +218,23 @@
                                 <div class="container_upload">
 
                                     <div class="select_upload">
+
                                         <select style="text-align: center;" class="files" id="files" name="files">
                                             <option selected value="files_cart_id">Carte d’identité (recto-verso)
                                             </option>
                                             <option value="files_cart_r">Carte Réserviste en cours de validité </option>
                                             <option value="other">Autres </option>
                                         </select>
-                                        <input type="file" class="upload-box" />
+                                        <input type="file" class="upload-box">
                                     </div>
                                     <div class="select_upload">
-                                        <select style="text-align: center;" class="files" id="files" name="files">
+                                        <select style="text-align: center;" class="files" id="files2" name="files">
                                             <option selected value="files_cart_id">Carte Réserviste en cours de validité
                                             </option>
                                             <option value="files_cart_r">Carte d’identité (recto-verso) </option>
                                             <option value="other">Autres </option>
                                         </select>
-                                        <input type="file" accept="image/png, image/jpeg" class="upload-box" />
+                                        <input type="file" accept="image/png, image/jpeg" class="upload-box">
                                     </div>
 
                                 </div>
@@ -238,6 +246,11 @@
                 </div>
 
                 <div class="form_4 data_info" style="display: none;">
+                    <p>PAGE EN COURS DE REALISATION</p>
+
+                </div>
+
+                <div class="form_5 data_info" style="display: none;">
                     <form>
                         <div class="form_container">
                             <div class="input_wrap">
@@ -281,34 +294,41 @@
                                                         <div class="container_checkbox">
                                                             <input type="checkbox" id="check_list" class="list_checkbox"
                                                                 name="check_list">
-                                                                <label for="list_checkbox">
-                                                                    Je reconnais avoir lu le texte des conditions générales
-                                                                    dans son intégralité<br> et en accepter tous les
-                                                                    termes. <a href="#">Téléchargeable ici</a></label>
+                                                            <label for="check_list">
+                                                                Je reconnais avoir lu le texte des conditions générales
+                                                                dans son intégralité<br> et en accepter tous les
+                                                                termes. <a href="#"
+                                                                    download="condition_génerales">Téléchargeable
+                                                                    ici</a></label>
                                                         </div>
                                                         <div class="container_checkbox">
-                                                            <input type="checkbox" id="check_list" class="list_checkbox"
-                                                                name="check_list">
-                                                                <label for="list_checkbox">
-                                                                    Je reconnais avoir lu le texte décrivant l'IPPID et en accepter tous les
-                                                                    termes. <br><a href="../images/Assurance Réserviste.pdf" download="">Téléchargeable ici</a></label>
+                                                            <input type="checkbox" id="check_list2"
+                                                                class="list_checkbox" name="check_list">
+                                                            <label for="check_list2">
+                                                                Je reconnais avoir lu le texte décrivant l'IPPID et en
+                                                                accepter tous les
+                                                                termes. <br><a
+                                                                    href="/asset/images/Assurance%20Réserviste.pdf"
+                                                                    download="exemplaire IPPID">Téléchargeable
+                                                                    ici</a></label>
                                                         </div>
                                                         <div class="container_checkbox">
-                                                            <input type="checkbox" id="check_list" class="list_checkbox"
-                                                                name="check_list">
-                                                                <label for="list_checkbox">
-                                                                    Je reconnais avoir lu le texte des conditions générales
-                                                                    dans son intégralité<br> et en accepter tous les
-                                                                    termes. <a href="#">Téléchargeable ici</a></label>
+                                                            <input type="checkbox" id="check_list3"
+                                                                class="list_checkbox" name="check_list">
+                                                            <label for="check_list3">
+                                                                Je reconnais avoir lu le texte des conditions générales
+                                                                dans son intégralité<br> et en accepter tous les
+                                                                termes. <a href="#" download="condition">Téléchargeable
+                                                                    ici</a></label>
                                                         </div>
                                                         <div class="container_checkbox">
-                                                            <label for="list_checkbox">Vous souhaitez que la garantie prenne effet le </label>
-                                                            <input type="date" id="check_list" class="list_checkbox"
+                                                            <label for="check_list4">Vous souhaitez que la garantie
+                                                                prenne effet le </label>
+                                                            <input type="date" id="check_list4" class="list_checkbox"
                                                                 name="check_list">
-                                                                
+
                                                         </div>
-                                                        
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,18 +337,19 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form_5 data_info" style="display: none;">
-                            <p>Complitude dossier</p>
-                            <form>
-                         
                     </form>
+
+
+
                 </div>
+
 
                 <div class="btns_wrap">
                     <div class="common_btns form_1_btns">
-                        <a href="/asset/pages/garantie.html"><button type="button"
-                                class="btn_back2">Précedent</button></a>
+
+                        <button type="button" onclick="location.href='/asset/pages/garantie.html'"
+                            class="btn_back2">Précedent</button>
+
                         <button type="button" class="btn_next">Suivant </button>
                     </div>
                     <div class="common_btns form_2_btns" style="display: none;">
@@ -348,17 +369,20 @@
                         <button type="button" class="btn_done">Envoyez</button>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal_wrapper">
-                <div class="shadow"></div>
-                <div class="success_wrap">
-                    <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
-                    <p>Vous avez presque terminé ! <br>
-                        Veuillez vérifier vos mails pour accéder au document PDF pour la signature électronique </p>
+
+
+                <div class="modal_wrapper">
+                    <div class="shadow"></div>
+                    <div class="success_wrap">
+                        <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+                        <p>Vous avez presque terminé ! <br>
+                            Veuillez vérifier vos mails pour accéder au document PDF pour la signature électronique </p>
+                    </div>
                 </div>
             </div>
 
+        </div>
     </section>
 
 
