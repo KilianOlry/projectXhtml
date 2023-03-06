@@ -293,33 +293,33 @@ footer .legale a {
 
 /*Card formulaire */
 .wrapper {
-  width: 670px;
-  height: 820px;
-  padding: var(--hight-size);
+  width: 620px;
+  height: 710px;
+  padding: var(--small-size);
   background: var(--color-white);
   margin: 135px auto 0;
   border-radius: var(--smalling-size2);
 }
 @media (max-width: 768px) {
   .wrapper {
-    width: 595px;
-    height: 830px;
+    width: 580px;
+    height: 700px;
   }
 }
 @media (max-width: 600px) {
   .wrapper {
-    width: 360px;
-    height: 820px;
+    width: 390px;
+    height: 715px;
   }
 }
 @media (max-width: 400px) {
   .wrapper {
-    width: 315px;
-    height: 830px;
+    width: 312px;
+    height: 722px;
   }
 }
 .wrapper .header {
-  margin-bottom: 15px;
+  margin-bottom: var(--small-size);
   display: flex;
   justify-content: center;
 }
@@ -331,6 +331,11 @@ footer .legale a {
   position: relative;
 }
 @media (max-width: 600px) {
+  .wrapper .header li {
+    margin-right: var(--medium-size);
+  }
+}
+@media (max-width: 400px) {
   .wrapper .header li {
     margin-right: 3px;
   }
@@ -363,6 +368,7 @@ footer .legale a {
 .wrapper .form_wrap .form_container span {
   font-size: var(--smalling-size);
   color: red;
+  margin-left: 0.5em;
 }
 .wrapper .form_wrap p {
   color: var(--color-blue);
@@ -377,7 +383,7 @@ footer .legale a {
 .wrapper .form_wrap .input_wrap .input {
   border: 2px solid var(--color-forms);
   border-radius: 3px;
-  padding: 6px;
+  padding: 3px;
   width: 100%;
   font-size: var(--smaller-size);
   transition: 0.5s ease;
@@ -390,7 +396,6 @@ footer .legale a {
   font-size: var(--smalling-size);
   font-weight: var(--light-weight);
   text-align: left;
-  margin-top: var(--smalling-size);
   text-transform: none;
 }
 
@@ -419,7 +424,7 @@ footer .legale a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: var(--hight-size);
 }
 .radio_input .input_mix {
   display: flex;
@@ -457,12 +462,11 @@ footer .legale a {
 .wrapper .form_wrap .btn3 {
   background: var(--color-white);
   border: 2px solid var(--color-forms);
-  border-radius: var(--small-size);
-  padding: 6px;
-  display: block;
+  border-radius: 3px;
+  padding: 3px;
   font-size: var(--smaller-size);
+  margin-top: 2px;
   transition: 0.5s ease;
-  margin-top: var(--smalling-size);
 }
 .wrapper .form_wrap .btn1:hover,
 .wrapper .form_wrap .btn2:hover,
@@ -478,17 +482,20 @@ footer .legale a {
   text-align: center;
   margin-top: var(--hight-size2);
 }
-.wrapper .form_wrap .input_wrap2 .content_wrap {
+.wrapper .form_wrap .input_wrap2 label {
+  font-size: var(--smaller-size);
+}
+.wrapper .form_wrap .content_wrap {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.wrapper .form_wrap .input_wrap2 .content_wrap .input {
+.wrapper .form_wrap .content_wrap .input {
   border: 2px solid var(--color-forms);
-  border-radius: var(--small-size);
-  padding: 6px;
+  border-radius: 3px;
+  padding: 3px;
   display: block;
   font-size: var(--smaller-size);
   transition: 0.5s ease;
@@ -542,7 +549,7 @@ footer .legale a {
   overflow-y: scroll;
 }
 .card .card-content {
-  max-height: 550px;
+  max-height: 480px;
   padding: var(--medium-size);
 }
 .card .card-content .header_final {
@@ -574,17 +581,17 @@ footer .legale a {
   margin: 1rem 0;
 }
 .container_final .text_content .input_checkbox {
-  margin-top: 2rem;
+  margin-top: var(--medium-size);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
 .container_final .text_content .input_checkbox .container_checkbox {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--small-size);
 }
 .container_final .text_content .input_checkbox .container_checkbox label {
-  margin: 1rem;
+  margin: var(--smalling-size);
 }
 .container_final .text_content .input_checkbox a {
   font-weight: 700;
@@ -597,9 +604,14 @@ footer .legale a {
 .wrapper .btns_wrap .common_btns {
   display: flex;
   justify-content: space-around;
-  margin-top: 25px;
+  margin: var(--medium-size);
 }
 @media (max-width: 400px) {
+  .wrapper .btns_wrap .common_btns {
+    margin: 2px;
+  }
+}
+@media (max-width: 320px) {
   .wrapper .btns_wrap .common_btns {
     display: flex;
     justify-content: center;
@@ -624,6 +636,11 @@ footer .legale a {
 @media (max-width: 600px) {
   .wrapper .btns_wrap .common_btns button {
     margin-top: var(--medium-size);
+  }
+}
+@media (max-width: 320px) {
+  .wrapper .btns_wrap .common_btns button {
+    margin-top: 12px;
   }
 }
 .wrapper .btns_wrap .common_btns button.btn_back, .wrapper .btns_wrap .common_btns button.btn_back2 {
@@ -667,7 +684,7 @@ footer .legale a {
   padding: var(--hight-size);
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: var(--smalling-size2);
   transition: 0.5s ease;
 }
 .modal_wrapper .success_wrap .modal_icon {
@@ -695,6 +712,9 @@ footer .legale a {
 }
 .modal_wrapper.active .success_wrap {
   transform: translate(-50%, -50%);
+}
+.modal_wrapper p {
+  font-size: var(--smalling-size);
 }
 
 /*# sourceMappingURL=form.css.map */

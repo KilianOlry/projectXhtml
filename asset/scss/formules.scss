@@ -5,9 +5,9 @@
 
 //Page formulaire //
 .main {
-  margin-top: 20rem;
   @include flex-ai-center-jc-center-direction-column;
   .titre {
+    margin-top: 15rem;
     text-align: center;
   }
   table {

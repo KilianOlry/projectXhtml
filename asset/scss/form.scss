@@ -8,51 +8,51 @@
   background-size: cover;
   height: 100vh;
   @include flex-jccenter-ai-center;
-
 }
 
 /*Card formulaire */
 
 .wrapper {
-  width: 670px;
-  height: 820px;
-  padding: var(--hight-size);
+  width: 620px;
+  height: 710px;
+  padding: var(--small-size);
   background: var(--color-white);
-  margin:135px auto 0;
+  margin: 135px auto 0;
   border-radius: var(--smalling-size2);
 
-
   @include medium-tablette {
-    width: 595px;
-    height: 830px;
-   
+    width: 580px;
+    height: 700px;
   }
   @include small-tablette {
-    width: 360px;
-    height: 820px;
-
+    width: 390px;
+    height: 715px;
   }
   @include smartphone {
-    width: 315px;
-    height: 830px;
+    width: 312px;
+    height: 722px;
   }
-  .header{
-    margin-bottom: 15px;
+  .header {
+    margin-bottom: var(--small-size);
     @include flex-jccenter;
 
-    ul{
+    ul {
       display: flex;
     }
-    li{
+    li {
       margin-right: var(--hight-size2);
       position: relative;
       @include small-tablette {
-        margin-right:3px;
+        margin-right: var(--medium-size);
       }
-      &:last-child{
+      @include smartphone {
+        margin-right: 3px;
+      }
+
+      &:last-child {
         margin-right: 0;
       }
-      &:before{
+      &:before {
         content: "";
         position: absolute;
         top: 50%;
@@ -61,49 +61,49 @@
         width: 100%;
         height: 2px;
         background: var(--color-forms);
-
       }
     }
-  div{
-    padding: var(--smalling-size2);
-  }
-  p{
-    width: var(--hight-size2);
-    height: var(--hight-size2);
-    background: var(--color-forms);
-    color: var(--color-white);
-    text-align: center;
-    line-height: var(--hight-size2);
-    border-radius: 50%;
-  }
+    div {
+      padding: var(--smalling-size2);
+    }
+    p {
+      width: var(--hight-size2);
+      height: var(--hight-size2);
+      background: var(--color-forms);
+      color: var(--color-white);
+      text-align: center;
+      line-height: var(--hight-size2);
+      border-radius: 50%;
+    }
   }
 
-
-  .form_wrap{
-    .form_container{
+  .form_wrap {
+    .form_container {
       span {
         font-size: var(--smalling-size);
         color: red;
+        margin-left: 0.5em;
       }
     }
-    p{
+    p {
       color: var(--color-blue);
       text-align: center;
       text-transform: uppercase;
       font-weight: var(--semi-bold);
     }
-    .input_wrap{
+    .input_wrap {
       max-width: 600px;
       margin: 3.5rem auto;
-      .input{
+
+      .input {
         border: 2px solid var(--color-forms);
         border-radius: 3px;
-        padding: 6px;
+        padding: 3px;
         width: 100%;
         font-size: var(--smaller-size);
         transition: 0.5s ease;
       }
-      label{
+      label {
         font-size: var(--smaller-size);
       }
     }
@@ -112,7 +112,6 @@
       font-size: var(--smalling-size);
       font-weight: var(--light-weight);
       text-align: left;
-      margin-top: var(--smalling-size);
       text-transform: none;
     }
   }
@@ -127,11 +126,8 @@
 }
 .wrapper .header ul li.active p {
   background: var(--color-orange);
-
 }
-.wrapper .form_wrap .input_wrap
-
-.wrapper .form_wrap .input_wrap:last-child {
+.wrapper .form_wrap .input_wrap .wrapper .form_wrap .input_wrap:last-child {
   margin-bottom: 0;
 }
 /* Input choice */
@@ -140,7 +136,7 @@
   width: 100%;
   max-width: 100%;
   @include flex-ai-center-jc-center-direction-column;
-  margin-top: 80px;
+  margin-top: var(--hight-size);
 
   .input_mix {
     @include flex-jcaround-ai-center;
@@ -170,7 +166,6 @@
       @include small-tablette {
         flex-direction: column;
         margin-top: 1px;
-
       }
     }
 
@@ -179,13 +174,11 @@
     .btn3 {
       background: var(--color-white);
       border: 2px solid var(--color-forms);
-      border-radius: var(--small-size);
-      padding: 6px;
-      display: block;
+      border-radius: 3px;
+      padding: 3px;
       font-size: var(--smaller-size);
+      margin-top: 2px;
       transition: 0.5s ease;
-      margin-top: var(--smalling-size);
-
     }
 
     .btn1:hover,
@@ -201,25 +194,29 @@
       text-align: center;
       margin-top: var(--hight-size2);
 
-      .content_wrap {
-        @include flex-jcaround-ai-center;
-        flex-direction: column;
-        width: 100%;
+      label {
+        font-size: var(--smaller-size);
+      }
+    }
 
-        .input {
-          border: 2px solid var(--color-forms);
-          border-radius: var(--small-size);
-          padding: 6px;
-          display: block;
-          font-size: var(--smaller-size);
-          transition: 0.5s ease;
-          margin-top: var(--medium-size);
-         
-        }
+    .content_wrap {
+      @include flex-jcaround-ai-center;
+      flex-direction: column;
+      width: 100%;
+
+      .input {
+        border: 2px solid var(--color-forms);
+        border-radius: 3px;
+        padding: 3px;
+        display: block;
+        font-size: var(--smaller-size);
+        transition: 0.5s ease;
+        margin-top: var(--medium-size);
       }
     }
   }
 }
+
 /*Container upload */
 
 .container_upload {
@@ -238,7 +235,6 @@
   .select_upload {
     margin-top: var(--smalling-size);
     height: 100px;
-    
   }
 
   .upload-box {
@@ -268,7 +264,7 @@
   overflow: hidden; /* cache le contenu débordant de la card */
   overflow-y: scroll;
   .card-content {
-    max-height: 550px;
+    max-height: 480px;
     padding: var(--medium-size);
     .header_final {
       @include flex-jccenter-ai-center;
@@ -286,36 +282,36 @@
 .container_final .text_content {
   font-size: var(--smaller-size);
   padding: var(--smalling-size);
-  p{
+  p {
     color: var(--color-black);
     width: 100%;
   }
-  .container{
-    ul{
-      li{
+  .container {
+    ul {
+      li {
         text-align: justify;
         list-style: disc;
-        margin: 1rem 0
+        margin: 1rem 0;
       }
     }
   }
   .input_checkbox {
-    margin-top: 2rem;
+    margin-top: var(--medium-size);
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-     .container_checkbox {
+    .container_checkbox {
       display: flex;
-      gap: 1.5rem;
-      label{
-        margin: 1rem;
+      gap: var(--small-size);
+      label {
+        margin: var(--smalling-size);
       }
     }
-    a{
+    a {
       font-weight: 700;
       font-size: var(--smalling-size);
       color: var(--color-black);
-      text-decoration: underline
+      text-decoration: underline;
     }
   }
 }
@@ -325,20 +321,16 @@
   .btns_wrap {
     .common_btns {
       @include flex-jcaround;
-      margin-top: 25px;
-   
-   
-
+      margin: var(--medium-size);
 
       @include smartphone {
-      @include flex-jccenter-ai-center;
-      flex-direction: column;
-    
-            
+        margin: 2px;
       }
 
-   
-   
+      @include small-smartphone {
+        @include flex-jccenter-ai-center;
+        flex-direction: column;
+      }
 
       button {
         border: none;
@@ -356,7 +348,10 @@
 
         @include small-tablette {
           margin-top: var(--medium-size);
+        }
 
+        @include small-smartphone {
+          margin-top: 12px;
         }
 
         &.btn_back,
@@ -387,6 +382,7 @@
   width: 100%;
   height: 100%;
   visibility: hidden;
+
   .shadow {
     position: absolute;
     top: 0;
@@ -405,8 +401,9 @@
     background: var(--color-white);
     padding: var(--hight-size);
     @include flex-ai-center;
-    border-radius: 5px;
+    border-radius: var(--smalling-size2);
     transition: 0.5s ease;
+
     .modal_icon {
       margin-right: var(--medium-size);
       font-size: var(--hight-size);
@@ -421,6 +418,7 @@
       height: 195px;
     }
   }
+
   &.active {
     visibility: visible;
     .shadow {
@@ -429,5 +427,8 @@
     .success_wrap {
       transform: translate(-50%, -50%);
     }
+  }
+  p {
+    font-size: var(--smalling-size);
   }
 }
